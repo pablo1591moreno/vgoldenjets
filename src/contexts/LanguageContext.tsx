@@ -20,9 +20,7 @@ const translations = {
     
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
-    "hero.title": "Luxury Travel",
-    "hero.subtitle": "Reimagined",
-    "hero.description": "Experience exclusive private jet charter service for unparalleled comfort, flexibility, and luxury. Your journey begins with us.",
+    "hero.title": "PRIVATE FLIGHTS",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
     
@@ -152,9 +150,7 @@ const translations = {
     
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
-    "hero.title": "Viajes de Lujo",
-    "hero.subtitle": "Reinventados",
-    "hero.description": "Experimente un servicio exclusivo de charter de jets privados para una comodidad, flexibilidad y lujo sin igual. Su viaje comienza con nosotros.",
+    "hero.title": "VUELOS PRIVADOS",
     "hero.services": "Nuestros Servicios",
     "hero.contact": "Contáctenos",
     

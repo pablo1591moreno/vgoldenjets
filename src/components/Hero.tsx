@@ -24,16 +24,12 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
       </div>
 
-      <div className="section-container relative z-10">
-        <div className="flex flex-col max-w-3xl animate-fade-in">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
+  <div className="flex flex-col items-start max-w-3xl animate-fade-in">
           <p className="text-gold text-sm sm:text-base md:text-lg mb-2">{t("hero.location")}</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight font-serif">
             <span className="text-white">{t("hero.title")}</span><br />
-            <span className="gold-gradient">{t("hero.subtitle")}</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl">
-            {t("hero.description")}
-          </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2">
             <a href="#services" className="btn-primary flex items-center justify-center">
               {t("hero.services")} <ArrowRight size={16} className="ml-2" />
