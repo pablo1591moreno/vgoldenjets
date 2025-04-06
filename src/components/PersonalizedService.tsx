@@ -55,18 +55,18 @@ const PersonalizedService = () => {
         {/* Background image with low opacity */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-50" 
+            className="absolute inset-0 bg-cover bg-center opacity-100" 
             style={{ 
               backgroundImage:`url(${img2})`
             }}
           />
-          <div className="absolute inset-0 bg-secondary/80" />
+          <div className="absolute inset-0 bg-secondary/20" />
         </div>
         
         <div className="section-container relative z-10">
           <h2 className="section-title font-serif">{t("personalizedService.title")}</h2>
           <div className="mt-8 max-w-4xl mx-auto">
-            <div className="p-6 sm:p-8 bg-black/40 rounded-xl">
+            <div className="p-6 sm:p-8 bg-black/85 rounded-xl">
               <p className="text-white/90 text-base sm:text-lg leading-relaxed">
                 {t("personalizedService.description")}
               </p>

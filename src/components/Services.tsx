@@ -15,7 +15,7 @@ const ServiceCard = ({
   const { t } = useLanguage();
   
   return (
-    <div className="p-5 sm:p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all bg-black/40">
+    <div className="p-5 sm:p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all bg-black/80">
       <div className="mb-3">
         <Icon className="text-gold h-5 w-5 sm:h-6 sm:w-6" />
       </div>

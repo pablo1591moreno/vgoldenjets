@@ -20,7 +20,9 @@ const translations = {
     
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
-    "hero.title": "PRIVATE FLIGHTS",
+    "hero.title": "PRIVATE",
+    "hero.title.two": "FLIGHTS",
+    "hero.subtitle": "Vgoldenjets the new way to fly",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
     
@@ -88,7 +90,6 @@ const translations = {
     
     // Popular Destinations
     "destinations.title": "Popular Destinations",
-    "destinations.subtitle": "Our most frequently requested charter routes",
     "destinations.routes": "Miami to New York, Miami to Los Angeles, Los Angeles to New York, New York to Los Angeles, New York to Las Vegas, Miami to Las Vegas, Miami to Aspen, Los Angeles to Aspen, New York to Aspen, Teterboro to Napa Valley, Miami to London, Los Angeles to Miami",
     
     // Contact
@@ -150,8 +151,9 @@ const translations = {
     
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
-    "hero.title": "VUELOS PRIVADOS",
-    "hero.services": "Nuestros Servicios",
+    "hero.title": "VUELOS",
+    "hero.title.two": "PRIVADOS",
+    "hero.subtitle": "Vgoldenjets, la nueva forma de volar",
     "hero.contact": "Contáctenos",
     
     // Services
@@ -218,7 +220,6 @@ const translations = {
     
     // Popular Destinations
     "destinations.title": "Destinos Populares",
-    "destinations.subtitle": "Nuestras rutas de charter más solicitadas",
     "destinations.routes": "Miami a Nueva York, Miami a Los Ángeles, Los Ángeles a Nueva York, Nueva York a Los Ángeles, Nueva York a Las Vegas, Miami a Las Vegas, Miami a Aspen, Los Ángeles a Aspen, Nueva York a Aspen, Teterboro a Valle de Napa, Miami a Londres, Los Ángeles a Miami",
     
     // Contact

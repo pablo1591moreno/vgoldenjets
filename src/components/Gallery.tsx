@@ -2,6 +2,13 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import GulfstreamImg from "@/img/Gulfstream.png";
+import ChallengerImg from "@/img/Challenger601.png";
+import HawkerImg from "@/img/Hawker 800.png";
+import LearImg from "@/img/Lear60.png";
+import BombardierImg from "@/img/BombardierGlobal.png";
+import CessnaImg from "@/img/CessnaCitationCJ1.png";
+import DassaultImg from "@/img/DassaultFalcon.png";
 
 interface Aircraft {
   id: number;
@@ -21,78 +28,230 @@ const Gallery = () => {
       {
         id: 1,
         name: "Gulfstream G650",
-        image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
+        image: GulfstreamImg,
         capacity: "Up to 19 passengers",
         range: "7,000 nautical miles",
         speed: "Mach 0.925",
-        features: ["Spacious cabin", "Stand-up headroom", "Four living areas", "State-of-the-art entertainment", "Satellite communications", "Full kitchen"]
+        features: [
+          "Spacious cabin",
+          "Stand-up headroom",
+          "Four living areas",
+          "State-of-the-art entertainment",
+          "Satellite communications",
+          "Full kitchen",
+        ],
       },
       {
         id: 2,
         name: "Bombardier Global 7500",
-        image: "https://images.unsplash.com/photo-1600534220846-99b70c10420b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1964&q=80",
+        image: BombardierImg,
         capacity: "Up to 19 passengers",
         range: "7,700 nautical miles",
         speed: "Mach 0.925",
-        features: ["Four distinct living spaces", "Permanent crew rest area", "Master suite with shower", "Full-size kitchen", "4K entertainment system", "Ka-band Wi-Fi"]
+        features: [
+          "Four distinct living spaces",
+          "Permanent crew rest area",
+          "Master suite with shower",
+          "Full-size kitchen",
+          "4K entertainment system",
+          "Ka-band Wi-Fi",
+        ],
       },
       {
         id: 3,
         name: "Dassault Falcon 8X",
-        image: "https://images.unsplash.com/photo-1474302770737-173ee21bab63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80",
+        image: DassaultImg,
         capacity: "Up to 16 passengers",
         range: "6,450 nautical miles",
         speed: "Mach 0.9",
-        features: ["30 cabin layouts", "Low cabin altitude", "Whisper-quiet cabin", "High-speed connectivity", "Falcon HD entertainment", "Spacious galley"]
+        features: [
+          "30 cabin layouts",
+          "Low cabin altitude",
+          "Whisper-quiet cabin",
+          "High-speed connectivity",
+          "Falcon HD entertainment",
+          "Spacious galley",
+        ],
       },
       {
         id: 4,
         name: "Lear 60",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80",
+        image: LearImg,
         capacity: "Up to 8 passengers",
         range: "2,405 nautical miles",
         speed: "Mach 0.81",
-        features: ["Comfortable seating", "Stand-up cabin", "Executive workspace", "Full refreshment center", "Modern avionics", "Private lavatory"]
-      }
+        features: [
+          "Comfortable seating",
+          "Stand-up cabin",
+          "Executive workspace",
+          "Full refreshment center",
+          "Modern avionics",
+          "Private lavatory",
+        ],
+      },
+      {
+        id: 5,
+        name: "Hawker 800",
+        image: HawkerImg,
+        capacity: "Up to 8 passengers",
+        range: "2,540 nautical miles",
+        speed: "Mach 0.80",
+        features: [
+          "Spacious cabin",
+          "Private lavatory",
+          "Club seating",
+          "Worktables",
+          "Efficient range",
+          "Refreshment center",
+        ],
+      },
+      {
+        id: 6,
+        name: "Challenger 601",
+        image: ChallengerImg,
+        capacity: "Up to 12 passengers",
+        range: "3,290 nautical miles",
+        speed: "Mach 0.80",
+        features: [
+          "Spacious stand-up cabin",
+          "Conference area",
+          "Full galley",
+          "Lavatory",
+          "Intercontinental range",
+          "Wi-Fi available",
+        ],
+      },
+      {
+        id: 7,
+        name: "Cessna Citation CJ1",
+        image: CessnaImg,
+        capacity: "Up to 5 passengers",
+        range: "1,300 nautical miles",
+        speed: "Mach 0.71",
+        features: [
+          "Compact and efficient",
+          "Quiet cabin",
+          "Executive layout",
+          "Low operating costs",
+          "Private lavatory",
+          "Ideal for short trips",
+        ],
+      },
     ],
     es: [
       {
         id: 1,
         name: "Gulfstream G650",
-        image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
+        image: GulfstreamImg,
         capacity: "Hasta 19 pasajeros",
         range: "7,000 millas náuticas",
         speed: "Mach 0.925",
-        features: ["Cabina espaciosa", "Altura para estar de pie", "Cuatro áreas habitables", "Entretenimiento de última generación", "Comunicaciones por satélite", "Cocina completa"]
+        features: [
+          "Cabina espaciosa",
+          "Altura para estar de pie",
+          "Cuatro áreas habitables",
+          "Entretenimiento de última generación",
+          "Comunicaciones por satélite",
+          "Cocina completa",
+        ],
       },
       {
         id: 2,
         name: "Bombardier Global 7500",
-        image: "https://images.unsplash.com/photo-1600534220846-99b70c10420b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1964&q=80",
+        image: BombardierImg,
         capacity: "Hasta 19 pasajeros",
         range: "7,700 millas náuticas",
         speed: "Mach 0.925",
-        features: ["Cuatro espacios habitables distintos", "Área de descanso permanente para la tripulación", "Suite principal con ducha", "Cocina de tamaño completo", "Sistema de entretenimiento 4K", "Wi-Fi de banda Ka"]
+        features: [
+          "Cuatro espacios habitables distintos",
+          "Área de descanso permanente para la tripulación",
+          "Suite principal con ducha",
+          "Cocina de tamaño completo",
+          "Sistema de entretenimiento 4K",
+          "Wi-Fi de banda Ka",
+        ],
       },
       {
         id: 3,
         name: "Dassault Falcon 8X",
-        image: "https://images.unsplash.com/photo-1474302770737-173ee21bab63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80",
+        image: DassaultImg,
         capacity: "Hasta 16 pasajeros",
         range: "6,450 millas náuticas",
         speed: "Mach 0.9",
-        features: ["30 diseños de cabina", "Baja altitud de cabina", "Cabina silenciosa", "Conectividad de alta velocidad", "Entretenimiento Falcon HD", "Cocina espaciosa"]
+        features: [
+          "30 diseños de cabina",
+          "Baja altitud de cabina",
+          "Cabina silenciosa",
+          "Conectividad de alta velocidad",
+          "Entretenimiento Falcon HD",
+          "Cocina espaciosa",
+        ],
       },
       {
         id: 4,
         name: "Lear 60",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80",
+        image: LearImg,
         capacity: "Hasta 8 pasajeros",
         range: "2,405 millas náuticas",
         speed: "Mach 0.81",
-        features: ["Asientos cómodos", "Cabina con altura para estar de pie", "Espacio de trabajo ejecutivo", "Centro de refrigerios completo", "Aviónica moderna", "Baño privado"]
-      }
-    ]
+        features: [
+          "Asientos cómodos",
+          "Cabina con altura para estar de pie",
+          "Espacio de trabajo ejecutivo",
+          "Centro de refrigerios completo",
+          "Aviónica moderna",
+          "Baño privado",
+        ],
+      },
+      {
+        id: 5,
+        name: "Hawker 800",
+        image: HawkerImg,
+        capacity: "Hasta 8 pasajeros",
+        range: "2,540 millas náuticas",
+        speed: "Mach 0.80",
+        features: [
+          "Cabina espaciosa",
+          "Baño privado",
+          "Asientos tipo club",
+          "Mesas de trabajo",
+          "Alcance eficiente",
+          "Centro de refrigerios",
+        ],
+      },
+      {
+        id: 6,
+        name: "Challenger 601",
+        image: ChallengerImg,
+        capacity: "Hasta 12 pasajeros",
+        range: "3,290 millas náuticas",
+        speed: "Mach 0.80",
+        features: [
+          "Cabina espaciosa con altura",
+          "Área de conferencias",
+          "Cocina completa",
+          "Baño privado",
+          "Alcance intercontinental",
+          "Wi-Fi disponible",
+        ],
+      },
+      {
+        id: 7,
+        name: "Cessna Citation CJ1",
+        image: CessnaImg,
+        capacity: "Hasta 5 pasajeros",
+        range: "1,300 millas náuticas",
+        speed: "Mach 0.71",
+        features: [
+          "Compacto y eficiente",
+          "Cabina silenciosa",
+          "Diseño ejecutivo",
+          "Bajos costos operativos",
+          "Baño privado",
+          "Ideal para viajes cortos",
+        ], 
+       }
+    ]    
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -116,7 +275,7 @@ const Gallery = () => {
   return (
     <section id="fleet" className="bg-secondary py-10 sm:py-16">
       <div className="section-container">
-        <h2 className="section-title">{t("fleet.title")}</h2>
+        <h2 className="section-title font-serif">{t("fleet.title")}</h2>
         <p className="section-subtitle">{t("fleet.subtitle")}</p>
         
         {/* Jet Categories */}
