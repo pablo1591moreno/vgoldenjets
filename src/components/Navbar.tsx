@@ -35,7 +35,7 @@ const Navbar = () => {
             <a href="#" className="flex items-center">
               <img 
                 src={logo}
-                className="w-40 rounded-full object-cover mr-2"
+                className="w-40  object-cover mr-2"
               />
             </a>
           </div>

@@ -20,9 +20,8 @@ const translations = {
     
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
-    "hero.title": "PRIVATE",
-    "hero.title.two": "FLIGHTS",
-    "hero.subtitle": "Vgoldenjets the new way to fly",
+    "hero.title": "PRIVATE FLIGHTS",
+    "hero.subtitle": "V Golden jets the new way to fly",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
     
@@ -151,9 +150,8 @@ const translations = {
     
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
-    "hero.title": "VUELOS",
-    "hero.title.two": "PRIVADOS",
-    "hero.subtitle": "Vgoldenjets, la nueva forma de volar",
+    "hero.title": "VUELOS PRIVADOS",
+    "hero.subtitle": "V Golden jets, la nueva forma de volar",
     "hero.contact": "Contáctenos",
     
     // Services

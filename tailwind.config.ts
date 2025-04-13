@@ -20,6 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'sans': ['Campton', 'sans-serif'],
 				'serif': ['Times New Roman', 'Georgia', 'serif'],
 			},
 			colors: {

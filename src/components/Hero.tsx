@@ -23,21 +23,15 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black" />
       </div>
 
-      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-start max-w-3xl animate-fade-in">
-          <p className="text-gold text-sm sm:text-base md:text-lg mb-2">{t("hero.location")}</p>
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5x1 font-bold tracking-tight font-serif">
-            {t("hero.title")}
-          </h1>
-          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5x1 font-bold tracking-tight font-serif px-24 lg:mb-6">
-            {t("hero.title.two")}
-          </h2>
-          <p className="text-whit text-sm sm:text-base md:text-lg mb-1">{t("hero.subtitle")}</p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 mt-[80px]">
+        <div className="flex flex-col items-start max-w-3xl animate-fade-in">  
+          <h1 className="text-whit sm:text-base md:text-2xl mt-1 font-sans">{t("hero.subtitle")}</h1>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-20">
             <a href="#contact" className="btn-primary flex items-center justify-center">
               {t("hero.contact")}
             </a>
           </div>
+          <p className="text-gold  mt-2">{t("hero.location")}</p>
         </div>
       </div>
     </section>
