@@ -1,11 +1,12 @@
 
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import emailjs from '@emailjs/browser';
+
 
 const ContactInfo = ({ 
   icon: Icon, 
@@ -30,6 +31,7 @@ const ContactInfo = ({
 };
 
 const Contact = () => {
+  const form = useRef()
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
@@ -56,7 +58,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would send this data to your backend
+    emailjs.sendForm("service_6967jpg", "template_2uvxpuf", form.current, "oetzTFmZ0qlPOBwy6")
+
     console.log("Form data:", formData);
     
     toast({
@@ -86,7 +89,7 @@ const Contact = () => {
           <div className="bg-black rounded-xl p-6 lg:p-8 shadow-lg">
             <h3 className="text-xl lg:text-2xl font-semibold text-white mb-6">{t("contact.form.title")}</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="text-white/80 mb-1 block">{t("contact.form.fullName")}</label>
                 <Input

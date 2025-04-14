@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <img 
-                className="w-40 object-left"
+                className="w-40 object-left mb-2"
                 src={logo}
               />
             <p className="text-white/60 mb-4">
