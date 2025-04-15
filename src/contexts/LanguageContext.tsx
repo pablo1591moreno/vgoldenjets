@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-
 type Language = "en" | "es";
 
 interface LanguageContextType {
@@ -17,14 +16,14 @@ const translations = {
     "nav.fleet": "Fleet",
     "nav.about": "About",
     "nav.contact": "Contact",
-    
+
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
     "hero.title": "PRIVATE FLIGHTS",
     "hero.subtitle": "V Golden jets the new way to fly",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
-    
+
     // Services
     "services.title": "Our Services",
     "services.subtitle": "Experience luxury travel tailored to your needs",
@@ -40,11 +39,11 @@ const translations = {
     "services.onDemand.description": "Book a flight whenever you want and wherever you are; your private flight is just a phone call, WhatsApp, or email away.",
     "services.global.title": "Global Access",
     "services.global.description": "Reach remote destinations and enjoy flexibility in arrival and departure locations.",
-    
+
     // Personalized Service
     "personalizedService.title": "Our Service",
     "personalizedService.description": "VGOLDEN JETS LLC is an aircraft charter broker with an emphasis on personalized service. With a dedicated charter expert at your fingertips, your aircraft preferences and passenger details will always be noted and remembered. You will always have your favorite beverage, snack, coffee, or any other extra you require waiting on board without having to discuss it every time you fly. VGOLDEN JETS LLC believes that your private jet company should cater to your specific needs, whether they be similar to other passengers or entirely unique to you. Every airplane model will be personalized with details executed to your satisfaction.",
-    
+
     // Why Choose Us
     "reasons.title": "Why Choose Vgoldenjets?",
     "reasons.subtitle": "Experience the difference with our premium service",
@@ -58,7 +57,7 @@ const translations = {
     "reasons.choice.description": "With access to 2500 aircraft and 90 different aircraft types, we will always source the right aircraft for your requirements.",
     "reasons.cost.title": "Cost Efficiency",
     "reasons.cost.description": "Our buying power and reputation allows us to find you the best private jet charter prices, ensuring you always receive the most cost-effective solution.",
-    
+
     // About
     "about.title": "About Us",
     "about.description1": "V Golden Jets provides premium private jet charter services, catering to discerning clients who value luxury, privacy, and efficiency in their travel experiences.",
@@ -68,9 +67,7 @@ const translations = {
     "about.hours": "Flight Hours",
     "about.destinations": "Global Destinations",
     "about.satisfaction": "Client Satisfaction",
-    "about.quote": "\"Our mission is to redefine luxury air travel by providing unmatched service and attention to detail.\"",
-    "about.ceo": "CEO & Founder",
-    
+
     // Fleet
     "fleet.title": "Our Fleet",
     "fleet.subtitle": "Explore our collection of luxury private jets",
@@ -86,11 +83,11 @@ const translations = {
     "fleet.features": "Features",
     "fleet.availableJets": "Private Jets Available",
     "fleet.jetModels": "Global 6000, Gulfstream G650, Embraer Legacy 650, Falcon 7X, Gulfstream GIV, Hawker 800XP, Lear 60, Citation, Challenger 350, Embraer Legacy 500, Citation CJ3, Hawker 400XP, Phenom 300",
-    
+
     // Popular Destinations
     "destinations.title": "Popular Destinations",
     "destinations.routes": "Miami to New York, Miami to Los Angeles, Los Angeles to New York, New York to Los Angeles, New York to Las Vegas, Miami to Las Vegas, Miami to Aspen, Los Angeles to Aspen, New York to Aspen, Teterboro to Napa Valley, Miami to London, Los Angeles to Miami",
-    
+
     // Contact
     "contact.title": "Contact Us",
     "contact.subtitle": "Reach out for personalized flight solutions",
@@ -101,6 +98,14 @@ const translations = {
     "contact.form.origin.placeholder": "Enter country or state of origin",
     "contact.form.destination": "Destination (Country/State)",
     "contact.form.destination.placeholder": "Enter country or state of destination",
+    "contact.form.tripType": "Trip Type",
+    "contact.form.tripType.placeholder": "Select a trip type",
+    "contact.form.tripType.oneWay": "One Way",
+    "contact.form.tripType.roundTrip": "Round Trip",
+    "contact.form.departureDate": "Departure Date",
+    "contact.form.departureDate.placeholder": "Select departure date",
+    "contact.form.returnDate": "Return Date",
+    "contact.form.returnDate.placeholder": "Select return date",
     "contact.form.passengers": "Number of Passengers",
     "contact.form.passengers.placeholder": "Number of passengers",
     "contact.form.email": "Email Address",
@@ -111,16 +116,19 @@ const translations = {
     "contact.form.message.placeholder": "Tell us about your travel needs...",
     "contact.form.submit": "Send Message",
     "contact.info.title": "Contact Information",
-    "contact.info.description": "Have questions or ready to book your next flight? Contact our team of aviation experts for immediate assistance with your travel needs.",
+    "contact.info.description": "Have questions or ready to book your next flight? Contact our team of aviation experts for immediate assistance.",
     "contact.info.address.title": "Office Address",
     "contact.info.address.content": "123 Aviation Blvd, Suite 500, New York, NY 10001",
     "contact.info.phone.title": "Phone Number",
     "contact.info.email.title": "Email Address",
     "contact.info.hours.title": "Business Hours",
-    "contact.info.hours.content": "24/7 Availability for Charter Inquiries",
+    "contact.info.hours.content": "Available 24/7 for charter inquiries",
     "contact.hotline.title": "Private Charter Hotline",
     "contact.hotline.hours": "Available 24/7 for urgent bookings",
-    
+    "contact.toast.title": "Message Sent",
+  "contact.toast.description": "Thank you for your inquiry. We'll get back to you shortly.",
+
+
     // Footer
     "footer.quickLinks": "Quick Links",
     "footer.services": "Services",
@@ -147,13 +155,13 @@ const translations = {
     "nav.fleet": "Flota",
     "nav.about": "Nosotros",
     "nav.contact": "Contacto",
-    
+
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
     "hero.title": "VUELOS PRIVADOS",
     "hero.subtitle": "V Golden jets, la nueva forma de volar",
     "hero.contact": "Contáctenos",
-    
+
     // Services
     "services.title": "Nuestros Servicios",
     "services.subtitle": "Experimente viajes de lujo adaptados a sus necesidades",
@@ -169,11 +177,11 @@ const translations = {
     "services.onDemand.description": "Reserve un vuelo cuando quiera y donde esté; su vuelo privado está a solo una llamada telefónica, WhatsApp o correo electrónico de distancia.",
     "services.global.title": "Acceso Global",
     "services.global.description": "Llegue a destinos remotos y disfrute de flexibilidad en los lugares de llegada y salida.",
-    
+
     // Personalized Service
     "personalizedService.title": "Servicio Personalizado",
     "personalizedService.description": "VGOLDEN JETS LLC es un agente de charter de aeronaves con énfasis en el servicio personalizado. Con un experto en charter dedicado a su disposición, sus preferencias de aeronave y detalles de pasajeros siempre serán anotados y recordados. Siempre tendrá su bebida favorita, aperitivo, café o cualquier otro extra que requiera esperándole a bordo sin tener que discutirlo cada vez que vuele. VGOLDEN JETS LLC cree que su compañía de jet privado debe atender sus necesidades específicas, ya sean similares a las de otros pasajeros o completamente únicas para usted. Cada modelo de avión será personalizado con detalles ejecutados a su satisfacción.",
-    
+
     // Why Choose Us
     "reasons.title": "¿Por qué elegirnos?",
     "reasons.subtitle": "Experimente la diferencia con nuestro servicio premium",
@@ -187,7 +195,7 @@ const translations = {
     "reasons.choice.description": "Con acceso a 2500 aeronaves y 90 tipos diferentes de aeronaves, siempre encontraremos la aeronave adecuada para sus requisitos.",
     "reasons.cost.title": "Eficiencia de Costos",
     "reasons.cost.description": "Nuestro poder de compra y reputación nos permite encontrarle los mejores precios de charter de jet privado, asegurando que siempre reciba la solución más rentable.",
-    
+
     // About
     "about.title": "Sobre Nosotros",
     "about.description1": "V Golden Jets proporciona servicios premium de charter de jets privados, atendiendo a clientes exigentes que valoran el lujo, la privacidad y la eficiencia en sus experiencias de viaje.",
@@ -197,9 +205,7 @@ const translations = {
     "about.hours": "Horas de Vuelo",
     "about.destinations": "Destinos Globales",
     "about.satisfaction": "Satisfacción del Cliente",
-    "about.quote": "\"Nuestra misión es redefinir los viajes aéreos de lujo proporcionando un servicio y atención al detalle incomparables.\"",
-    "about.ceo": "CEO y Fundador",
-    
+
     // Fleet
     "fleet.title": "Nuestra Flota",
     "fleet.subtitle": "Explore nuestra colección de jets privados de lujo",
@@ -215,12 +221,12 @@ const translations = {
     "fleet.features": "Características",
     "fleet.availableJets": "Jets Privados Disponibles",
     "fleet.jetModels": "Global 6000, Gulfstream G650, Embraer Legacy 650, Falcon 7X, Gulfstream GIV, Hawker 800XP, Lear 60, Citation, Challenger 350, Embraer Legacy 500, Citation CJ3, Hawker 400XP, Phenom 300",
-    
+
     // Popular Destinations
     "destinations.title": "Destinos Populares",
     "destinations.routes": "Miami a Nueva York, Miami a Los Ángeles, Los Ángeles a Nueva York, Nueva York a Los Ángeles, Nueva York a Las Vegas, Miami a Las Vegas, Miami a Aspen, Los Ángeles a Aspen, Nueva York a Aspen, Teterboro a Valle de Napa, Miami a Londres, Los Ángeles a Miami",
-    
-    // Contact
+
+    // Contacto
     "contact.title": "Contáctenos",
     "contact.subtitle": "Comuníquese para soluciones de vuelo personalizadas",
     "contact.form.title": "Envíenos un Mensaje",
@@ -230,6 +236,14 @@ const translations = {
     "contact.form.origin.placeholder": "Ingrese país o estado de origen",
     "contact.form.destination": "Destino (País/Estado)",
     "contact.form.destination.placeholder": "Ingrese país o estado de destino",
+    "contact.form.tripType": "Tipo de Viaje",
+    "contact.form.tripType.placeholder": "Seleccione un tipo de viaje",
+    "contact.form.tripType.oneWay": "Solo Ida",
+    "contact.form.tripType.roundTrip": "Ida y Vuelta",
+    "contact.form.departureDate": "Fecha de Ida",
+    "contact.form.departureDate.placeholder": "Seleccione fecha de ida",
+    "contact.form.returnDate": "Fecha de Vuelta",
+    "contact.form.returnDate.placeholder": "Seleccione fecha de vuelta",
     "contact.form.passengers": "Cantidad de Pasajeros",
     "contact.form.passengers.placeholder": "Número de pasajeros",
     "contact.form.email": "Correo Electrónico",
@@ -240,16 +254,19 @@ const translations = {
     "contact.form.message.placeholder": "Cuéntenos sobre sus necesidades de viaje...",
     "contact.form.submit": "Enviar Mensaje",
     "contact.info.title": "Información de Contacto",
-    "contact.info.description": "¿Tiene preguntas o está listo para reservar su próximo vuelo? Contacte a nuestro equipo de expertos en aviación para asistencia inmediata con sus necesidades de viaje.",
+    "contact.info.description": "¿Tiene preguntas o desea reservar su próximo vuelo? Contacte a nuestro equipo de expertos en aviación para recibir asistencia inmediata.",
     "contact.info.address.title": "Dirección de Oficina",
     "contact.info.address.content": "123 Aviation Blvd, Suite 500, Nueva York, NY 10001",
     "contact.info.phone.title": "Número de Teléfono",
     "contact.info.email.title": "Correo Electrónico",
     "contact.info.hours.title": "Horario de Atención",
-    "contact.info.hours.content": "Disponibilidad 24/7 para consultas de charter",
+    "contact.info.hours.content": "Disponibilidad 24/7 para consultas de vuelos charter",
     "contact.hotline.title": "Línea Directa de Charter Privado",
     "contact.hotline.hours": "Disponible 24/7 para reservas urgentes",
-    
+    "contact.toast.title": "Mensaje enviado",
+  "contact.toast.description": "Gracias por tu consulta. Te responderemos pronto.",
+
+
     // Footer
     "footer.quickLinks": "Enlaces Rápidos",
     "footer.services": "Servicios",
