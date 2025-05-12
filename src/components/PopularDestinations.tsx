@@ -2,11 +2,11 @@
 import React from "react";
 import { Plane } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import img3 from "@/img/img 3.png";
+import img3 from "@/img/img 3.webp";
 
 const DestinationCard = ({ route }: { route: string }) => {
   return (
-    <div className="bg-black/80 p-3 sm:p-4 rounded-lg hover:bg-black/60 transition-colors flex items-center space-x-3">
+    <div className="bg-black/80 p-3 sm:p-4  hover:bg-black/60 transition-colors flex items-center space-x-3">
       <Plane size={18} className="text-gold" />
       <span className="text-white text-sm sm:text-base">{route}</span>
     </div>

@@ -47,9 +47,9 @@ const Navbar = () => {
             <a href="#fleet" className="text-white hover:text-gold transition-colors">{t("nav.fleet")}</a>
             <a href="#about" className="text-white hover:text-gold transition-colors">{t("nav.about")}</a>
             <a href="#contact" className="text-white hover:text-gold transition-colors">{t("nav.contact")}</a>
-            <a href="tel:+12345678900" className="flex items-center text-gold hover:text-gold-light">
+            <a href="https://wa.me/+17863005652" className="flex items-center text-gold hover:text-gold-light">
               <Phone size={18} className="mr-2" />
-              +1 234 567 8900
+              + 1 7863005652
             </a>
             <Button 
               variant="ghost" 
@@ -91,9 +91,9 @@ const Navbar = () => {
           <a href="#fleet" onClick={closeMenu} className="block py-2 text-white hover:text-gold">{t("nav.fleet")}</a>
           <a href="#about" onClick={closeMenu} className="block py-2 text-white hover:text-gold">{t("nav.about")}</a>
           <a href="#contact" onClick={closeMenu} className="block py-2 text-white hover:text-gold">{t("nav.contact")}</a>
-          <a href="tel:+12345678900" className="flex items-center py-2 text-gold">
+          <a href="https://wa.me/+17863005652" className="flex items-center py-2 text-gold">
             <Phone size={18} className="mr-2" />
-            +1 234 567 8900
+            + 1 7863005652
           </a>
         </div>
       </div>

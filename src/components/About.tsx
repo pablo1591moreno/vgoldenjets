@@ -1,14 +1,17 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import img from "@/img/about.png";
+import img from "@/img/argus.png";
+import imgBackgound from "@/img/jetAbout.webp"
 
 const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="bg-black py-16 sm:py-24">
-      <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="bg-black py-10 sm:py-16 lg:py-20"> {/* Añadimos padding vertical */}
+      <div className="section-container bg-cover bg-center opacity-80" style={{
+          backgroundImage:`url(${imgBackgound})`
+        }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-black p-10 bg-black/70" >
           <div>
             <h2 className="section-title font-serif">{t("about.title")}</h2>
             <p className="text-white/80 mb-6">
@@ -41,12 +44,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:pl-10">
-            <div className="relative rounded-xl overflow-hidden h-[500px]">
+          <div className="lg:pl-10 flex justify-center items-start"> {/* Cambiamos items-center a items-start */}
+            <div className="relative overflow-hidden h-auto w-1/2"> {/* Removemos altura fija */}
               <img
                 src={img}
                 alt="Luxury private jet interior"
-                className="w-full h-full object-cover"
+                className="object-contain w-full h-full"
               />
             </div>
           </div>

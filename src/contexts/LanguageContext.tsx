@@ -20,7 +20,7 @@ const translations = {
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
     "hero.title": "PRIVATE FLIGHTS",
-    "hero.subtitle": "V Golden jets the new way to fly",
+    "hero.subtitle": "VGoldenjets the new way to fly",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
 
@@ -60,7 +60,7 @@ const translations = {
 
     // About
     "about.title": "About Us",
-    "about.description1": "V Golden Jets provides premium private jet charter services, catering to discerning clients who value luxury, privacy, and efficiency in their travel experiences.",
+    "about.description1": "VGoldenjets provides premium private jet charter services, catering to discerning clients who value luxury, privacy, and efficiency in their travel experiences.",
     "about.description2": "Founded with a passion for aviation excellence, our team brings decades of industry experience to every flight. We maintain the highest standards of safety, service, and discretion.",
     "about.description3": "Our commitment to personalized service means we handle every detail of your journey, from ground transportation to in-flight dining preferences and special accommodations.",
     "about.years": "Years Experience",
@@ -118,8 +118,9 @@ const translations = {
     "contact.info.title": "Contact Information",
     "contact.info.description": "Have questions or ready to book your next flight? Contact our team of aviation experts for immediate assistance.",
     "contact.info.address.title": "Office Address",
-    "contact.info.address.content": "123 Aviation Blvd, Suite 500, New York, NY 10001",
-    "contact.info.phone.title": "Phone Number",
+    "contact.info.address.content": "USA Fort Lauderdale Executive Airport ( fxe ) ARG San fernando international Airport ( SADF )",
+    "contact.info.phone.title": "Phone EEUU",
+    "contact.info.phone.title2": "Phone Argentina",
     "contact.info.email.title": "Email Address",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.content": "Available 24/7 for charter inquiries",
@@ -159,7 +160,7 @@ const translations = {
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
     "hero.title": "VUELOS PRIVADOS",
-    "hero.subtitle": "V Golden jets, la nueva forma de volar",
+    "hero.subtitle": "VGoldenjets, la nueva forma de volar",
     "hero.contact": "Contáctenos",
 
     // Services
@@ -198,7 +199,7 @@ const translations = {
 
     // About
     "about.title": "Sobre Nosotros",
-    "about.description1": "V Golden Jets proporciona servicios premium de charter de jets privados, atendiendo a clientes exigentes que valoran el lujo, la privacidad y la eficiencia en sus experiencias de viaje.",
+    "about.description1": "VGoldenjets proporciona servicios premium de charter de jets privados, atendiendo a clientes exigentes que valoran el lujo, la privacidad y la eficiencia en sus experiencias de viaje.",
     "about.description2": "Fundada con pasión por la excelencia en aviación, nuestro equipo aporta décadas de experiencia en la industria a cada vuelo. Mantenemos los más altos estándares de seguridad, servicio y discreción.",
     "about.description3": "Nuestro compromiso con el servicio personalizado significa que nos encargamos de cada detalle de su viaje, desde el transporte terrestre hasta las preferencias gastronómicas a bordo y alojamientos especiales.",
     "about.years": "Años de Experiencia",
@@ -256,8 +257,9 @@ const translations = {
     "contact.info.title": "Información de Contacto",
     "contact.info.description": "¿Tiene preguntas o desea reservar su próximo vuelo? Contacte a nuestro equipo de expertos en aviación para recibir asistencia inmediata.",
     "contact.info.address.title": "Dirección de Oficina",
-    "contact.info.address.content": "123 Aviation Blvd, Suite 500, Nueva York, NY 10001",
-    "contact.info.phone.title": "Número de Teléfono",
+    "contact.info.address.content": "USA Fort Lauderdale Executive Airport ( fxe ) / ARG San fernando international Airport ( SADF )",
+    "contact.info.phone.title": "Teléfono EEUU",
+    "contact.info.phone.title2": "Teléfono Argentina",
     "contact.info.email.title": "Correo Electrónico",
     "contact.info.hours.title": "Horario de Atención",
     "contact.info.hours.content": "Disponibilidad 24/7 para consultas de vuelos charter",

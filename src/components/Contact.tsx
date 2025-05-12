@@ -6,18 +6,18 @@ import { toast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import emailjs from '@emailjs/browser';
 
-const ContactInfo = ({ 
-  icon: Icon, 
-  title, 
-  content 
-}: { 
-  icon: React.ElementType; 
-  title: string; 
+const ContactInfo = ({
+  icon: Icon,
+  title,
+  content
+}: {
+  icon: React.ElementType;
+  title: string;
   content: string | React.ReactNode;
 }) => {
   return (
     <div className="flex space-x-4">
-      <div className="bg-gold/20 p-3 rounded-full h-fit">
+      <div className="bg-gold/20 p-3 h-fit">
         <Icon className="h-6 w-6 text-gold" />
       </div>
       <div>
@@ -57,7 +57,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    emailjs.sendForm("service_6967jpg", "template_2uvxpuf", form.current, "oetzTFmZ0qlPOBwy6");
+    emailjs.sendForm("service_i8rzt5e", "template_hp4utjd", form.current, "Hlap8_HHq2vJfOs3N");
 
     console.log("Form data:", formData);
 
@@ -86,7 +86,7 @@ const Contact = () => {
         <p className="section-subtitle">{t("contact.subtitle")}</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
-          <div className="bg-black rounded-xl p-6 lg:p-8 shadow-lg">
+          <div className="bg-black p-6 lg:p-8 shadow-lg">
             <h3 className="text-xl lg:text-2xl font-semibold text-white mb-6">{t("contact.form.title")}</h3>
 
             <form ref={form} onSubmit={handleSubmit} className="space-y-4">
@@ -117,21 +117,21 @@ const Contact = () => {
 
               <div>
                 <label className="text-white/80 mb-1 block">{t("contact.form.tripType")}</label>
-                <select name="tripType" value={formData.tripType} onChange={handleChange} className="bg-secondary border-gray-700 focus:border-gold/70 text-white w-full p-2 rounded">
+                <select name="tripType" value={formData.tripType} onChange={handleChange} required className="bg-secondary border-gray-700 focus:border-gold/70 text-white w-full p-2 ">
                   <option value="oneway">{t("contact.form.tripType.oneWay")}</option>
                   <option value="roundtrip">{t("contact.form.tripType.roundTrip")}</option>
                 </select>
               </div>
               <div>
                 <label className="text-white/80 mb-1 block">{t("contact.form.departureDate")}</label>
-                <Input type="date" name="departureDate" value={formData.departureDate} onChange={handleChange} className="bg-secondary border-gray-700 focus:border-gold/70 text-white" />
+                <Input type="date" name="departureDate" value={formData.departureDate} onChange={handleChange} required className="bg-secondary border-gray-700 focus:border-gold/70 text-white" />
               </div>
               <div>
                 <label className="text-white/80 mb-1 block">{t("contact.form.returnDate")}</label>
                 <Input type="date" name="returnDate" value={formData.returnDate} onChange={handleChange} disabled={formData.tripType === "oneway"} className="bg-secondary border-gray-700 focus:border-gold/70 text-white disabled:opacity-50" />
               </div>
 
-              <Button type="submit" className="w-full bg-gold hover:bg-gold-dark text-black">
+              <Button type="submit" className="w-full bg-gold hover:bg-gold-dark text-black rounded-full">
                 {t("contact.form.submit")}
               </Button>
             </form>
@@ -143,16 +143,10 @@ const Contact = () => {
               <p className="text-white/70 mb-8">{t("contact.info.description")}</p>
               <div className="space-y-6">
                 <ContactInfo icon={MapPin} title={t("contact.info.address.title")} content={t("contact.info.address.content")} />
-                <ContactInfo icon={Phone} title={t("contact.info.phone.title")} content={<a href="tel:+12345678900" className="text-white/70 hover:text-gold">+1 234 567 8900</a>} />
+                <ContactInfo icon={Phone} title={t("contact.info.phone.title")} content={<a href="https://wa.me/+17863005652" className="text-white/70 hover:text-gold">+1 786 300 5652</a>} />
+                <ContactInfo icon={Phone} title={t("contact.info.phone.title2")} content={<a href="https://wa.me/+1168668170" className="text-white/70 hover:text-gold">+11 6866 8170</a>} />
                 <ContactInfo icon={Mail} title={t("contact.info.email.title")} content={<a href="mailto:info@vgoldenjets.com" className="text-white/70 hover:text-gold">info@vgoldenjets.com</a>} />
                 <ContactInfo icon={Clock} title={t("contact.info.hours.title")} content={t("contact.info.hours.content")} />
-              </div>
-            </div>
-            <div className="mt-10 lg:mt-0">
-              <div className="p-5 bg-black/50 border border-gold/20 rounded-lg">
-                <h4 className="text-gold font-semibold mb-2">{t("contact.hotline.title")}</h4>
-                <p className="text-white text-xl font-bold">+1 800 JET 5555</p>
-                <p className="text-white/60 text-sm mt-1">{t("contact.hotline.hours")}</p>
               </div>
             </div>
           </div>

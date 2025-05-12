@@ -29,13 +29,7 @@ const Footer = () => {
               {t("footer.companyInfo")}
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-white hover:text-gold transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-gold transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-gold transition-colors">
+              <a href="https://www.instagram.com/vgoldenjets?igsh=aHMxcmltaGwzNm8=" className="text-white hover:text-gold transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-white hover:text-gold transition-colors">
@@ -73,10 +67,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gold">{t("footer.contactUs")}</h3>
             <address className="not-italic text-white/70">
-              <p>123 Aviation Blvd, Suite 500</p>
-              <p>New York, NY 10001</p>
+              <p>USA Fort Lauderdale Executive Airport ( fxe )<br/>ARG San fernando international Airport ( SADF )</p>
               <p className="mt-2">
-                <a href="tel:+12345678900" className="hover:text-gold transition-colors">+1 234 567 8900</a>
+                <a href="https://wa.me/+17863005652" className="hover:text-gold transition-colors">+1 786 300 5652</a>
+              </p>
+                <p className="mt-2">
+                <a href="https://wa.me/+1168668170" className="hover:text-gold transition-colors">+11 6866 8170</a>
               </p>
               <p>
                 <a href="mailto:info@vgoldenjets.com" className="hover:text-gold transition-colors">info@vgoldenjets.com</a>

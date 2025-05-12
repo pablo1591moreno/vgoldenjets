@@ -19,8 +19,8 @@ const Index = () => {
       <PersonalizedService />
       <Gallery />
       <PopularDestinations />
-      <About />
       <Contact />
+      <About />
       <Footer />
     </div>
   );

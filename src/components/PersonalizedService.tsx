@@ -2,7 +2,7 @@
 import React from "react";
 import { Star, Shield, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import img2 from "@/img/img 2.png";
+import img2 from "@/img/img 2.webp";
 
 
 const ReasonCard = ({ 
@@ -17,7 +17,7 @@ const ReasonCard = ({
   const { t } = useLanguage();
   
   return (
-    <div className="p-5 sm:p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all bg-black/40">
+    <div className="p-5 sm:p-6 border border-gold/20 hover:border-gold/50 transition-all bg-black/40">
       <div className="mb-3">
         <Icon className="text-gold h-5 w-5 sm:h-6 sm:w-6" />
       </div>
@@ -66,7 +66,7 @@ const PersonalizedService = () => {
         <div className="section-container relative z-10">
           <h2 className="section-title font-serif">{t("personalizedService.title")}</h2>
           <div className="mt-8 max-w-4xl mx-auto">
-            <div className="p-6 sm:p-8 bg-black/85 rounded-xl">
+            <div className="p-6 sm:p-8 bg-black/85">
               <p className="text-white/90 text-base sm:text-lg leading-relaxed">
                 {t("personalizedService.description")}
               </p>
