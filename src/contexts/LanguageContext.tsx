@@ -20,7 +20,7 @@ const translations = {
     // Hero
     "hero.location": "Based in Buenos Aires and Miami",
     "hero.title": "PRIVATE FLIGHTS",
-    "hero.subtitle": "VGoldenjets the new way to fly",
+    "hero.subtitle": "VGoldenjets, Your Time, Our Priority",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
 
@@ -160,7 +160,7 @@ const translations = {
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
     "hero.title": "VUELOS PRIVADOS",
-    "hero.subtitle": "VGoldenjets, la nueva forma de volar",
+    "hero.subtitle": "VGoldenjets, Tu Tiempo, Nuestra Prioridadr",
     "hero.contact": "Contáctenos",
 
     // Services
