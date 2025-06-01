@@ -42,7 +42,7 @@ const translations = {
 
     // Personalized Service
     "personalizedService.title": "Our Service",
-    "personalizedService.description": "VGOLDEN JETS LLC is an aircraft charter broker with an emphasis on personalized service. With a dedicated charter expert at your fingertips, your aircraft preferences and passenger details will always be noted and remembered. You will always have your favorite beverage, snack, coffee, or any other extra you require waiting on board without having to discuss it every time you fly. VGOLDEN JETS LLC believes that your private jet company should cater to your specific needs, whether they be similar to other passengers or entirely unique to you. Every airplane model will be personalized with details executed to your satisfaction.",
+    "personalizedService.description": "At VGOLDEN JETS LLC, we understand that your time is your most valuable asset. As your aircraft charter agent, our obsession is to maximize every minute of your journey, whether for business or leisure. With a dedicated expert at your disposal, your time becomes our priority from the first contact. We record and remember your preferences so you'll find your favorite drink, snack, or perfect coffee waiting for you on board, without having to ask. We free up your time from every small detail, so you can focus on what truly matters. We believe your private jet experience should align flawlessly with your unique needs and schedule. We personalize every detail and precisely adapt each aircraft, because your time is priceless, and our priority is for you to make the most of it.",
 
     // Why Choose Us
     "reasons.title": "Why Choose Vgoldenjets?",
@@ -160,7 +160,7 @@ const translations = {
     // Hero
     "hero.location": "Basados en Buenos Aires y Miami",
     "hero.title": "VUELOS PRIVADOS",
-    "hero.subtitle": "VGoldenjets, Tu Tiempo, Nuestra Prioridadr",
+    "hero.subtitle": "VGoldenjets, Tu Tiempo, Nuestra Prioridad",
     "hero.contact": "Contáctenos",
 
     // Services
@@ -181,7 +181,7 @@ const translations = {
 
     // Personalized Service
     "personalizedService.title": "Servicio Personalizado",
-    "personalizedService.description": "VGOLDEN JETS LLC es un agente de charter de aeronaves con énfasis en el servicio personalizado. Con un experto en charter dedicado a su disposición, sus preferencias de aeronave y detalles de pasajeros siempre serán anotados y recordados. Siempre tendrá su bebida favorita, aperitivo, café o cualquier otro extra que requiera esperándole a bordo sin tener que discutirlo cada vez que vuele. VGOLDEN JETS LLC cree que su compañía de jet privado debe atender sus necesidades específicas, ya sean similares a las de otros pasajeros o completamente únicas para usted. Cada modelo de avión será personalizado con detalles ejecutados a su satisfacción.",
+    "personalizedService.description": "En VGOLDEN JETS LLC, comprendemos que tu tiempo es tu activo más valioso. Como tu agente de chárter de aeronaves, nuestra obsesión es maximizar cada minuto de tu viaje, ya sea por negocios o placer. Con un experto dedicado a tu disposición, tu tiempo se convierte en nuestra prioridad desde el primer contacto. Registramos y recordamos tus preferencias para que encuentres a bordo tu bebida favorita, aperitivo o café perfecto, sin tener que pedirlo. Liberamos tu tiempo de cada pequeña gestión, para que te concentres en lo que realmente importa. Creemos que tu experiencia en jet privado debe alinearse impecablemente con tus necesidades y horarios únicos. Personalizamos cada detalle y adaptamos cada avión con precisión, porque tu tiempo no tiene precio y nuestra prioridad es que lo aproveches al máximo.",
 
     // Why Choose Us
     "reasons.title": "¿Por qué elegirnos?",

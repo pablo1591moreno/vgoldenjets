@@ -60,18 +60,18 @@ const Contact = () => {
     if (form.current) {
       emailjs.sendForm("service_i8rzt5e", "template_hp4utjd", form.current, "Hlap8_HHq2vJfOs3N")
         .then((result) => {
-            console.log(result.text);
-            toast({
-              title: t("contact.toast.title"),
-              description: t("contact.toast.description"),
-            });
+          console.log(result.text);
+          toast({
+            title: t("contact.toast.title"),
+            description: t("contact.toast.description"),
+          });
         }, (error) => {
-            console.log(error.text);
-            toast({
-              title: t("contact.toast.errorTitle") || "Error", // Assumed t("contact.toast.errorTitle")
-              description: t("contact.toast.errorDescription") || "Something went wrong.",
-              variant: "destructive",
-            });
+          console.log(error.text);
+          toast({
+            title: t("contact.toast.errorTitle") || "Error", // Assumed t("contact.toast.errorTitle")
+            description: t("contact.toast.errorDescription") || "Something went wrong.",
+            variant: "destructive",
+          });
         });
     }
 
@@ -156,30 +156,6 @@ const Contact = () => {
                 </Button>
               </div>
             </form>
-
-            {/* Contact Information - Below the form and button */}
-            <div className="mt-12 pt-10 border-t border-gray-700/50">
-              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-8">{t("contact.info.title")}</h3>
-              <p className="text-white/70 mb-10">{t("contact.info.description")}</p>
-              
-              {/* Grid container for ContactInfo columns */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-                
-                {/* Left Column for ContactInfo (3 items) */}
-                <div className="flex flex-col space-y-8">
-                  <ContactInfo icon={MapPin} title={t("contact.info.address.title")} content={t("contact.info.address.content")} />
-                  <ContactInfo icon={Phone} title={t("contact.info.phone.title")} content={<a href="https://wa.me/+17863005652" className="text-white/70 hover:text-gold transition-colors duration-300">+1 786 300 5652</a>} />
-                  <ContactInfo icon={Phone} title={t("contact.info.phone.title2")} content={<a href="https://wa.me/+1168668170" className="text-white/70 hover:text-gold transition-colors duration-300">+11 6866 8170</a>} />
-                </div>
-
-                {/* Right Column for ContactInfo (2 items) */}
-                <div className="flex flex-col space-y-8">
-                  <ContactInfo icon={Mail} title={t("contact.info.email.title")} content={<a href="mailto:info@vgoldenjets.com" className="text-white/70 hover:text-gold transition-colors duration-300">info@vgoldenjets.com</a>} />
-                  <ContactInfo icon={Clock} title={t("contact.info.hours.title")} content={t("contact.info.hours.content")} />
-                </div>
-
-              </div>
-            </div>
           </div>
         </div>
       </div>
