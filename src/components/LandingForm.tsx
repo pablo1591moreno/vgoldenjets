@@ -82,8 +82,13 @@ const LandingPage = () => {
 
       {/* Fixed navbar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/80 flex items-center justify-between px-6 py-3 shadow-md">
-        <img src={logo} alt="Logo" className="w-36 object-cover" />
-        <Button
+        <a
+          href="https://www.vgoldenjets.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={logo} alt="Logo" className="w-36 object-cover" />
+        </a>        <Button
           variant="ghost"
           size="sm"
           onClick={toggleLanguage}

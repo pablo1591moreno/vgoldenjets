@@ -3,14 +3,17 @@ import { Instagram, Linkedin, MapPin, Phone, Mail, Clock, ArrowUp } from "lucide
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/img/logo vgolden jet-01.png";
 
-const ContactInfo = ({ icon: Icon, title, content }) => (
-  <div className="flex space-x-4 max-w-md">
+// Agrego la prop 'centerVertically' para los casos que necesites centrar
+const ContactInfo = ({ icon: Icon, title, content, centerVertically = false }) => (
+  <div
+    className={`flex max-w-md space-x-4 ${centerVertically ? "items-center" : ""}`}
+  >
     <div className="bg-gold/20 p-3 h-fit rounded">
       <Icon className="h-6 w-6 text-gold" />
     </div>
     <div>
       <h3 className="text-white font-semibold mb-1 text-left">{title}</h3>
-      <p className="text-white/70 text-left">{content}</p>
+      {content && <p className="text-white/70 text-left">{content}</p>}
     </div>
   </div>
 );
@@ -30,7 +33,7 @@ const Footer = () => {
           <h3 className="text-xl lg:text-2xl font-semibold text-white mb-8 text-center">{t("footer.contactUs")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
             <div className="flex flex-col space-y-8 items-start">
-                            <ContactInfo
+              <ContactInfo
                 icon={Phone}
                 title={t("contact.info.phone.title")}
                 content={
@@ -54,7 +57,8 @@ const Footer = () => {
                   </a>
                 }
               />
-              <ContactInfo icon={MapPin} title="USA Fort Lauderdale Executive Airport (FXE) / ARG San Fernando Intl. (SADF)" content="" />
+              {/* CENTRAR SOLO ESTA LINEA */}
+              <ContactInfo icon={MapPin} title={t("contact.info.address.content")} centerVertically />
             </div>
             <div className="flex flex-col space-y-8 items-start">
               <ContactInfo

@@ -14,14 +14,14 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-  
+
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "es" : "en");
   };
@@ -32,11 +32,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
-              <img 
-                src={logo}
-                className="w-40  object-cover mr-2"
-              />
+            <a
+              href="https://www.vgoldenjets.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={logo} alt="Logo" className="w-36 object-cover" />
             </a>
           </div>
 
@@ -51,9 +52,9 @@ const Navbar = () => {
               <Phone size={18} className="mr-2" />
               + 1 7863005652
             </a>
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={toggleLanguage}
               className="text-white hover:text-gold hover:bg-black/30"
             >
@@ -64,16 +65,16 @@ const Navbar = () => {
 
           {/* Mobile menu button and language selector */}
           <div className="md:hidden flex items-center gap-2">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={toggleLanguage}
               className="text-white hover:text-gold hover:bg-black/30"
             >
               <Globe size={20} />
               <span className="ml-1">{language === "en" ? "EN" : "ES"}</span>
             </Button>
-            <button 
+            <button
               onClick={toggleMenu}
               className="text-white focus:outline-none"
             >

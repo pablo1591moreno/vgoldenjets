@@ -8,6 +8,10 @@ import LearImg from "@/img/Lear60.webp";
 import BombardierImg from "@/img/BombardierGlobal.webp";
 import CessnaImg from "@/img/CessnaCitationCJ1.webp";
 import DassaultImg from "@/img/DassaultFalcon.webp";
+import lightJet from "@/img/Light Jets.png"
+import MidSizeJets from "@/img/Mid-Size Jets.png"
+import HeavyJets from "@/img/Heavy Jets.png"
+
 
 interface Aircraft {
     id: number;
@@ -66,21 +70,26 @@ const Gallery = () => {
                 <h2 className="section-title font-serif">{t("fleet.title")}</h2>
                 <p className="section-subtitle">{t("fleet.subtitle")}</p>
 
-                {/* Jet Categories */}
+{/* Jet Categories */}
+             {/*
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-12">
                     <div className="bg-black/40 p-5">
+                        <img src={lightJet} alt="Light Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
                         <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.lightJets.title")}</h3>
                         <p className="text-white/80">{t("fleet.lightJets.description")}</p>
                     </div>
                     <div className="bg-black/40 p-5">
+                        <img src={MidSizeJets} alt="Mid Size Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
                         <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.midSizeJets.title")}</h3>
                         <p className="text-white/80">{t("fleet.midSizeJets.description")}</p>
                     </div>
                     <div className="bg-black/40 p-5">
+                        <img src={HeavyJets} alt="Heavy Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
                         <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.heavyJets.title")}</h3>
                         <p className="text-white/80">{t("fleet.heavyJets.description")}</p>
                     </div>
-                </div>
+                </div> */}
+               
 
                 {/* Fleet Gallery */}
 
