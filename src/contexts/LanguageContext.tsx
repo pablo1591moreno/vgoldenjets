@@ -18,9 +18,9 @@ const translations = {
     "nav.contact": "Contact",
 
     // Hero
-    "hero.location": "Based in Miami",
     "hero.title": "PRIVATE FLIGHTS",
-    "hero.subtitle": "VGoldenjets, Your Time, Our Priority",
+    "hero.subtitle.line1": "VGoldenjets, Your Time,",
+    "hero.subtitle.line2": "Our Priority",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
 
@@ -127,7 +127,7 @@ const translations = {
     "contact.hotline.title": "Private Charter Hotline",
     "contact.hotline.hours": "Available 24/7 for urgent bookings",
     "contact.toast.title": "Message Sent",
-  "contact.toast.description": "Thank you for your inquiry. We'll get back to you shortly.",
+    "contact.toast.description": "Thank you for your inquiry. We'll get back to you shortly.",
 
 
     // Footer
@@ -158,9 +158,9 @@ const translations = {
     "nav.contact": "Contacto",
 
     // Hero
-    "hero.location": "Basados Miami",
     "hero.title": "VUELOS PRIVADOS",
-    "hero.subtitle": "VGoldenjets, Tu Tiempo, Nuestra Prioridad",
+    "hero.subtitle.line1": "VGoldenjets, Tu Tiempo,",
+    "hero.subtitle.line2": "Nuestra Prioridad",
     "hero.contact": "Contáctenos",
 
     // Services
@@ -266,7 +266,7 @@ const translations = {
     "contact.hotline.title": "Línea Directa de Charter Privado",
     "contact.hotline.hours": "Disponible 24/7 para reservas urgentes",
     "contact.toast.title": "Mensaje enviado",
-  "contact.toast.description": "Gracias por tu consulta. Te responderemos pronto.",
+    "contact.toast.description": "Gracias por tu consulta. Te responderemos pronto.",
 
 
     // Footer
