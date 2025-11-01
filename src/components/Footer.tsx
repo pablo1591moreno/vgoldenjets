@@ -89,7 +89,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/vgoldenjets?igsh=aHMxcmltaGwzNm8=" className="text-white hover:text-gold transition-colors">
               <Instagram size={24} />
             </a>
-            <a href="https://www.linkedin.com/company/vgoldenjets1" className="text-white hover:text-gold transition-colors">
+            <a href="https://www.linkedin.com/company/vgoldenjetsarg" className="text-white hover:text-gold transition-colors">
               <Linkedin size={24} />
             </a>
           </div>

@@ -6,9 +6,10 @@ import cuantoCuesta from "@/img/Articulos/CuántoCuesta.webp";
 import personas from "@/img/Articulos/8personas.webp";
 import bussines from "@/img/Articulos/bussines.webp";
 import ultimahora from "@/img/Articulos/ultimaHora.webp";
-import jetAeropuerto from "@/img/Articulos/jetAeropuerto.webp";
 import avionEjecutivo from "@/img/Articulos/avionEjecutivo.webp";
 import emptyLegsArgentina from "@/img/Articulos/emptyLegsArgentina.webp";
+import determinanPrecio from "@/img/Articulos/determinanPrecio.webp";
+import JetPtivadoGrupo from "@/img/Articulos/JetPtivadoGrupo.webp"
 
 import { fromTheme } from "tailwind-merge";
 
@@ -136,7 +137,9 @@ function projectArticle(lang: Language, a: JsonArticle): ArticleView {
    =========================== */
 
 const articlesJSON: JsonArticle[] = [
-     //----------------------------------------------------------------------ARTICULO  
+
+  //----------------------------------------------------------------------ARTICULO  
+
   {
     slug: "precio-charter-jet-privado",
     date: "2025-09-16",
@@ -164,7 +167,9 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "El tipo de avión, el número de pasajeros, la duración del vuelo, las tasas de aterrizaje y los servicios especiales (catering, transporte terrestre) determinan el costo final de tu charter. Nuestros asesores te orientarán para elegir la mejor opción en función de tu itinerario y presupuesto.", en: "The type of aircraft, number of passengers, flight duration, landing fees and special services (catering, ground transportation) determine the final cost of your charter. Our advisors will help you choose the best option based on your itinerary and budget." } },
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO 
+
   {
     slug: "alquilar-jet-privado-para-8-personas",
     date: "2025-09-15",
@@ -190,7 +195,9 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Desde escapadas a bodegas en Mendoza hasta semanas de esquí en Bariloche o viajes de golf en la Patagonia, nuestros vuelos charter para 8 personas te llevan directamente al destino sin escalas. También ofrecemos rutas corporativas a Córdoba, Rosario o Florianópolis para equipos de trabajo que necesitan eficiencia y comodidad.", en: "From wine tours in Mendoza to ski weeks in Bariloche or golf trips in Patagonia, our charter flights for eight passengers take you directly to your destination without stopovers. We also offer corporate routes to Córdoba, Rosario or Florianópolis for teams that need efficiency and comfort." } },
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO 
+
   {
     slug: "charter-jet-privado-para-negocios",
     date: "2025-09-13",
@@ -216,7 +223,9 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Si tus reuniones te llevan a Santiago, São Paulo, Montevideo o Córdoba, nuestros vuelos chárter desde Buenos Aires te permiten visitar varias ciudades en una misma jornada. Olvídate de las conexiones y aprovecha cada minuto para trabajar o descansar mientras vuelas.", en: "If your meetings take you to Santiago, São Paulo, Montevideo or Córdoba, our charter flights from Buenos Aires allow you to visit several cities in a single day. Forget about connections and make the most of every minute to work or relax while you fly." } },
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO 
+
   {
     slug: "vuelo-privado-de-ultima-hora",
     date: "2025-09-11",
@@ -242,7 +251,9 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Operamos desde los principales aeropuertos de Buenos Aires (Aeroparque, Ezeiza y San Fernando) y podemos activar un vuelo en cuestión de horas. Nuestro equipo está disponible 24/7 para coordinar tu itinerario y gestionar los permisos necesarios para tu despegue inmediato.", en: "We operate from Buenos Aires’ main airports (Aeroparque, Ezeiza and San Fernando) and can launch a flight within hours. Our team is available 24/7 to coordinate your itinerary and obtain the necessary permits for your immediate departure." } },
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO 
+
   {
     slug: "charter-negocios-latam-rutas",
     date: "2025-10-22",
@@ -268,7 +279,9 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Conectamos los principales centros de negocios del Cono Sur. Buenos Aires, Santiago y São Paulo forman el triángulo de negocios más influyente de la región. Nuestros vuelos chárter permiten reuniones cara a cara en un mismo día, evitando demoras y maximizando cada minuto de su agenda.", en: "We connect the main business hubs of the Southern Cone. Buenos Aires, Santiago and São Paulo form the most influential business triangle in the region. Our charter flights allow face-to-face meetings in a single day, avoiding delays and maximizing every minute of your schedule." } },
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO 
+
   {
     slug: "empty-legs-argentina-acceso-smart",
     date: "2025-10-12",
@@ -296,8 +309,138 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "El modelo Chárter (alquiler por viaje) es ideal para aquellos que vuelan menos de 50 horas al año. Es la opción más flexible, ya que el cliente alquila una aeronave para un viaje específico, sin necesidad de una compra o un compromiso a largo plazo. Al aprovechar los tramos vacíos, esta opción se considera la puerta de entrada más flexible al mundo de la aviación privada. Al centrar la comunicación en la eficiencia y la personalización, ofrecemos un valor intrínseco: el jet privado como la máxima expresión de control, lo que permite a los clientes dedicar más tiempo a las cosas que realmente importan.", en: "The Charter model (rental per trip) is ideal for those flying less than 50 hours a year. It is the most flexible option, as the client rents an aircraft for a specific trip, without the need for a purchase or long-term commitment. By taking advantage of empty legs, this option is considered the most flexible gateway to the world of private aviation. By focusing communication on efficiency and personalization, we offer intrinsic value: the private jet as the ultimate expression of control, allowing clients to dedicate more time to the things that truly matter." } },
     ],
   },
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "factores-precio-vuelo-privado-argentina",
+    date: "2025-11-01",
+    cover: determinanPrecio,
+    title: {
+      es: "Factores que determinan el precio de un vuelo privado en Argentina",
+      en: "Factors that determine the price of a private flight in Argentina",
+    },
+    subtitle: {
+      es: "Comprende cómo se calculan las tarifas y planifica tu presupuesto con inteligencia.",
+      en: "Understand how fares are calculated and plan your budget wisely.",
+    },
+    excerpt: {
+      es: "El costo de alquilar un jet depende de la aeronave, la distancia, el número de pasajeros y los servicios solicitados. Te explicamos las variables y te damos ejemplos de tarifas en rutas populares.",
+      en: "The cost of renting a jet depends on the aircraft, distance, number of passengers and requested services. We explain the variables and give you examples of fares on popular routes.",
+    },
+    content: [
+      {
+        type: "p", text: {
+          es: `Muchas personas se preguntan cuánto cuesta un vuelo privado. La respuesta no es única: el precio final está influenciado por varios factores, desde el modelo de avión hasta la duración del viaje y los servicios a bordo.`,
+          en: `Many people wonder how much a private flight costs. The answer is not unique: the final price is influenced by several factors, from the aircraft model to the duration of the trip and onboard services.`
+        }
+      },
+      { type: "img", src: determinanPrecio },
+      {
+        type: "h2",
+        text: { es: "Variables que afectan el costo", en: "Variables that affect the cost" }
+      },
+      {
+        type: "p",
+        text: {
+          es: `• Tipo de aeronave: un jet ligero para cinco pasajeros tiene un valor diferente a un jet de largo alcance para 14 personas.
+• Distancia y rutas: volar de Buenos Aires a Mendoza no implica el mismo costo que un trayecto a Punta del Este o a Santiago.
+• Tiempo de espera: si la aeronave debe permanecer en destino, se aplica un cargo adicional.
+• Servicios complementarios: catering gourmet, transporte terrestre o necesidades especiales incrementan el precio.`,
+          en: `• Aircraft type: a light jet for five passengers has a different price from a long-range jet for fourteen passengers.
+• Distance and routes: flying from Buenos Aires to Mendoza does not have the same cost as a trip to Punta del Este or Santiago.
+• Waiting time: if the aircraft has to remain at the destination, an additional charge applies.
+• Complementary services: gourmet catering, ground transportation or special needs increase the price.`
+        }
+      },
+      {
+        type: "h2",
+        text: { es: "Ejemplos de tarifas", en: "Fare examples" }
+      },
+      {
+        type: "p",
+        text: {
+          es: `Las rutas internas como Buenos Aires–Mendoza o Buenos Aires–Bariloche suelen ubicarse en la gama media, mientras que los vuelos a Punta del Este o São Paulo pueden tener tarifas ligeramente inferiores o superiores según la categoría del jet. Consulta con nuestros asesores para obtener valores actualizados y elegir la aeronave que mejor se adapte a tu viaje.`,
+          en: `Domestic routes such as Buenos Aires–Mendoza or Buenos Aires–Bariloche usually fall within the mid-range, while flights to Punta del Este or São Paulo can have slightly lower or higher fares depending on the jet category. Consult our advisors for updated values and choose the aircraft that best suits your trip.`
+        }
+      },
+      {
+        type: "h2",
+        text: { es: "Cómo obtener una cotización justa", en: "How to obtain a fair quote" }
+      },
+      {
+        type: "p",
+        text: {
+          es: `Proporciona a tu corredor aéreo datos precisos: número de pasajeros, fechas flexibles, servicios deseados y aeropuertos de salida y llegada. Cuanta más información ofrezcas, más precisa será la cotización. Recuerda que una tarifa transparente elimina sorpresas y te permite evaluar el costo como una inversión en tiempo y productividad.`,
+          en: `Provide your air broker with accurate data: number of passengers, flexible dates, desired services and departure and arrival airports. The more information you provide, the more accurate the quote will be. Remember that a transparent fare eliminates surprises and lets you evaluate the cost as an investment in time and productivity.`
+        }
+      }
+    ],
 
-  
+  },
+
+  //----------------------------------------------------------------------ARTICULO  
+
+  {
+    slug: "vuelos-privados-eventos-grupos",
+    date: "2025-10-30",
+    cover: JetPtivadoGrupo,
+    title: {
+      es: "Viajes en jet privado para eventos y grupos: haz que la ocasión sea inolvidable",
+      en: "Private jet travel for events and groups: make your occasion unforgettable",
+    },
+    subtitle: {
+      es: "Asiste a conciertos, partidos o bodas de manera exclusiva y con la comodidad de compartir el vuelo.",
+      en: "Attend concerts, games or weddings in an exclusive way and with the convenience of sharing the flight.",
+    },
+    excerpt: {
+      es: "¿Planeas un recital, un partido o una celebración familiar? Conoce cómo un charter privado puede transportar a tu grupo con estilo, dividiendo el costo y personalizando cada detalle.",
+      en: "Planning a concert, a game or a family celebration? Learn how a private charter can transport your group in style, splitting the cost and customizing every detail.",
+    },
+    content: [
+      {
+        type: "p",
+        text: {
+          es: `Los vuelos privados no son solo para ejecutivos. Cada vez más grupos de amigos, familias y empresas los utilizan para asistir a eventos especiales. Puedes dividir el costo entre los pasajeros y disfrutar de un viaje rápido y personalizado.`,
+          en: `Private flights are not just for executives. More and more groups of friends, families and companies are using them to attend special events. You can split the cost among passengers and enjoy a fast, personalized trip.`,
+        },
+      },
+      { type: "img", src: JetPtivadoGrupo },
+      {
+        type: "h2",
+        text: { es: "Eventos deportivos y culturales", en: "Sports and cultural events" },
+      },
+      {
+        type: "p",
+        text: {
+          es: `Desde recitales internacionales hasta finales de fútbol en otras provincias, volar en jet privado te permite llegar a tiempo y regresar el mismo día. Además, contamos con vehículos y helicópteros para trasladarte directamente al estadio o al venue.`,
+          en: `From international concerts to football finals in other provinces, flying on a private jet lets you arrive on time and return the same day. We also have vehicles and helicopters to take you directly to the stadium or venue.`,
+        },
+      },
+      {
+        type: "h2",
+        text: { es: "Bodas y celebraciones", en: "Weddings and celebrations" },
+      },
+      {
+        type: "p",
+        text: {
+          es: `Haz que la boda o la fiesta de aniversario sea aún más especial llevando a tus invitados en un jet privado. Nuestro equipo puede decorar la cabina, ofrecer catering especial y coordinar todos los detalles para que solo te ocupes de disfrutar.`,
+          en: `Make the wedding or anniversary party even more special by taking your guests on a private jet. Our team can decorate the cabin, offer special catering and coordinate every detail so you just have to enjoy.`,
+        },
+      },
+      {
+        type: "h2",
+        text: { es: "Planificación sencilla y ahorro de tiempo", en: "Simple planning and time savings" },
+      },
+      {
+        type: "p",
+        text: {
+          es: `Te asignamos un asesor que se encarga de la logística: horarios, permisos, catering y transporte terrestre. De esta manera, el viaje se convierte en parte del evento y no en un estrés adicional.`,
+          en: `We assign you an advisor who takes care of the logistics: schedules, permits, catering and ground transportation. This way, the trip becomes part of the event and not an additional stress.`,
+        },
+      },
+    ],
+  },
+
+
 ];
 
 

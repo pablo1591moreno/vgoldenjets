@@ -19,7 +19,7 @@
   <!-- Jets Magazine index -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine"/>
@@ -109,6 +109,34 @@
       href="https://www.vgoldenjets.com/en/jetsmagazine/vuelo-privado-de-ultima-hora"/>
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora"/>
+  </url>
+
+  <!-- NUEVO: Factores precio vuelo privado en Argentina -->
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"
+      href="https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://www.vgoldenjets.com/en/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
+  </url>
+
+  <!-- NUEVO: Vuelos privados para eventos y grupos -->
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos</loc>
+    <lastmod>2025-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"
+      href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos"/>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-eventos-grupos"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos"/>
   </url>
 
 </urlset>
