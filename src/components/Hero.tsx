@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
-import background from "@/img/1.2.png";
+import background from "@/img//portada.webp";
 
 const Hero = () => {
   const { t } = useLanguage();

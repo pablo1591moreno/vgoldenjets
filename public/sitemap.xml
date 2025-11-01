@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Home (si tenés /en/ como home en inglés, añadilo en alternates) -->
+  <!-- Home -->
   <url>
     <loc>https://www.vgoldenjets.com/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <!-- Descomenta si existe home en inglés -->
+    <!-- Descomentar si tenés home en inglés separado -->
     <!--
     <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/"/>
@@ -19,7 +19,7 @@
   <!-- Jets Magazine index -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine"/>
@@ -27,21 +27,35 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine"/>
   </url>
 
-  <!-- Artículo 1 -->
+  <!-- Artículo: La Ruta de Negocios Inteligente -->
   <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-miami-a-nueva-york</loc>
-    <lastmod>2025-09-20</lastmod>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas</loc>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es"
-      href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-miami-a-nueva-york"/>
+      href="https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas"/>
     <xhtml:link rel="alternate" hreflang="en"
-      href="https://www.vgoldenjets.com/en/jetsmagazine/vuelo-privado-miami-a-nueva-york"/>
+      href="https://www.vgoldenjets.com/en/jetsmagazine/charter-negocios-latam-rutas"/>
     <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-miami-a-nueva-york"/>
+      href="https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas"/>
   </url>
 
-  <!-- Artículo 2 -->
+  <!-- Artículo: Empty Legs Argentina -->
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"
+      href="https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart"/>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://www.vgoldenjets.com/en/jetsmagazine/empty-legs-argentina-acceso-smart"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart"/>
+  </url>
+
+  <!-- Artículo: ¿Cuánto cuesta un jet privado? -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado</loc>
     <lastmod>2025-09-16</lastmod>
@@ -55,7 +69,7 @@
       href="https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado"/>
   </url>
 
-  <!-- Artículo 3 -->
+  <!-- Artículo: Jet para 8 personas -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/alquilar-jet-privado-para-8-personas</loc>
     <lastmod>2025-09-15</lastmod>
@@ -69,7 +83,7 @@
       href="https://www.vgoldenjets.com/jetsmagazine/alquilar-jet-privado-para-8-personas"/>
   </url>
 
-  <!-- Artículo 4 -->
+  <!-- Artículo: Jet para negocios -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/charter-jet-privado-para-negocios</loc>
     <lastmod>2025-09-13</lastmod>
@@ -83,7 +97,7 @@
       href="https://www.vgoldenjets.com/jetsmagazine/charter-jet-privado-para-negocios"/>
   </url>
 
-  <!-- Artículo 5 -->
+  <!-- Artículo: Última hora -->
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora</loc>
     <lastmod>2025-09-11</lastmod>
@@ -95,34 +109,6 @@
       href="https://www.vgoldenjets.com/en/jetsmagazine/vuelo-privado-de-ultima-hora"/>
     <xhtml:link rel="alternate" hreflang="x-default"
       href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora"/>
-  </url>
-
-  <!-- Artículo 6 -->
-  <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-tramo-vacio</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es"
-      href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-tramo-vacio"/>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-tramo-vacio"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-tramo-vacio"/>
-  </url>
-
-  <!-- Artículo 7 -->
-  <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/costo-jet-privado-mexico-a-los-angeles</loc>
-    <lastmod>2025-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es"
-      href="https://www.vgoldenjets.com/jetsmagazine/costo-jet-privado-mexico-a-los-angeles"/>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://www.vgoldenjets.com/en/jetsmagazine/costo-jet-privado-mexico-a-los-angeles"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://www.vgoldenjets.com/jetsmagazine/costo-jet-privado-mexico-a-los-angeles"/>
   </url>
 
 </urlset>

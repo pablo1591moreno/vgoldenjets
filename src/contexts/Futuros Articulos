@@ -1,0 +1,133 @@
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "ventajas-vuelos-privados-argentina",
+    date: "2025-11-01",
+    cover: ventajas,
+    title: {
+      es: "Vuelos privados vs comerciales en Argentina: ventajas y accesos exclusivos",
+      en: "Private flights vs commercial flights in Argentina: advantages and exclusive access",
+    },
+    subtitle: {
+      es: "Descubra por qué la aviación privada ofrece beneficios únicos frente a los vuelos comerciales.",
+      en: "Discover why private aviation offers unique benefits compared with commercial flights.",
+    },
+    excerpt: {
+      es: "¿Sabías que la aviación privada puede operar en más de 400 aeródromos en Argentina mientras que la comercial solo llega a 25? Exploramos las diferencias en tiempo, comodidad y servicios.",
+      en: "Did you know that private aviation can operate at more than 400 aerodromes in Argentina while commercial airlines reach only around 25? We explore the differences in time, comfort and services.",
+    },
+    content: [
+      { type: "p", text: { es: "La elección entre vuelos privados y comerciales no solo se reduce al precio, sino a la experiencia y a la productividad. En Argentina existen 276 aeródromos de uso público y más de 200 de uso privado. La aviación comercial llega a cerca de 25 de ellos, mientras que un jet privado, dependiendo de la aeronave, puede operar en más de 400 aeródromos:contentReference[oaicite:7]{index=7}. Esto significa que puedes aterrizar más cerca de tu destino final y evitar largas conexiones terrestres.", en: "Choosing between private and commercial flights is not just about price; it’s about experience and productivity. In Argentina there are 276 public aerodromes and more than 200 private ones. Commercial aviation reaches around 25 of them, whereas a private jet, depending on the aircraft, can operate at more than 400 aerodromes:contentReference[oaicite:8]{index=8}. This means you can land closer to your final destination and avoid long ground connections." } },
+      { type: "h2", text: { es: "Más aeropuertos, más opciones", en: "More airports, more options" } },
+      { type: "p", text: { es: "Acceder a aeropuertos como San Fernando, Morón o aeródromos regionales te permite ahorrar horas de viaje y optimizar tu agenda. Para turistas, llegar directamente a un lodge de pesca o a una estancia es una ventaja que el vuelo comercial no ofrece.", en: "Accessing airports such as San Fernando, Morón or regional airfields lets you save hours of travel and optimize your schedule. For tourists, landing directly at a fishing lodge or an estancia is an advantage that commercial flights do not offer." } },
+      { type: "h2", text: { es: "Servicios exclusivos en FBO", en: "Exclusive services at FBOs" } },
+      { type: "p", text: { es: "Los FBO (Operadores de Base Fija) brindan atención personalizada: salas VIP, trámites migratorios prioritarios, catering premium y transporte en limusina:contentReference[oaicite:9]{index=9}. Este nivel de servicio te permite salir y embarcar en minutos, sin filas ni esperas.", en: "FBOs (Fixed Base Operators) offer personalized attention: VIP lounges, priority immigration procedures, premium catering and limousine transfers:contentReference[oaicite:10]{index=10}. This level of service lets you depart and board in minutes, with no queues or waiting." } },
+      { type: "p", text: { es: "Al final, el valor de volar privado reside en el tiempo que recuperas y en el confort que disfrutas. Este artículo te ayudará a decidir cuándo la aviación privada es la mejor opción para tus viajes en Argentina.", en: "Ultimately, the value of flying private lies in the time you regain and the comfort you enjoy. This article will help you decide when private aviation is the best option for your travels in Argentina." } },
+    ],
+  },
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "destinos-vuelos-privados-buenos-aires",
+    date: "2025-11-02",
+    cover: destinosTop,
+    title: {
+      es: "Destinos top para vuelos privados desde Buenos Aires",
+      en: "Top destinations for private flights from Buenos Aires",
+    },
+    subtitle: {
+      es: "Descubre los lugares más solicitados y por qué son ideales para viajar en jet privado.",
+      en: "Discover the most sought-after places and why they are ideal for private jet travel.",
+    },
+    excerpt: {
+      es: "Bariloche, Mendoza, Punta del Este, Santiago y São Paulo figuran entre los destinos favoritos de nuestros clientes. Conoce sus atractivos y tiempos de vuelo aproximados.",
+      en: "Bariloche, Mendoza, Punta del Este, Santiago and São Paulo are among our clients’ favorite destinations. Learn about their attractions and approximate flight times.",
+    },
+    content: [
+      { type: "p", text: { es: "Buenos Aires es el punto de partida de la mayoría de los vuelos privados en Argentina. Ya sea por negocios o por placer, estas rutas se destacan por su alta demanda y por la experiencia que ofrecen a bordo de un jet.", en: "Buenos Aires is the starting point for most private flights in Argentina. Whether for business or pleasure, these routes stand out for their high demand and the experience they offer aboard a jet." } },
+      { type: "h2", text: { es: "Destinos nacionales", en: "Domestic destinations" } },
+      { type: "p", text: { es: "• **Bariloche**: ideal para esquiar o desconectarse en la Patagonia; los jets aterrizan en un aeropuerto rodeado de paisajes andinos.\\n• **Mendoza**: para enoturismo y negocios; el tiempo de vuelo ronda las dos horas.\\n• **Córdoba**: centro industrial y turístico del país, con múltiples aeródromos cercanos.\\n• **Ushuaia**: la ciudad más austral del mundo, perfecta para aventuras en el fin del mundo.", en: "• **Bariloche**: ideal for skiing or relaxing in Patagonia; jets land at an airport surrounded by Andean landscapes.\\n• **Mendoza**: for wine tourism and business; flight time is around two hours.\\n• **Córdoba**: an industrial and tourist hub with several nearby airfields.\\n• **Ushuaia**: the southernmost city in the world, perfect for end‑of‑the‑world adventures." } },
+      { type: "h2", text: { es: "Destinos internacionales cercanos", en: "Nearby international destinations" } },
+      { type: "p", text: { es: "• **Punta del Este (Uruguay)**: uno de los itinerarios más cotizados por su cercanía y exclusividad:contentReference[oaicite:11]{index=11}.\\n• **Santiago (Chile)**: hub de negocios y conexiones internacionales.\\n• **São Paulo (Brasil)**: epicentro empresarial de Sudamérica.\\nTodos estos destinos cuentan con varios aeropuertos y helipuertos, lo que brinda flexibilidad y rapidez.", en: "• **Punta del Este (Uruguay)**: one of the most popular routes due to its proximity and exclusivity:contentReference[oaicite:12]{index=12}.\\n• **Santiago (Chile)**: a business hub and international connection point.\\n• **São Paulo (Brazil)**: the business epicenter of South America.\\nAll these destinations have several airports and helipads, which provide flexibility and speed." } },
+      { type: "p", text: { es: "¿Quieres viajar a otro lugar? Nuestro equipo puede diseñar una ruta a medida a cualquier destino de la región. Contáctanos para conocer las opciones disponibles.", en: "Want to travel somewhere else? Our team can design a tailor‑made route to any destination in the region. Contact us to learn about the available options." } },
+    ],
+  },
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "vuelos-privados-eventos-grupos",
+    date: "2025-11-03",
+    cover: eventos,
+    title: {
+      es: "Viajes en jet privado para eventos y grupos: haz que la ocasión sea inolvidable",
+      en: "Private jet travel for events and groups: make your occasion unforgettable",
+    },
+    subtitle: {
+      es: "Asiste a conciertos, partidos o bodas de manera exclusiva y con la comodidad de compartir el vuelo.",
+      en: "Attend concerts, games or weddings in an exclusive way and with the convenience of sharing the flight.",
+    },
+    excerpt: {
+      es: "¿Planeas un recital, un partido o una celebración familiar? Conoce cómo un charter privado puede transportar a tu grupo con estilo, dividiendo el costo y personalizando cada detalle.",
+      en: "Planning a concert, a game or a family celebration? Learn how a private charter can transport your group in style, splitting the cost and customizing every detail.",
+    },
+    content: [
+      { type: "p", text: { es: "Los vuelos privados no son solo para ejecutivos. Cada vez más grupos de amigos, familias y empresas los utilizan para asistir a eventos especiales. Puedes dividir el costo entre los pasajeros y disfrutar de un viaje rápido y personalizado:contentReference[oaicite:13]{index=13}.", en: "Private flights are not just for executives. More and more groups of friends, families and companies are using them to attend special events. You can split the cost among passengers and enjoy a fast, personalized trip:contentReference[oaicite:14]{index=14}." } },
+      { type: "img", src: eventos },
+      { type: "h2", text: { es: "Eventos deportivos y culturales", en: "Sports and cultural events" } },
+      { type: "p", text: { es: "Desde recitales internacionales hasta finales de fútbol en otras provincias, volar en jet privado te permite llegar a tiempo y regresar el mismo día. Además, contamos con vehículos y helicópteros para trasladarte directamente al estadio o al venue.", en: "From international concerts to football finals in other provinces, flying on a private jet lets you arrive on time and return the same day. We also have vehicles and helicopters to take you directly to the stadium or venue." } },
+      { type: "h2", text: { es: "Bodas y celebraciones", en: "Weddings and celebrations" } },
+      { type: "p", text: { es: "Haz que la boda o la fiesta de aniversario sea aún más especial llevando a tus invitados en un jet privado. Nuestro equipo puede decorar la cabina, ofrecer catering especial y coordinar todos los detalles para que solo te ocupes de disfrutar.", en: "Make the wedding or anniversary party even more special by taking your guests on a private jet. Our team can decorate the cabin, offer special catering and coordinate every detail so you just have to enjoy." } },
+      { type: "h2", text: { es: "Planificación sencilla y ahorro de tiempo", en: "Simple planning and time savings" } },
+      { type: "p", text: { es: "Te asignamos un asesor que se encarga de la logística: horarios, permisos, catering y transporte terrestre. De esta manera, el viaje se convierte en parte del evento y no en un estrés adicional.", en: "We assign you an advisor who takes care of the logistics: schedules, permits, catering and ground transportation. This way, the trip becomes part of the event and not an additional stress." } },
+    ],
+  },
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "aeropuertos-fbo-argentina",
+    date: "2025-11-04",
+    cover: fbo,
+    title: {
+      es: "Guía de aeropuertos y FBO en Argentina para jets privados",
+      en: "Guide to airports and FBOs in Argentina for private jets",
+    },
+    subtitle: {
+      es: "Descubre qué aeródromos y operadores te ofrecen la mejor experiencia en tu próximo vuelo.",
+      en: "Discover which airfields and operators offer you the best experience on your next flight.",
+    },
+    excerpt: {
+      es: "La aviación privada en Argentina tiene acceso a más de 400 aeródromos:contentReference[oaicite:15]{index=15}. Aquí te contamos cuáles son los más importantes y qué servicios FBO ofrecen.",
+      en: "Private aviation in Argentina has access to more than 400 aerodromes:contentReference[oaicite:16]{index=16}. Here we tell you which ones are the most important and what FBO services they offer.",
+    },
+    content: [
+      { type: "p", text: { es: "Uno de los principales beneficios de volar en jet privado en Argentina es la libertad de aterrizar en aeródromos que no están disponibles para vuelos comerciales:contentReference[oaicite:17]{index=17}. Esto no solo ahorra tiempo, sino que brinda flexibilidad para llegar a destinos específicos.", en: "One of the main benefits of flying on a private jet in Argentina is the freedom to land at airfields that are not available to commercial flights:contentReference[oaicite:18]{index=18}. This not only saves time but also provides flexibility to reach specific destinations." } },
+      { type: "h2", text: { es: "Principales aeródromos", en: "Main airfields" } },
+      { type: "p", text: { es: "• **San Fernando (Buenos Aires)**: centro neurálgico de la aviación ejecutiva con amplios servicios FBO.\\n• **Aeroparque Jorge Newbery**: ofrece terminal exclusiva para jets privados.\\n• **Morón**: opción alternativa para vuelos de negocio o recreativos.\\n• **Córdoba y Rosario**: aeródromos con infraestructura para aviones ligeros y medianos.", en: "• **San Fernando (Buenos Aires)**: nerve center of executive aviation with extensive FBO services.\\n• **Aeroparque Jorge Newbery**: offers an exclusive terminal for private jets.\\n• **Morón**: alternative option for business or recreational flights.\\n• **Córdoba and Rosario**: airfields with infrastructure for light and midsize aircraft." } },
+      { type: "h2", text: { es: "Servicios FBO imprescindibles", en: "Essential FBO services" } },
+      { type: "p", text: { es: "Los FBO ofrecen comodidades que hacen de tu viaje una experiencia de lujo: check‑in rápido, salas VIP, estacionamiento privado, planificación meteorológica y catering premium:contentReference[oaicite:19]{index=19}. Estos servicios reducen el tiempo de tránsito y garantizan privacidad absoluta.", en: "FBOs offer amenities that make your trip a luxury experience: fast check‑in, VIP lounges, private parking, weather planning and premium catering:contentReference[oaicite:20]{index=20}. These services reduce transit time and guarantee absolute privacy." } },
+      { type: "p", text: { es: "Antes de tu próximo vuelo, consulta con nuestro equipo cuál es el aeródromo más conveniente y qué FBO se ajusta a tus expectativas.", en: "Before your next flight, check with our team which airfield is most convenient and which FBO suits your expectations." } },
+    ],
+  },
+  //----------------------------------------------------------------------ARTICULO  
+  {
+    slug: "factores-precio-vuelo-privado-argentina",
+    date: "2025-11-05",
+    cover: factoresPrecio,
+    title: {
+      es: "Factores que determinan el precio de un vuelo privado en Argentina",
+      en: "Factors that determine the price of a private flight in Argentina",
+    },
+    subtitle: {
+      es: "Comprende cómo se calculan las tarifas y planifica tu presupuesto con inteligencia.",
+      en: "Understand how fares are calculated and plan your budget wisely.",
+    },
+    excerpt: {
+      es: "El costo de alquilar un jet depende de la aeronave, la distancia, el número de pasajeros y los servicios solicitados. Te explicamos las variables y te damos ejemplos de tarifas en rutas populares.",
+      en: "The cost of renting a jet depends on the aircraft, distance, number of passengers and requested services. We explain the variables and give you examples of fares on popular routes.",
+    },
+    content: [
+      { type: "p", text: { es: "Muchas personas se preguntan cuánto cuesta un vuelo privado. La respuesta no es única: el precio final está influenciado por varios factores, desde el modelo de avión hasta la duración del viaje y los servicios a bordo.", en: "Many people wonder how much a private flight costs. The answer is not unique: the final price is influenced by several factors, from the aircraft model to the duration of the trip and onboard services." } },
+      { type: "h2", text: { es: "Variables que afectan el costo", en: "Variables that affect the cost" } },
+      { type: "p", text: { es: "• **Tipo de aeronave**: un jet ligero para cinco pasajeros tiene un valor diferente a un jet de largo alcance para 14 personas.\\n• **Distancia y rutas**: volar de Buenos Aires a Mendoza no implica el mismo costo que un trayecto a Punta del Este o a Santiago:contentReference[oaicite:21]{index=21}.\\n• **Tiempo de espera**: si la aeronave debe permanecer en destino, se aplica un cargo adicional.\\n• **Servicios complementarios**: catering gourmet, transporte terrestre o necesidades especiales incrementan el precio.", en: "• **Aircraft type**: a light jet for five passengers has a different price from a long‑range jet for fourteen passengers.\\n• **Distance and routes**: flying from Buenos Aires to Mendoza does not have the same cost as a trip to Punta del Este or Santiago:contentReference[oaicite:22]{index=22}.\\n• **Waiting time**: if the aircraft has to remain at the destination, an additional charge applies.\\n• **Complementary services**: gourmet catering, ground transportation or special needs increase the price." } },
+      { type: "h2", text: { es: "Ejemplos de tarifas", en: "Fare examples" } },
+      { type: "p", text: { es: "Las rutas internas como Buenos Aires–Mendoza o Buenos Aires–Bariloche suelen ubicarse en la gama media, mientras que los vuelos a Punta del Este o São Paulo pueden tener tarifas ligeramente inferiores o superiores según la categoría del jet:contentReference[oaicite:23]{index=23}. Consulta con nuestros asesores para obtener valores actualizados y elegir la aeronave que mejor se adapte a tu viaje.", en: "Domestic routes such as Buenos Aires–Mendoza or Buenos Aires–Bariloche usually fall within the mid‑range, while flights to Punta del Este or São Paulo can have slightly lower or higher fares depending on the jet category:contentReference[oaicite:24]{index=24}. Consult our advisors for updated values and choose the aircraft that best suits your trip." } },
+      { type: "h2", text: { es: "Cómo obtener una cotización justa", en: "How to obtain a fair quote" } },
+      { type: "p", text: { es: "Proporciona a tu corredor aéreo datos precisos: número de pasajeros, fechas flexibles, servicios deseados y aeropuertos de salida y llegada. Cuanta más información ofrezcas, más precisa será la cotización. Recuerda que una tarifa transparente elimina sorpresas y te permite evaluar el costo como una inversión en tiempo y productividad.", en: "Provide your air broker with accurate data: number of passengers, flexible dates, desired services and departure and arrival airports. The more information you provide, the more accurate the quote will be. Remember that a transparent fare eliminates surprises and lets you evaluate the cost as an investment in time and productivity." } },
+    ],
+  },

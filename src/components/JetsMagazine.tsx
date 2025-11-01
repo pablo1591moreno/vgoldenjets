@@ -1,3 +1,4 @@
+// JetsMagazine.tsx
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -15,6 +16,9 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
   const language = forcedLang ?? ctx.language;
   const isEN = language === "en";
 
+  // ⬅️ literal local según el idioma efectivo del componente
+  const READ_MORE = isEN ? "Read more →" : "Leer más →";
+
   // Locale para fechas
   const locale = isEN ? "en-US" : "es-AR";
 
@@ -28,7 +32,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
     [locale]
   );
 
-  // Meta (hero/title/subtitle) + artículos localizados
+  // Meta + artículos localizados
   const magazine = useMemo(() => selectMagazineMeta(language), [language]);
   const localized = useMemo(() => selectArticles(language), [language]);
 
@@ -130,7 +134,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto pt-5 font-medium text-white">{"Leer más →"}</div>
+                <div className="mt-auto pt-5 font-medium text-white">{READ_MORE}</div>
               </div>
             </Link>
           </div>
@@ -174,7 +178,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                     {a.excerpt}
                   </p>
                   <div className="mt-4 font-medium text-white group-hover:text-gold transition-colors">
-                    {"Leer más →"}
+                    {READ_MORE}
                   </div>
                 </div>
               </Link>
