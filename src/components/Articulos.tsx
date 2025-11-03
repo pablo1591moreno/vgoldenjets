@@ -6,6 +6,7 @@ import { selectArticleBySlug, selectMagazineMeta } from "@/contexts/DatosParaArt
 import { useLanguage } from "@/contexts/LanguageContext";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import ShareBar from "./ShareBar";
 
 type Props = { forcedLang?: "en" | "es" };
 
@@ -13,6 +14,13 @@ const SITE = "https://www.vgoldenjets.com";
 
 function truncate(s: string, n = 160) {
   return s.length > n ? s.slice(0, n - 1) + "…" : s;
+}
+
+/** Asegura URL absoluta para crawlers (OpenGraph/Twitter) */
+function toAbsoluteUrl(pathOrUrl: string): string {
+  if (!pathOrUrl) return SITE;
+  if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
+  return `${SITE}${pathOrUrl.startsWith("/") ? "" : "/"}${pathOrUrl}`;
 }
 
 const Articulos: React.FC<Props> = ({ forcedLang }) => {
@@ -34,7 +42,10 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
   if (!article) {
     return (
       <div className="section-container py-16">
-        <Link to={`${isEN ? "/en" : ""}/jetsmagazine`} className="inline-flex items-center text-gold hover:underline">
+        <Link
+          to={`${isEN ? "/en" : ""}/jetsmagazine`}
+          className="inline-flex items-center text-gold hover:underline"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" /> {backLabel}
         </Link>
         <h1 className="mt-6 text-2xl font-semibold text-black">{"Artículo no encontrado"}</h1>
@@ -51,12 +62,15 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
   const title = `${article.title} | V Golden Jets`;
   const description = truncate(article.excerpt || article.subtitle || article.title, 160);
 
+  // Preferir JPG/PNG social si existe; si no, caer en cover
+  const ogImageAbs = toAbsoluteUrl(article.ogImage || article.cover);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
     description,
-    image: [article.cover],
+    image: [ogImageAbs],
     datePublished: article.date,
     dateModified: article.date,
     mainEntityOfPage: CANONICAL,
@@ -73,9 +87,12 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
   return (
     <article>
       <Helmet>
+        {/* Básico */}
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={CANONICAL} />
+
+        {/* hreflang */}
         <link rel="alternate" hrefLang="es" href={ES_URL} />
         <link rel="alternate" hrefLang="en" href={EN_URL} />
         <link rel="alternate" hrefLang="x-default" href={ES_URL} />
@@ -83,16 +100,23 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="V Golden Jets" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={CANONICAL} />
-        <meta property="og:image" content={article.cover} />
+        <meta property="og:image" content={ogImageAbs} />
+        <meta property="og:image:secure_url" content={ogImageAbs} />
+        <meta property="og:image:alt" content={article.title} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="article:published_time" content={article.date} />
+        <meta property="article:modified_time" content={article.date} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={article.cover} />
+        <meta name="twitter:image" content={ogImageAbs} />
 
         {/* Structured data */}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -155,7 +179,6 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
                 case "img":
                   return (
                     <figure key={idx} className="my-6">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={block.src}
                         alt={block.alt || "Imagen del artículo"}
@@ -172,6 +195,9 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
                   return null;
               }
             })}
+
+            {/* Barra de compartir */}
+            <ShareBar url={CANONICAL} title={article.title} text={description} />
           </div>
         </div>
       </section>

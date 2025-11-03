@@ -9,8 +9,9 @@ import ultimahora from "@/img/Articulos/ultimaHora.webp";
 import avionEjecutivo from "@/img/Articulos/avionEjecutivo.webp";
 import emptyLegsArgentina from "@/img/Articulos/emptyLegsArgentina.webp";
 import determinanPrecio from "@/img/Articulos/determinanPrecio.webp";
-import JetPtivadoGrupo from "@/img/Articulos/JetPtivadoGrupo.webp"
+import JetPtivadoGrupo from "@/img/Articulos/JetPtivadoGrupo.webp";
 
+// (si tenés defaultHero importado en otra parte, dejalo como está en tu proyecto)
 import { fromTheme } from "tailwind-merge";
 
 export type Language = "en" | "es";
@@ -29,11 +30,10 @@ function lx(s: LStr, lang: Language): string {
 }
 
 export function selectArticles(lang: Language): ArticleView[] {
-  return [...articlesJSON]            // clon para no mutar el original
-    .reverse()                        // último agregado → primero
+  return [...articlesJSON] // clon para no mutar el original
+    .reverse() // último agregado → primero
     .map((a) => projectArticle(lang, a));
 }
-
 
 /* ===========================
    META DE JETSMAGAZINE (HERO)
@@ -80,6 +80,8 @@ interface JsonArticle {
   slug: string;
   date: string;
   cover: string;
+  /** Imagen preferida para redes (JPG/PNG 1200x630) */
+  ogImage?: string;
   title: LStr;
   subtitle: LStr;
   excerpt: LStr;
@@ -98,6 +100,8 @@ export interface ArticleView {
   date: string;
   dateMs: number;
   cover: string;
+  /** Imagen preferida para OG/Twitter */
+  ogImage?: string;
   title: string;
   subtitle: string;
   excerpt: string;
@@ -107,6 +111,9 @@ export interface ArticleView {
 /* ===========================
    PROYECCIÓN
    =========================== */
+
+// si usás defaultHero en tu proyecto, asegurate de que esté importado
+declare const defaultHero: string;
 
 function projectBlock(lang: Language, b: JsonContentBlock): ContentBlock {
   if (b.type === "img") {
@@ -125,6 +132,7 @@ function projectArticle(lang: Language, a: JsonArticle): ArticleView {
     date: a.date,
     dateMs: Date.parse(a.date) || 0,
     cover: a.cover || defaultHero,
+    ogImage: a.ogImage, // <— nuevo campo
     title: lx(a.title, lang),
     subtitle: lx(a.subtitle, lang),
     excerpt: lx(a.excerpt, lang),
@@ -135,6 +143,9 @@ function projectArticle(lang: Language, a: JsonArticle): ArticleView {
 /* ===========================
    DATA (usando imports directo)
    =========================== */
+
+const withOG = (slug: string, override?: string) =>
+  override ?? `/og/${slug}.jpg`; // Cambiá a .png si corresponde
 
 const articlesJSON: JsonArticle[] = [
 
@@ -443,15 +454,11 @@ const articlesJSON: JsonArticle[] = [
 
 ];
 
-
 /* ===========================
    SELECTORES
    =========================== */
-
-
 
 export function selectArticleBySlug(slug: string, lang: Language): ArticleView | undefined {
   const base = articlesJSON.find((a) => a.slug === slug);
   return base ? projectArticle(lang, base) : undefined;
 }
-
