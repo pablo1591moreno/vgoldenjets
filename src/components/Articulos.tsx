@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ShareBar from "./ShareBar";
+import Contact from "@/components/Contact";
 
 type Props = { forcedLang?: "en" | "es" };
 
@@ -200,8 +201,8 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
             <ShareBar url={CANONICAL} title={article.title} text={description} />
           </div>
         </div>
+      <Contact />
       </section>
-
       <Footer />
     </article>
   );

@@ -10,6 +10,8 @@ import avionEjecutivo from "@/img/Articulos/avionEjecutivo.webp";
 import emptyLegsArgentina from "@/img/Articulos/emptyLegsArgentina.webp";
 import determinanPrecio from "@/img/Articulos/determinanPrecio.webp";
 import JetPtivadoGrupo from "@/img/Articulos/JetPtivadoGrupo.webp";
+import itinerarioIdealMundial from "@/img/Articulos/itinerarioIdealMundial.webp"
+import ventajasAccesosEficiencia from "@/img//Articulos/ventajas_accesos_eficiencia.webp"
 
 // (si tenés defaultHero importado en otra parte, dejalo como está en tu proyecto)
 import { fromTheme } from "tailwind-merge";
@@ -450,6 +452,173 @@ const articlesJSON: JsonArticle[] = [
       },
     ],
   },
+
+  //----------------------------------------------------------------------ARTICULO  
+
+  {
+  "slug": "itinerario-ideal-sedes-mundial-2026-jet-privado",
+  "date": "2025-11-03",
+  "cover": itinerarioIdealMundial,
+  "title": {
+    "es": "Itinerario ideal para el Mundial 2026 en jet privado: conectando sedes sin perder un partido",
+    "en": "Ideal itinerary for the 2026 World Cup in a private jet: linking venues without missing a match"
+  },
+  "subtitle": {
+    "es": "Descubra cómo moverse entre México, Estados Unidos y Canadá con total comodidad y estilo.",
+    "en": "Discover how to travel between Mexico, the United States and Canada with total comfort and style."
+  },
+  "excerpt": {
+    "es": "El Mundial 2026 se jugará en 16 ciudades de tres países. Viajar en jet privado permite conectar varias sedes en poco tiempo y sin las demoras de la aviación comercial.",
+    "en": "The 2026 World Cup will be played in 16 cities across three countries. Flying private lets you connect several venues in little time and without commercial delays."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "La Copa Mundial de la FIFA 2026 se jugará en 16 ciudades distribuidas entre Estados Unidos, México y Canadá. Esta configuración hace que la logística sea más compleja para los aficionados que quieren seguir varios partidos. Un jet privado simplifica todo el recorrido.",
+        "en": "The 2026 FIFA World Cup will be played in 16 cities across the United States, Mexico and Canada. This setup makes logistics more complex for fans who want to follow several matches. A private jet simplifies the whole journey."
+      }
+    },
+    {
+      "type": "img",
+      "src": itinerarioIdealMundial
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Ruta sugerida para fanáticos latinoamericanos",
+        "en": "Suggested route for Latin American fans"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Una ruta típica puede comenzar en Buenos Aires con un vuelo hacia Ciudad de México para el primer partido. Luego, continuar hacia otra sede mexicana como Guadalajara o Monterrey, y después volar a ciudades de Estados Unidos como Dallas, Los Ángeles o Miami. Si el calendario lo requiere, se puede sumar una última escala en Canadá. Todo se programa según la agenda del pasajero.",
+        "en": "A typical route may start in Buenos Aires with a flight to Mexico City for the first match. Then continue to another Mexican venue such as Guadalajara or Monterrey, and afterwards fly to U.S. cities like Dallas, Los Angeles or Miami. If needed, a last stop in Canada can be added. Everything is scheduled according to the passenger’s agenda."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Ventajas del jet privado frente al avión comercial",
+        "en": "Advantages of a private jet vs commercial flight"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Al volar privado usted evita tiempos muertos en aeropuertos, conexiones innecesarias y esperas en migraciones. En un evento con fechas tan ajustadas, ahorrar incluso una o dos horas por tramo puede significar llegar o no a un partido.",
+        "en": "When flying private you avoid dead time at airports, unnecessary connections and immigration lines. In an event with such a tight schedule, saving even one or two hours per leg can mean making it to a match or not."
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Además, al usar aeropuertos ejecutivos o terminales privadas, el embarque es rápido y la experiencia se mantiene en el estándar de lujo que buscan los viajeros de alto poder adquisitivo.",
+        "en": "In addition, by using executive airports or private terminals, boarding is fast and the experience remains at the luxury standard high-net-worth travellers are looking for."
+      }
+    }
+  ]
+},
+
+  //----------------------------------------------------------------------ARTICULO  
+
+{
+  "slug": "vuelos-privados-argentina",
+  "date": "2025-11-15",
+  "cover": ventajasAccesosEficiencia,
+  "title": {
+    "es": "Vuelos privados en Argentina: ventajas, accesos y eficiencia",
+    "en": "Private flights in Argentina: advantages, access and efficiency"
+  },
+  "subtitle": {
+    "es": "Descubra las razones por las que los vuelos privados en Argentina superan a la aviación comercial en accesibilidad, tiempo y servicio.",
+    "en": "Discover why private flights in Argentina outperform commercial aviation in accessibility, time and service."
+  },
+  "excerpt": {
+    "es": "Descubra las ventajas de los vuelos privados en Argentina: más aeropuertos, horarios flexibles y acceso exclusivo sin demoras ni complicaciones.",
+    "en": "Discover the benefits of private flights in Argentina: more airports, flexible schedules and exclusive access without delays or complications."
+  },
+  "content": [
+    {
+      "type": "h2",
+      "text": {
+        "es": "Vuelos privados vs comerciales en Argentina: eficiencia, privacidad y tiempo",
+        "en": "Private vs commercial flights in Argentina: efficiency, privacy and time"
+      }
+    },
+    
+    {
+      "type": "p",
+      "text": {
+        "es": "Los vuelos privados en Argentina no solo se eligen por comodidad o lujo, sino por la eficiencia y la privacidad frente a los vuelos comerciales tradicionales. En el país existen más de 276 aeródromos públicos y más de 200 de uso privado, pero la aviación comercial opera regularmente solo en unos 25. En cambio, un jet privado —según su categoría— puede acceder a más de 400 pistas en todo el país, lo que permite aterrizar más cerca del destino final y ahorrar tiempo valioso evitando conexiones terrestres innecesarias.",
+        "en": "Private flights in Argentina are not just about luxury—they are about efficiency and privacy compared to traditional commercial flights. The country has more than 276 public aerodromes and over 200 private ones, yet commercial aviation regularly operates in only around 25. In contrast, a private jet—depending on its category—can access over 400 runways nationwide, allowing passengers to land closer to their final destination and avoid unnecessary ground transfers."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Aeródromos privados: acceda a más de 400 destinos en el país",
+        "en": "Private airfields: access over 400 destinations across the country"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "La aviación privada en Argentina abre un abanico de posibilidades al operar en cientos de aeródromos distribuidos estratégicamente. Desde pistas rurales hasta aeropuertos ejecutivos como San Fernando, Morón o aeródromos regionales, los vuelos privados permiten crear itinerarios más directos y eficientes. Esto representa una ventaja clave tanto para viajes de negocios como para el turismo de lujo.",
+        "en": "Private aviation in Argentina opens up a range of possibilities by operating in hundreds of strategically located airfields. From rural runways to executive airports like San Fernando, Morón or regional aerodromes, private flights allow more direct and efficient itineraries. This is a key advantage for both business travel and luxury tourism."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Agenda flexible: optimice sus viajes de negocio o turismo de lujo",
+        "en": "Flexible schedule: optimize business or luxury travel"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Para ejecutivos y viajeros frecuentes, los vuelos privados en Argentina permiten realizar múltiples reuniones en distintas provincias en un mismo día, sin depender de horarios fijos. Para turistas de alto nivel, significa aterrizar directamente en un lodge de pesca en la Patagonia, una bodega en Mendoza o una estancia remota en la Pampa, evitando los aeropuertos comerciales y sus demoras.",
+        "en": "For executives and frequent travelers, private flights in Argentina allow for multiple meetings in different provinces within the same day—without being tied to fixed schedules. For high-end tourists, it means landing directly at a fishing lodge in Patagonia, a winery in Mendoza or a remote estancia in the Pampas, avoiding commercial airports and delays."
+      }
+    },
+      {
+      "type": "img",
+      "src": ventajasAccesosEficiencia
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "FBO en Argentina: servicios premium sin esperas ni filas",
+        "en": "FBO in Argentina: premium services without queues or delays"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Los FBO (Fixed Base Operators) en Argentina están diseñados para ofrecer una experiencia ejecutiva total: salas VIP privadas, control migratorio y de seguridad acelerado, catering personalizado y traslado directo al avión. Todo en un entorno seguro, sin filas ni tiempos muertos. Este tipo de servicios marcan una diferencia fundamental para quienes priorizan la privacidad y el confort.",
+        "en": "FBOs (Fixed Base Operators) in Argentina are designed to offer a complete executive experience: private VIP lounges, expedited immigration and security control, personalized catering and direct aircraft transfers. All in a secure environment, without queues or wasted time. These services make a fundamental difference for those who prioritize privacy and comfort."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Conclusión: por qué elegir vuelos privados en Argentina hoy",
+        "en": "Conclusion: why choose private flights in Argentina today"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Más que un lujo, los vuelos privados en Argentina representan una herramienta estratégica para optimizar tiempo, mejorar la experiencia de viaje y garantizar privacidad. Con acceso a más de 400 aeródromos, servicios FBO premium y flexibilidad total, la aviación privada es la solución ideal para quienes valoran cada minuto. Si busca eficiencia y confort, no hay mejor opción dentro del país.",
+        "en": "More than a luxury, private flights in Argentina are a strategic tool to optimize time, enhance the travel experience and ensure privacy. With access to over 400 airfields, premium FBO services and total flexibility, private aviation is the ideal solution for those who value every minute. If you're looking for efficiency and comfort, there's no better option within the country."
+      }
+    }
+  ]
+}
+
+
 
 
 ];

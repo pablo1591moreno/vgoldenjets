@@ -1,31 +1,5 @@
   //----------------------------------------------------------------------ARTICULO  
   {
-    slug: "ventajas-vuelos-privados-argentina",
-    date: "2025-11-01",
-    cover: ventajas,
-    title: {
-      es: "Vuelos privados vs comerciales en Argentina: ventajas y accesos exclusivos",
-      en: "Private flights vs commercial flights in Argentina: advantages and exclusive access",
-    },
-    subtitle: {
-      es: "Descubra por qué la aviación privada ofrece beneficios únicos frente a los vuelos comerciales.",
-      en: "Discover why private aviation offers unique benefits compared with commercial flights.",
-    },
-    excerpt: {
-      es: "¿Sabías que la aviación privada puede operar en más de 400 aeródromos en Argentina mientras que la comercial solo llega a 25? Exploramos las diferencias en tiempo, comodidad y servicios.",
-      en: "Did you know that private aviation can operate at more than 400 aerodromes in Argentina while commercial airlines reach only around 25? We explore the differences in time, comfort and services.",
-    },
-    content: [
-      { type: "p", text: { es: "La elección entre vuelos privados y comerciales no solo se reduce al precio, sino a la experiencia y a la productividad. En Argentina existen 276 aeródromos de uso público y más de 200 de uso privado. La aviación comercial llega a cerca de 25 de ellos, mientras que un jet privado, dependiendo de la aeronave, puede operar en más de 400 aeródromos:contentReference[oaicite:7]{index=7}. Esto significa que puedes aterrizar más cerca de tu destino final y evitar largas conexiones terrestres.", en: "Choosing between private and commercial flights is not just about price; it’s about experience and productivity. In Argentina there are 276 public aerodromes and more than 200 private ones. Commercial aviation reaches around 25 of them, whereas a private jet, depending on the aircraft, can operate at more than 400 aerodromes:contentReference[oaicite:8]{index=8}. This means you can land closer to your final destination and avoid long ground connections." } },
-      { type: "h2", text: { es: "Más aeropuertos, más opciones", en: "More airports, more options" } },
-      { type: "p", text: { es: "Acceder a aeropuertos como San Fernando, Morón o aeródromos regionales te permite ahorrar horas de viaje y optimizar tu agenda. Para turistas, llegar directamente a un lodge de pesca o a una estancia es una ventaja que el vuelo comercial no ofrece.", en: "Accessing airports such as San Fernando, Morón or regional airfields lets you save hours of travel and optimize your schedule. For tourists, landing directly at a fishing lodge or an estancia is an advantage that commercial flights do not offer." } },
-      { type: "h2", text: { es: "Servicios exclusivos en FBO", en: "Exclusive services at FBOs" } },
-      { type: "p", text: { es: "Los FBO (Operadores de Base Fija) brindan atención personalizada: salas VIP, trámites migratorios prioritarios, catering premium y transporte en limusina:contentReference[oaicite:9]{index=9}. Este nivel de servicio te permite salir y embarcar en minutos, sin filas ni esperas.", en: "FBOs (Fixed Base Operators) offer personalized attention: VIP lounges, priority immigration procedures, premium catering and limousine transfers:contentReference[oaicite:10]{index=10}. This level of service lets you depart and board in minutes, with no queues or waiting." } },
-      { type: "p", text: { es: "Al final, el valor de volar privado reside en el tiempo que recuperas y en el confort que disfrutas. Este artículo te ayudará a decidir cuándo la aviación privada es la mejor opción para tus viajes en Argentina.", en: "Ultimately, the value of flying private lies in the time you regain and the comfort you enjoy. This article will help you decide when private aviation is the best option for your travels in Argentina." } },
-    ],
-  },
-  //----------------------------------------------------------------------ARTICULO  
-  {
     slug: "destinos-vuelos-privados-buenos-aires",
     date: "2025-11-02",
     cover: destinosTop,
@@ -79,3 +53,295 @@
     ],
   },
 
+-------------------------------------------------------- (MUNDIAL 2026)
+
+{
+  "slug": "ahorra-tiempo-evita-aeropuertos-masivos-mundial-2026",
+  "date": "2025-11-03",
+  "cover": "tiempo_aeropuertos_jetprivado",
+  "title": {
+    "es": "Cómo ahorrar tiempo y evitar aeropuertos masivos durante el Mundial 2026",
+    "en": "How to save time and avoid massive airports during the 2026 World Cup"
+  },
+  "subtitle": {
+    "es": "La forma más eficiente de viajar entre sedes en un torneo multinacional.",
+    "en": "The most efficient way to travel between venues in a multinational tournament."
+  },
+  "excerpt": {
+    "es": "El Mundial 2026 se jugará en tres países y las distancias serán mayores que en ediciones anteriores. Volar en jet privado permite reducir esperas y concentrarse en disfrutar el evento.",
+    "en": "The 2026 World Cup will be played in three countries and distances will be greater than in previous editions. Flying private allows you to reduce waiting times and focus on enjoying the event."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "Los aeropuertos principales de Estados Unidos y México suelen operar con alta ocupación, y durante el Mundial 2026 la afluencia de aficionados aumentará. Esto puede traducirse en más tiempo de check-in, más espera en controles y menos flexibilidad en horarios.",
+        "en": "The main airports in the United States and Mexico usually operate at high capacity, and during the 2026 World Cup the number of fans will increase. This can translate into longer check-in times, more waiting at controls and less flexibility in schedules."
+      }
+    },
+    {
+      "type": "img",
+      "src": "aeropuerto_privado_jet"
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Embarque rápido y terminales privadas",
+        "en": "Fast boarding and private terminals"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Con un jet privado el pasajero puede llegar al aeropuerto pocos minutos antes del despegue, embarcar por una terminal exclusiva y reducir el tiempo total de viaje. En muchos casos el proceso completo puede tomar menos de 30 minutos.",
+        "en": "With a private jet the passenger can arrive at the airport just minutes before departure, board through an exclusive terminal and reduce total travel time. In many cases the entire process can take less than 30 minutes."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Rutas directas entre ciudades sede",
+        "en": "Direct routes between host cities"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Al no depender de vuelos comerciales, es posible volar directo entre dos ciudades sede incluso cuando no hay ruta comercial directa. Esto es ideal para seguir dos partidos en días consecutivos o para trasladar a un grupo VIP.",
+        "en": "By not depending on commercial flights, it is possible to fly directly between two host cities even when there is no commercial direct route. This is ideal to follow two matches on consecutive days or to transport a VIP group."
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "El resultado es simple: menos tiempo en aeropuertos y más tiempo en el estadio, en el hotel o en actividades de hospitalidad.",
+        "en": "The result is simple: less time at airports and more time at the stadium, at the hotel or in hospitality activities."
+      }
+    }
+  ]
+}
+
+  //----------------------------------------------------------------------ARTICULO  
+{
+  "slug": "empresas-ejecutivos-negocios-y-futbol-mundial-2026-jet",
+  "date": "2025-11-03",
+  "cover": "empresas_ejecutivos_jetprivado",
+  "title": {
+    "es": "Empresas y ejecutivos: cómo combinar negocios y pasión por el fútbol en el Mundial 2026",
+    "en": "Companies and executives: how to combine business and football passion at the 2026 World Cup"
+  },
+  "subtitle": {
+    "es": "Viajes corporativos premium para el mayor evento deportivo del mundo.",
+    "en": "Premium corporate travel for the biggest sporting event in the world."
+  },
+  "excerpt": {
+    "es": "El Mundial es una gran oportunidad de relacionamiento. Un jet privado permite a directivos y clientes vivir el fútbol sin descuidar la agenda de negocios.",
+    "en": "The World Cup is a great networking opportunity. A private jet allows executives and clients to enjoy football without neglecting business."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "Muchos altos ejecutivos viajan durante el Mundial para asistir a partidos con clientes, sponsors o socios estratégicos. Hacerlo en jet privado ofrece privacidad para conversar, flexibilidad de horarios y una imagen acorde al nivel de la relación comercial.",
+        "en": "Many senior executives travel during the World Cup to attend matches with clients, sponsors or strategic partners. Doing it on a private jet offers privacy to talk, schedule flexibility and an image that matches the level of the business relationship."
+      }
+    },
+    {
+      "type": "img",
+      "src": "viaje_corporativo_jetprivado"
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Logística diseñada para equipos de alto nivel",
+        "en": "Logistics designed for high-level teams"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Se puede planificar un recorrido que combine sedes del Mundial con reuniones en ciudades clave de Estados Unidos o México. El avión espera al grupo, no al revés, y el itinerario se ajusta si surge una comida de último momento.",
+        "en": "A route can be planned that combines World Cup venues with meetings in key U.S. or Mexican cities. The aircraft waits for the group, not the other way around, and the itinerary can be adjusted if a last-minute lunch comes up."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Experiencia para el cliente",
+        "en": "Client experience"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Invitar a ver un partido del Mundial y trasladar al invitado en un jet privado es una acción de hospitalidad de muy alto impacto. Refuerza la marca de la empresa, el nivel de servicio y la cercanía con el invitado.",
+        "en": "Inviting someone to watch a World Cup match and flying them on a private jet is a very high-impact hospitality action. It reinforces the company’s brand, service level and closeness with the guest."
+      }
+    }
+  ]
+}
+  //----------------------------------------------------------------------ARTICULO  
+
+{
+  "slug": "cuanto-cuesta-volar-en-jet-privado-al-mundial-2026",
+  "date": "2025-11-03",
+  "cover": "costos_jetprivado_mundial2026",
+  "title": {
+    "es": "¿Cuánto cuesta volar en jet privado al Mundial 2026? Guía estimada",
+    "en": "How much does it cost to fly private to the 2026 World Cup? Estimated guide"
+  },
+  "subtitle": {
+    "es": "Rangos orientativos y factores que inciden en el precio.",
+    "en": "Indicative ranges and factors that affect pricing."
+  },
+  "excerpt": {
+    "es": "El costo de un jet privado depende de la ruta, el tamaño del avión y los servicios adicionales. Aquí presentamos valores estimados para planificar con anticipación.",
+    "en": "The cost of a private jet depends on the route, aircraft size and additional services. Here we present estimated values to help you plan ahead."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "No hay un único precio para volar privado al Mundial 2026 porque cada viaje es personalizado. Sin embargo, para un grupo de 6 a 8 pasajeros que vuele dentro de Norteamérica durante el torneo, se pueden estimar rangos de entre 15 000 y 25 000 dólares por hora de vuelo en jets de categoría media. Para vuelos más largos o aviones más espaciosos, el valor puede ser mayor.",
+        "en": "There is no single price for flying private to the 2026 World Cup because each trip is personalized. However, for a group of 6 to 8 passengers flying within North America during the tournament, ranges of between 15,000 and 25,000 dollars per flight hour on midsize jets can be estimated. For longer flights or larger aircraft, the amount can be higher."
+      }
+    },
+    {
+      "type": "img",
+      "src": "costos_jetprivado_infografia"
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Factores que aumentan o reducen el costo",
+        "en": "Factors that increase or reduce the cost"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "• Distancia entre sedes.  \n• Tipo de aeropuerto utilizado.  \n• Número de pasajeros.  \n• Catering premium y servicios en tierra.  \n• Anticipación de la reserva, especialmente en fechas de alta demanda.",
+        "en": "• Distance between venues.  \n• Type of airport used.  \n• Number of passengers.  \n• Premium catering and ground services.  \n• Booking in advance, especially on high-demand dates."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "¿Por qué puede ser más rentable de lo que parece?",
+        "en": "Why can it be more cost-effective than it seems?"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Cuando el grupo es de varias personas y se trata de un viaje corporativo o VIP, el valor por persona puede ser competitivo frente a comprar varias tarifas de clase ejecutiva más los costos de tiempo, traslados y cambios de itinerario.",
+        "en": "When the group is made up of several people and it is a corporate or VIP trip, the per-person value can be competitive compared to buying several business-class fares plus the time, transfer and itinerary-change costs."
+      }
+    }
+  ]
+}
+  //----------------------------------------------------------------------ARTICULO  
+{
+  "slug": "como-reservar-un-jet-privado-para-el-mundial-2026",
+  "date": "2025-11-03",
+  "cover": "reservar_jetprivado_mundial2026",
+  "title": {
+    "es": "Cómo reservar un jet privado para el Mundial 2026 paso a paso",
+    "en": "How to book a private jet for the 2026 World Cup step by step"
+  },
+  "subtitle": {
+    "es": "Proceso claro desde la consulta hasta el despegue.",
+    "en": "Clear process from inquiry to take-off."
+  },
+  "excerpt": {
+    "es": "Reservar con anticipación es clave porque el Mundial 2026 tendrá más partidos y sedes que otras ediciones. Esta guía muestra cada etapa del servicio.",
+    "en": "Booking in advance is key because the 2026 World Cup will have more matches and venues than other editions. This guide shows each stage of the service."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "1. Consulta inicial: indicás ciudad de origen, cantidad de pasajeros y sedes que querés visitar.  \n2. Propuesta personalizada: presentamos opciones de aviones, horarios y aeropuertos ejecutivos.  \n3. Confirmación: se bloquea el avión y los slots de aeropuerto.  \n4. Servicios adicionales: catering, traslados terrestres, asistencia en destino.  \n5. Día de vuelo: llegada a terminal privada, embarque rápido y despegue hacia la sede del partido.",
+        "en": "1. Initial inquiry: you indicate departure city, number of passengers and venues you want to visit.  \n2. Personalized proposal: we present aircraft options, schedules and executive airports.  \n3. Confirmation: the aircraft and airport slots are blocked.  \n4. Additional services: catering, ground transportation, destination assistance.  \n5. Day of flight: arrival at private terminal, fast boarding and take-off to the match venue."
+      }
+    },
+    {
+      "type": "img",
+      "src": "proceso_reserva_jetprivado"
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Reservar con 6 a 12 meses de anticipación",
+        "en": "Book 6 to 12 months in advance"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Como el Mundial 2026 tendrá más partidos y más ciudades que ediciones anteriores, la disponibilidad de aeronaves y horarios cómodos se reduce rápido. Para asegurar el modelo de avión adecuado para su grupo es recomendable reservar con varios meses de anticipación.",
+        "en": "Since the 2026 World Cup will have more matches and more cities than previous editions, availability of aircraft and convenient times is reduced quickly. To secure the right aircraft for your group it is advisable to book several months in advance."
+      }
+    }
+  ]
+}
+
+  //----------------------------------------------------------------------ARTICULO  
+{
+  "slug": "desde-buenos-aires-a-miami-sin-escalas-mundial-2026",
+  "date": "2025-11-03",
+  "cover": "buenosaires_miami_jetprivado",
+  "title": {
+    "es": "Desde Buenos Aires a Miami sin escalas: la nueva forma de vivir la Copa del Mundo",
+    "en": "From Buenos Aires to Miami non-stop: the new way to live the World Cup"
+  },
+  "subtitle": {
+    "es": "Vuelo directo, atención premium y conexión inmediata con la sede.",
+    "en": "Direct flight, premium attention and immediate connection with the venue."
+  },
+  "excerpt": {
+    "es": "Una propuesta pensada para grupos argentinos y latinoamericanos que buscan llegar directo a una sede del Mundial 2026 sin pasar por aeropuertos masivos.",
+    "en": "A proposal designed for Argentine and Latin American groups who want to arrive directly to a 2026 World Cup venue without going through massive airports."
+  },
+  "content": [
+    {
+      "type": "p",
+      "text": {
+        "es": "El trayecto Buenos Aires – Miami es uno de los más demandados por viajeros de la región. Hacerlo en jet privado permite salir en el horario elegido, volar sin escalas, llegar descansado y continuar la experiencia del Mundial sin interrupciones.",
+        "en": "The Buenos Aires – Miami route is one of the most demanded by travellers from the region. Doing it on a private jet allows you to depart at your chosen time, fly non-stop, arrive rested and continue the World Cup experience without interruptions."
+      }
+    },
+    {
+      "type": "img",
+      "src": "buenosaires_miami_jetprivado"
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Miami como base de operaciones",
+        "en": "Miami as an operations base"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Miami será una de las sedes y además es una ciudad con excelente infraestructura hotelera y de servicios de lujo. Desde allí se pueden organizar vuelos privados más cortos hacia otras sedes del torneo.",
+        "en": "Miami will be one of the venues and it is also a city with excellent hotel and luxury services infrastructure. From there, shorter private flights to other tournament venues can be organized."
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "es": "Servicio Vgolden jets",
+        "en": "Vgolden jets service"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "es": "Incluimos traslado hasta la terminal privada en Buenos Aires, embarque rápido, catering a bordo, tripulación dedicada y coordinación en destino con chofer. Todo pensado para que el viaje sea parte de la experiencia del Mundial.",
+        "en": "We include transfer to the private terminal in Buenos Aires, fast boarding, onboard catering, dedicated crew and destination coordination with a driver. Everything is designed so that the trip becomes part of the World Cup experience."
+      }
+    }
+  ]
+}
