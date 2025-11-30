@@ -19,7 +19,6 @@ if (!API_KEY) {
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-// 1. SEGURIDAD: Desactivamos filtros para evitar bloqueos por temas de "lujo"
 const safetySettings = [
     { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
@@ -27,41 +26,81 @@ const safetySettings = [
     { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
 ];
 
-// 2. LISTA DE MODELOS: Si uno falla (404), probamos el siguiente
 const MODEL_CANDIDATES = [
     "gemini-1.5-flash",
-    "gemini-pro",           // El estándar más estable
+    "gemini-pro",
     "gemini-1.5-flash-latest",
     "gemini-1.0-pro",
     "gemini-1.5-pro"
 ];
 
-// --- FUNCIÓN QUE PRUEBA MODELOS EN BUCLE ---
+// --- FALLBACK REST API (SIN SDK) ---
+async function generateWithRest(modelName, prompt) {
+    console.log(`📡 [REST] Probando conexión directa con: ${modelName}...`);
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${API_KEY}`;
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            safetySettings: [
+                { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
+            ]
+        })
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`REST API Error ${response.status}: ${errorText}`);
+    }
+
+    const data = await response.json();
+    if (data.candidates && data.candidates.length > 0 && data.candidates[0].content) {
+        return data.candidates[0].content.parts[0].text;
+    } else {
+        throw new Error('Respuesta REST vacía o formato inesperado');
+    }
+}
+
+// --- FUNCIÓN QUE PRUEBA MODELOS EN BUCLE (SDK + REST) ---
 async function generateWithFallback(prompt) {
     let lastError = null;
 
+    // 1. Intentar con SDK
     for (const modelName of MODEL_CANDIDATES) {
         try {
-            console.log(`📡 Probando conexión con: ${modelName}...`);
+            console.log(`📡 [SDK] Probando conexión con: ${modelName}...`);
             const model = genAI.getGenerativeModel({ model: modelName, safetySettings });
-
             const result = await model.generateContent(prompt);
             const response = await result.response;
-            const text = response.text();
-
-            console.log(`✅ ¡Éxito con ${modelName}!`);
-            return text; // Si llegamos aquí, funcionó. Retornamos y salimos del bucle.
+            console.log(`✅ ¡Éxito con ${modelName} (SDK)!`);
+            return response.text();
         } catch (error) {
-            console.warn(`⚠️ Falló ${modelName}: ${error.message}`);
+            console.warn(`⚠️ Falló ${modelName} (SDK): ${error.message}`);
             lastError = error;
-            // Continuamos al siguiente modelo del array...
         }
     }
-    // Si terminamos el bucle y nada funcionó:
-    throw new Error(`FATAL: Todos los modelos fallaron. Último error: ${lastError?.message}`);
+
+    // 2. Intentar con REST API Directa (Último recurso)
+    console.log('⚠️ Todos los intentos SDK fallaron. Probando REST API directa...');
+    for (const modelName of MODEL_CANDIDATES) {
+        try {
+            const text = await generateWithRest(modelName, prompt);
+            console.log(`✅ ¡Éxito con ${modelName} (REST)!`);
+            return text;
+        } catch (error) {
+            console.warn(`⚠️ Falló ${modelName} (REST): ${error.message}`);
+            lastError = error;
+        }
+    }
+
+    throw new Error(`FATAL: Todos los modelos fallaron (SDK y REST). Verifique su API Key y permisos. Último error: ${lastError?.message}`);
 }
 
-// --- FUNCIÓN DE OPTIMIZACIÓN ---
 async function optimizeArticle(article) {
     console.log(`Optimizing article: ${article.slug}`);
 
@@ -81,10 +120,8 @@ async function optimizeArticle(article) {
     `;
 
     try {
-        // Usamos la función tanque que prueba todos los modelos
         let text = await generateWithFallback(prompt);
 
-        // 3. LIMPIEZA DE JSON (Regex para quitar markdown ```json ... ```)
         text = text.replace(/```json/g, '').replace(/```/g, '');
         const firstBrace = text.indexOf('{');
         const lastBrace = text.lastIndexOf('}');
@@ -102,7 +139,6 @@ async function optimizeArticle(article) {
     }
 }
 
-// --- MAIN LOOP ---
 async function main() {
     console.log('Starting SEO optimization...');
 
@@ -113,7 +149,6 @@ async function main() {
 
     let content = fs.readFileSync(FILE_PATH, 'utf-8');
 
-    // Regex para encontrar artículos
     const slugRegex = /slug:\s*(["'])([^"']+)\1/g;
     let match;
     const articles = [];
@@ -121,7 +156,6 @@ async function main() {
     while ((match = slugRegex.exec(content)) !== null) {
         const slug = match[2];
         const slugIndex = match.index;
-        // Leemos 4000 caracteres para asegurar que capturamos toda la metadata
         const chunk = content.substring(slugIndex, slugIndex + 4000);
 
         const dateMatch = chunk.match(/date:\s*(["'])([^"']+)\1/);
@@ -151,7 +185,6 @@ async function main() {
         }
     }
 
-    // Ordenar: Prioridad a los que nunca se han optimizado
     articles.sort((a, b) => {
         if (!a.lastSeoUpdate && !b.lastSeoUpdate) return new Date(a.date) - new Date(b.date);
         if (!a.lastSeoUpdate) return -1;
@@ -188,14 +221,11 @@ async function main() {
 
             reportMarkdown += `## ✅ ${article.slug}\n**Old Title:** ${article.title.es}\n**New Title:** ${optimized.title.es}\n\n`;
         } else {
-            // Reportamos el error pero NO rompemos el script
             reportMarkdown += `## ❌ Falló: ${article.slug}\n> **Error:** ${result.error}\n\n`;
         }
-        // Esperamos un poco para no saturar la API
         await new Promise(r => setTimeout(r, 1000));
     }
 
-    // Aplicar cambios al archivo
     replacements.sort((a, b) => b.start - a.start);
     let newContent = content;
     for (const rep of replacements) newContent = newContent.substring(0, rep.start) + rep.text + newContent.substring(rep.end);
