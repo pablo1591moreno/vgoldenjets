@@ -18,15 +18,44 @@ if (!API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// Safety Settings: Force BLOCK_NONE to avoid blocking legitimate content
+// Safety Settings: Force BLOCK_NONE
 const safetySettings = [
     { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
 ];
+
+// Model Fallback List
+const MODEL_CANDIDATES = [
+    "gemini-1.5-flash",
+    "gemini-pro",
+    "gemini-1.0-pro"
+];
+
+async function generateContentWithFallback(prompt) {
+    let lastError = null;
+
+    for (const modelName of MODEL_CANDIDATES) {
+        try {
+            // console.log(`Trying model: ${modelName}`);
+            const model = genAI.getGenerativeModel({ model: modelName });
+            const result = await model.generateContent({
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                safetySettings: safetySettings,
+            });
+            const response = await result.response;
+            return response.text();
+        } catch (error) {
+            // console.warn(`Model ${modelName} failed: ${error.message}`);
+            lastError = error;
+            // If it's a safety block, no point trying other models usually, but we continue just in case.
+            // If it's a 404 or 403, trying another model is the right move.
+        }
+    }
+    throw lastError || new Error("All models failed");
+}
 
 async function optimizeArticle(article) {
     console.log(`Optimizing article: ${article.slug}`);
@@ -52,15 +81,9 @@ async function optimizeArticle(article) {
   `;
 
     try {
-        const result = await model.generateContent({
-            contents: [{ role: "user", parts: [{ text: prompt }] }],
-            safetySettings: safetySettings,
-        });
+        let text = await generateContentWithFallback(prompt);
 
-        const response = await result.response;
-        let text = response.text();
-
-        // Sanitization: Extract only the JSON object
+        // Sanitization
         const jsonMatch = text.match(/\{[\s\S]*\}/);
         if (!jsonMatch) {
             throw new Error("No JSON object found in response");
@@ -70,7 +93,6 @@ async function optimizeArticle(article) {
         return JSON.parse(text);
     } catch (error) {
         console.error(`Failed to optimize article ${article.slug}:`, error.message);
-        // Error Propagation: Return the error message to be included in the report
         return { error: error.message };
     }
 }
@@ -211,7 +233,6 @@ async function main() {
             reportMarkdown += `### Excerpt\n**Before:** ${article.excerpt.es}\n**After:** ${optimized.excerpt.es}\n\n`;
             reportMarkdown += `---\n\n`;
         } else {
-            // Handle Error in Report
             const errorMessage = result ? result.error : "Unknown error";
             reportMarkdown += `## Article: ${article.slug}\n\n`;
             reportMarkdown += `### Status: ❌ Failed\n\n`;
