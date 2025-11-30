@@ -88,6 +88,8 @@ interface JsonArticle {
   cover: string;
   /** Imagen preferida para redes (JPG/PNG 1200x630) */
   ogImage?: string;
+  /** Fecha de última optimización SEO automática */
+  lastSeoUpdate?: string;
   title: LStr;
   subtitle: LStr;
   excerpt: LStr;
@@ -182,11 +184,19 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Los precios de un vuelo charter varían en función de la aeronave y la distancia. Rutas habituales como Buenos Aires–Bariloche, Buenos Aires–Punta del Este o Buenos Aires–Mendoza suelen estar en un rango medio por tramo. Para conocer un valor preciso, contáctanos y te ofreceremos una cotización transparente adaptada a tus necesidades.", en: "Charter prices vary depending on the aircraft and distance. Common routes such as Buenos Aires–Bariloche, Buenos Aires–Punta del Este or Buenos Aires–Mendoza fall within an average range per leg. For an accurate quote, contact us and we will provide a transparent estimate tailored to your needs." } },
       { type: "h2", text: { es: "Factores que influyen en el precio", en: "Factors that influence the price" } },
       { type: "p", text: { es: "El tipo de avión, el número de pasajeros, la duración del vuelo, las tasas de aterrizaje y los servicios especiales (catering, transporte terrestre) determinan el costo final de tu charter. Nuestros asesores te orientarán para elegir la mejor opción en función de tu itinerario y presupuesto.", en: "The type of aircraft, number of passengers, flight duration, landing fees and special services (catering, ground transportation) determine the final cost of your charter. Our advisors will help you choose the best option based on your itinerary and budget." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO 
-
   {
     slug: "alquilar-jet-privado-para-8-personas",
     date: "2025-09-15",
@@ -210,11 +220,19 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Utiliza el tiempo de vuelo para reuniones importantes con tu equipo, o simplemente para relajarte con tu familia. La cabina es tuya y la adaptamos para que tengas la mejor experiencia posible.", en: "Use flight time for important meetings with your team, or just to relax with your family. The cabin is yours and we adapt it so you have the best possible experience." } },
       { type: "h2", text: { es: "Destinos ideales para grupos en Argentina", en: "Ideal group destinations in Argentina" } },
       { type: "p", text: { es: "Desde escapadas a bodegas en Mendoza hasta semanas de esquí en Bariloche o viajes de golf en la Patagonia, nuestros vuelos charter para 8 personas te llevan directamente al destino sin escalas. También ofrecemos rutas corporativas a Córdoba, Rosario o Florianópolis para equipos de trabajo que necesitan eficiencia y comodidad.", en: "From wine tours in Mendoza to ski weeks in Bariloche or golf trips in Patagonia, our charter flights for eight passengers take you directly to your destination without stopovers. We also offer corporate routes to Córdoba, Rosario or Florianópolis for teams that need efficiency and comfort." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO 
-
   {
     slug: "charter-jet-privado-para-negocios",
     date: "2025-09-13",
@@ -238,11 +256,19 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Un jet privado te da el control total sobre tu tiempo. Elige tus horarios de salida, rutas y destinos, lo que es ideal para ejecutivos que necesitan llegar a múltiples lugares rápidamente.", en: "A private jet gives you total control over your time. Choose your own departure times, routes, and destinations, which is ideal for executives who need to get to multiple places quickly." } },
       { type: "h2", text: { es: "Rutas de negocios populares", en: "Popular business routes" } },
       { type: "p", text: { es: "Si tus reuniones te llevan a Santiago, São Paulo, Montevideo o Córdoba, nuestros vuelos chárter desde Buenos Aires te permiten visitar varias ciudades en una misma jornada. Olvídate de las conexiones y aprovecha cada minuto para trabajar o descansar mientras vuelas.", en: "If your meetings take you to Santiago, São Paulo, Montevideo or Córdoba, our charter flights from Buenos Aires allow you to visit several cities in a single day. Forget about connections and make the most of every minute to work or relax while you fly." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO 
-
   {
     slug: "vuelo-privado-de-ultima-hora",
     date: "2025-09-11",
@@ -266,11 +292,19 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "A diferencia de las aerolíneas comerciales, un jet privado ofrece una flexibilidad sin igual, lo que te permite elegir tus propios horarios de salida, rutas y destinos.", en: "Unlike commercial airlines, a private jet offers unparalleled flexibility, allowing you to choose your own departure times, routes, and destinations." } },
       { type: "h2", text: { es: "Cómo funciona en Argentina", en: "How it works in Argentina" } },
       { type: "p", text: { es: "Operamos desde los principales aeropuertos de Buenos Aires (Aeroparque, Ezeiza y San Fernando) y podemos activar un vuelo en cuestión de horas. Nuestro equipo está disponible 24/7 para coordinar tu itinerario y gestionar los permisos necesarios para tu despegue inmediato.", en: "We operate from Buenos Aires’ main airports (Aeroparque, Ezeiza and San Fernando) and can launch a flight within hours. Our team is available 24/7 to coordinate your itinerary and obtain the necessary permits for your immediate departure." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO 
-
   {
     slug: "charter-negocios-latam-rutas",
     date: "2025-10-22",
@@ -294,11 +328,19 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Para los multimillonarios y altos funcionarios, la aeronave se percibe como una herramienta estratégica indispensable para gestionar agendas complejas y proteger la privacidad. En el contexto del auge de las economías emergentes de la región, esta percepción es aún más aguda: la aviación privada es vista como una herramienta esencial para la eficiencia y el estatus. Con Vgolden jets, usted garantiza un proceso de embarque y seguridad considerablemente más rápido, lo cual transforma el tiempo perdido en tiempo productivo. Nos enfocamos en ofrecer una solución financiera y logística que minimiza los costos de oportunidad de los viajes comerciales.", en: "For billionaires and high-ranking officials, the aircraft is perceived as an indispensable strategic tool for managing complex agendas and protecting privacy. In the context of the region's emerging economies boom, this perception is even sharper: private aviation is seen as an essential tool for efficiency and status. With Vgolden jets, you guarantee a considerably faster boarding and security process, which transforms lost time into productive time. We focus on offering a financial and logistical solution that minimizes the opportunity costs of commercial travel." } },
       { type: "h2", text: { es: "Rutas clave en el Cono Sur", en: "Key routes in the Southern Cone" } },
       { type: "p", text: { es: "Conectamos los principales centros de negocios del Cono Sur. Buenos Aires, Santiago y São Paulo forman el triángulo de negocios más influyente de la región. Nuestros vuelos chárter permiten reuniones cara a cara en un mismo día, evitando demoras y maximizando cada minuto de su agenda.", en: "We connect the main business hubs of the Southern Cone. Buenos Aires, Santiago and São Paulo form the most influential business triangle in the region. Our charter flights allow face-to-face meetings in a single day, avoiding delays and maximizing every minute of your schedule." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO 
-
   {
     slug: "empty-legs-argentina-acceso-smart",
     date: "2025-10-12",
@@ -324,8 +366,18 @@ const articlesJSON: JsonArticle[] = [
       { type: "p", text: { es: "Publicamos regularmente los tramos vacíos disponibles desde Buenos Aires, Punta del Este y otros destinos del Cono Sur. Si tu agenda es flexible, consulta nuestro listado o suscríbete a las alertas para reservar un vuelo a un precio privilegiado. También puedes combinar un tramo vacío con un chárter normal para crear un itinerario a medida.", en: "We regularly publish empty legs available from Buenos Aires, Punta del Este and other Southern Cone destinations. If your schedule is flexible, check our list or subscribe to alerts to book a flight at a privileged price. You can also combine an empty leg with a normal charter to create a tailored itinerary." } },
       { type: "h2", text: { es: "El Modelo Chárter: La Puerta de Entrada Flexible para Argentina", en: "The Charter Model: The Flexible Gateway for Argentina" } },
       { type: "p", text: { es: "El modelo Chárter (alquiler por viaje) es ideal para aquellos que vuelan menos de 50 horas al año. Es la opción más flexible, ya que el cliente alquila una aeronave para un viaje específico, sin necesidad de una compra o un compromiso a largo plazo. Al aprovechar los tramos vacíos, esta opción se considera la puerta de entrada más flexible al mundo de la aviación privada. Al centrar la comunicación en la eficiencia y la personalización, ofrecemos un valor intrínseco: el jet privado como la máxima expresión de control, lo que permite a los clientes dedicar más tiempo a las cosas que realmente importan.", en: "The Charter model (rental per trip) is ideal for those flying less than 50 hours a year. It is the most flexible option, as the client rents an aircraft for a specific trip, without the need for a purchase or long-term commitment. By taking advantage of empty legs, this option is considered the most flexible gateway to the world of private aviation. By focusing communication on efficiency and personalization, we offer intrinsic value: the private jet as the ultimate expression of control, allowing clients to dedicate more time to the things that truly matter." } },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
+
   //----------------------------------------------------------------------ARTICULO  
   {
     slug: "factores-precio-vuelo-privado-argentina",
@@ -345,7 +397,8 @@ const articlesJSON: JsonArticle[] = [
     },
     content: [
       {
-        type: "p", text: {
+        type: "p",
+        text: {
           es: `Muchas personas se preguntan cuánto cuesta un vuelo privado. La respuesta no es única: el precio final está influenciado por varios factores, desde el modelo de avión hasta la duración del viaje y los servicios a bordo.`,
           en: `Many people wonder how much a private flight costs. The answer is not unique: the final price is influenced by several factors, from the aircraft model to the duration of the trip and onboard services.`
         }
@@ -389,13 +442,20 @@ const articlesJSON: JsonArticle[] = [
           es: `Proporciona a tu corredor aéreo datos precisos: número de pasajeros, fechas flexibles, servicios deseados y aeropuertos de salida y llegada. Cuanta más información ofrezcas, más precisa será la cotización. Recuerda que una tarifa transparente elimina sorpresas y te permite evaluar el costo como una inversión en tiempo y productividad.`,
           en: `Provide your air broker with accurate data: number of passengers, flexible dates, desired services and departure and arrival airports. The more information you provide, the more accurate the quote will be. Remember that a transparent fare eliminates surprises and lets you evaluate the cost as an investment in time and productivity.`
         }
+      },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
       }
     ],
-
   },
 
   //----------------------------------------------------------------------ARTICULO  
-
   {
     slug: "vuelos-privados-eventos-grupos",
     date: "2025-10-30",
@@ -454,494 +514,546 @@ const articlesJSON: JsonArticle[] = [
           en: `We assign you an advisor who takes care of the logistics: schedules, permits, catering and ground transportation. This way, the trip becomes part of the event and not an additional stress.`,
         },
       },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
     ],
   },
 
   //----------------------------------------------------------------------ARTICULO  
 
   {
-  "slug": "itinerario-ideal-sedes-mundial-2026-jet-privado",
-  "date": "2025-11-03",
-  "cover": itinerarioIdealMundial,
-  "title": {
-    "es": "Itinerario ideal para el Mundial 2026 en jet privado: conectando sedes sin perder un partido",
-    "en": "Ideal itinerary for the 2026 World Cup in a private jet: linking venues without missing a match"
-  },
-  "subtitle": {
-    "es": "Descubra cómo moverse entre México, Estados Unidos y Canadá con total comodidad y estilo.",
-    "en": "Discover how to travel between Mexico, the United States and Canada with total comfort and style."
-  },
-  "excerpt": {
-    "es": "El Mundial 2026 se jugará en 16 ciudades de tres países. Viajar en jet privado permite conectar varias sedes en poco tiempo y sin las demoras de la aviación comercial.",
-    "en": "The 2026 World Cup will be played in 16 cities across three countries. Flying private lets you connect several venues in little time and without commercial delays."
-  },
-  "content": [
-    {
-      "type": "p",
-      "text": {
-        "es": "La Copa Mundial de la FIFA 2026 se jugará en 16 ciudades distribuidas entre Estados Unidos, México y Canadá. Esta configuración hace que la logística sea más compleja para los aficionados que quieren seguir varios partidos. Un jet privado simplifica todo el recorrido.",
-        "en": "The 2026 FIFA World Cup will be played in 16 cities across the United States, Mexico and Canada. This setup makes logistics more complex for fans who want to follow several matches. A private jet simplifies the whole journey."
-      }
+    "slug": "itinerario-ideal-sedes-mundial-2026-jet-privado",
+    "date": "2025-11-03",
+    "cover": itinerarioIdealMundial,
+    "title": {
+      "es": "Itinerario ideal para el Mundial 2026 en jet privado: conectando sedes sin perder un partido",
+      "en": "Ideal itinerary for the 2026 World Cup in a private jet: linking venues without missing a match"
     },
-    {
-      "type": "img",
-      "src": itinerarioIdealMundial
+    "subtitle": {
+      "es": "Descubra cómo moverse entre México, Estados Unidos y Canadá con total comodidad y estilo.",
+      "en": "Discover how to travel between Mexico, the United States and Canada with total comfort and style."
     },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Ruta sugerida para fanáticos latinoamericanos",
-        "en": "Suggested route for Latin American fans"
-      }
+    "excerpt": {
+      "es": "El Mundial 2026 se jugará en 16 ciudades de tres países. Viajar en jet privado permite conectar varias sedes en poco tiempo y sin las demoras de la aviación comercial.",
+      "en": "The 2026 World Cup will be played in 16 cities across three countries. Flying private lets you connect several venues in little time and without commercial delays."
     },
-    {
-      "type": "p",
-      "text": {
-        "es": "Una ruta típica puede comenzar en Buenos Aires con un vuelo hacia Ciudad de México para el primer partido. Luego, continuar hacia otra sede mexicana como Guadalajara o Monterrey, y después volar a ciudades de Estados Unidos como Dallas, Los Ángeles o Miami. Si el calendario lo requiere, se puede sumar una última escala en Canadá. Todo se programa según la agenda del pasajero.",
-        "en": "A typical route may start in Buenos Aires with a flight to Mexico City for the first match. Then continue to another Mexican venue such as Guadalajara or Monterrey, and afterwards fly to U.S. cities like Dallas, Los Angeles or Miami. If needed, a last stop in Canada can be added. Everything is scheduled according to the passenger’s agenda."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Ventajas del jet privado frente al avión comercial",
-        "en": "Advantages of a private jet vs commercial flight"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Al volar privado usted evita tiempos muertos en aeropuertos, conexiones innecesarias y esperas en migraciones. En un evento con fechas tan ajustadas, ahorrar incluso una o dos horas por tramo puede significar llegar o no a un partido.",
-        "en": "When flying private you avoid dead time at airports, unnecessary connections and immigration lines. In an event with such a tight schedule, saving even one or two hours per leg can mean making it to a match or not."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Además, al usar aeropuertos ejecutivos o terminales privadas, el embarque es rápido y la experiencia se mantiene en el estándar de lujo que buscan los viajeros de alto poder adquisitivo.",
-        "en": "In addition, by using executive airports or private terminals, boarding is fast and the experience remains at the luxury standard high-net-worth travellers are looking for."
-      }
-    }
-  ]
-},
-
-  //----------------------------------------------------------------------ARTICULO  
-
-{
-  "slug": "vuelos-privados-argentina",
-  "date": "2025-11-05",
-  "cover": ventajasAccesosEficiencia,
-  "title": {
-    "es": "Vuelos privados en Argentina: ventajas, accesos y eficiencia",
-    "en": "Private flights in Argentina: advantages, access and efficiency"
-  },
-  "subtitle": {
-    "es": "Descubra las razones por las que los vuelos privados en Argentina superan a la aviación comercial en accesibilidad, tiempo y servicio.",
-    "en": "Discover why private flights in Argentina outperform commercial aviation in accessibility, time and service."
-  },
-  "excerpt": {
-    "es": "Descubra las ventajas de los vuelos privados en Argentina: más aeropuertos, horarios flexibles y acceso exclusivo sin demoras ni complicaciones.",
-    "en": "Discover the benefits of private flights in Argentina: more airports, flexible schedules and exclusive access without delays or complications."
-  },
-  "content": [
-    {
-      "type": "h2",
-      "text": {
-        "es": "Vuelos privados vs comerciales en Argentina: eficiencia, privacidad y tiempo",
-        "en": "Private vs commercial flights in Argentina: efficiency, privacy and time"
-      }
-    },
-    
-    {
-      "type": "p",
-      "text": {
-        "es": "Los vuelos privados en Argentina no solo se eligen por comodidad o lujo, sino por la eficiencia y la privacidad frente a los vuelos comerciales tradicionales. En el país existen más de 276 aeródromos públicos y más de 200 de uso privado, pero la aviación comercial opera regularmente solo en unos 25. En cambio, un jet privado —según su categoría— puede acceder a más de 400 pistas en todo el país, lo que permite aterrizar más cerca del destino final y ahorrar tiempo valioso evitando conexiones terrestres innecesarias.",
-        "en": "Private flights in Argentina are not just about luxury—they are about efficiency and privacy compared to traditional commercial flights. The country has more than 276 public aerodromes and over 200 private ones, yet commercial aviation regularly operates in only around 25. In contrast, a private jet—depending on its category—can access over 400 runways nationwide, allowing passengers to land closer to their final destination and avoid unnecessary ground transfers."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Aeródromos privados: acceda a más de 400 destinos en el país",
-        "en": "Private airfields: access over 400 destinations across the country"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "La aviación privada en Argentina abre un abanico de posibilidades al operar en cientos de aeródromos distribuidos estratégicamente. Desde pistas rurales hasta aeropuertos ejecutivos como San Fernando, Morón o aeródromos regionales, los vuelos privados permiten crear itinerarios más directos y eficientes. Esto representa una ventaja clave tanto para viajes de negocios como para el turismo de lujo.",
-        "en": "Private aviation in Argentina opens up a range of possibilities by operating in hundreds of strategically located airfields. From rural runways to executive airports like San Fernando, Morón or regional aerodromes, private flights allow more direct and efficient itineraries. This is a key advantage for both business travel and luxury tourism."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Agenda flexible: optimice sus viajes de negocio o turismo de lujo",
-        "en": "Flexible schedule: optimize business or luxury travel"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Para ejecutivos y viajeros frecuentes, los vuelos privados en Argentina permiten realizar múltiples reuniones en distintas provincias en un mismo día, sin depender de horarios fijos. Para turistas de alto nivel, significa aterrizar directamente en un lodge de pesca en la Patagonia, una bodega en Mendoza o una estancia remota en la Pampa, evitando los aeropuertos comerciales y sus demoras.",
-        "en": "For executives and frequent travelers, private flights in Argentina allow for multiple meetings in different provinces within the same day—without being tied to fixed schedules. For high-end tourists, it means landing directly at a fishing lodge in Patagonia, a winery in Mendoza or a remote estancia in the Pampas, avoiding commercial airports and delays."
-      }
-    },
+    "content": [
       {
-      "type": "img",
-      "src": ventajasAccesosEficiencia
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "FBO en Argentina: servicios premium sin esperas ni filas",
-        "en": "FBO in Argentina: premium services without queues or delays"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Los FBO (Fixed Base Operators) en Argentina están diseñados para ofrecer una experiencia ejecutiva total: salas VIP privadas, control migratorio y de seguridad acelerado, catering personalizado y traslado directo al avión. Todo en un entorno seguro, sin filas ni tiempos muertos. Este tipo de servicios marcan una diferencia fundamental para quienes priorizan la privacidad y el confort.",
-        "en": "FBOs (Fixed Base Operators) in Argentina are designed to offer a complete executive experience: private VIP lounges, expedited immigration and security control, personalized catering and direct aircraft transfers. All in a secure environment, without queues or wasted time. These services make a fundamental difference for those who prioritize privacy and comfort."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Conclusión: por qué elegir vuelos privados en Argentina hoy",
-        "en": "Conclusion: why choose private flights in Argentina today"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Más que un lujo, los vuelos privados en Argentina representan una herramienta estratégica para optimizar tiempo, mejorar la experiencia de viaje y garantizar privacidad. Con acceso a más de 400 aeródromos, servicios FBO premium y flexibilidad total, la aviación privada es la solución ideal para quienes valoran cada minuto. Si busca eficiencia y confort, no hay mejor opción dentro del país.",
-        "en": "More than a luxury, private flights in Argentina are a strategic tool to optimize time, enhance the travel experience and ensure privacy. With access to over 400 airfields, premium FBO services and total flexibility, private aviation is the ideal solution for those who value every minute. If you're looking for efficiency and comfort, there's no better option within the country."
-      }
-    }
-  ]
-},
-  //----------------------------------------------------------------------ARTICULO  
-{
-  "slug": "vuelos-privados-desde-buenos-aires",
-  "date": "2025-11-09",
-  "cover": vuelosBuenosAires,
-  "title": {
-    "es": "Vuelos privados desde Buenos Aires: destinos más solicitados",
-    "en": "Private Flights from Buenos Aires: Top Requested Destinations"
-  },
-  "subtitle": {
-    "es": "Conozca los destinos más populares para vuelos privados desde Buenos Aires y por qué son ideales para viajar en jet.",
-    "en": "Discover the most popular private flight destinations from Buenos Aires and why they’re ideal for jet travel."
-  },
-  "excerpt": {
-    "es": "Desde Buenos Aires, los vuelos privados a destinos como Bariloche, Mendoza o Punta del Este combinan eficiencia, confort y acceso directo. Descubra sus atractivos.",
-    "en": "From Buenos Aires, private flights to destinations like Bariloche, Mendoza or Punta del Este offer efficiency, comfort and direct access. Discover more."
-  },
-  "content": [
-    {
-      "type": "p",
-      "text": {
-        "es": "Buenos Aires es el punto de partida principal para vuelos privados en Argentina. Ya sea para viajes corporativos, escapadas de lujo o itinerarios personalizados, las rutas que parten desde la capital ofrecen accesos directos, mayor privacidad y una experiencia a bordo sin comparación.",
-        "en": "Buenos Aires is the main departure point for private flights in Argentina. Whether for corporate travel, luxury getaways or tailored itineraries, routes departing from the capital offer direct access, greater privacy and an unmatched onboard experience."
-      }
-    },
-          {
-      "type": "img",
-      "src": vuelosBuenosAires
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Destinos nacionales preferidos para vuelos privados",
-        "en": "Top Domestic Destinations for Private Flights"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Estos son los destinos dentro de Argentina más elegidos por quienes vuelan en jet privado desde Buenos Aires:",
-        "en": "These are the most chosen destinations within Argentina for those flying private from Buenos Aires:"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Bariloche: perfecto para esquiar o desconectarse en la Patagonia. Los jets aterrizan en un entorno natural rodeado de lagos y montañas.",
-        "en": "• Bariloche: perfect for skiing or relaxing in Patagonia. Jets land in a natural setting surrounded by lakes and mountains."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Mendoza: ideal para el turismo enológico y reuniones empresariales. El vuelo desde Buenos Aires toma aproximadamente 2 horas.",
-        "en": "• Mendoza: ideal for wine tourism and business meetings. The flight from Buenos Aires takes about 2 hours."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Córdoba: importante polo industrial y cultural, con múltiples aeródromos ejecutivos en la región.",
-        "en": "• Córdoba: an important industrial and cultural hub with several executive airfields nearby."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Ushuaia: la ciudad más austral del mundo. Un destino exclusivo para quienes buscan experiencias únicas en el fin del mundo.",
-        "en": "• Ushuaia: the southernmost city in the world. An exclusive destination for those seeking unique end-of-the-world experiences."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Destinos internacionales cercanos en jet privado",
-        "en": "Nearby International Destinations by Private Jet"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Desde Buenos Aires también se realizan vuelos privados a destinos internacionales estratégicos. Estos son los más demandados:",
-        "en": "Private flights from Buenos Aires also reach strategic international destinations. Here are the most in-demand:"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Punta del Este (Uruguay): una ruta clásica por su cercanía y exclusividad. Ideal para fines de semana de relax o eventos de temporada.",
-        "en": "• Punta del Este (Uruguay): a classic route due to its proximity and exclusivity. Perfect for weekend getaways or seasonal events."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• Santiago (Chile): centro de negocios y conexión internacional. Vuelos ejecutivos frecuentes para reuniones corporativas.",
-        "en": "• Santiago (Chile): a business center and international hub. Frequent executive flights for corporate meetings."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "• São Paulo (Brasil): capital empresarial de Sudamérica, con múltiples aeropuertos y helipuertos que permiten máxima flexibilidad.",
-        "en": "• São Paulo (Brazil): the business capital of South America, with multiple airports and helipads for maximum flexibility."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Todos estos destinos cuentan con infraestructura para recibir vuelos privados, incluyendo FBOs, terminales VIP y servicios de asistencia en tierra.",
-        "en": "All these destinations have the infrastructure to handle private flights, including FBOs, VIP terminals and ground support services."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Vuelos personalizados desde Buenos Aires a cualquier destino",
-        "en": "Custom Private Flights from Buenos Aires to Any Destination"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "¿Tiene otro destino en mente? Nuestro equipo diseña vuelos privados a medida desde Buenos Aires a cualquier punto de Argentina o América del Sur. Contáctenos para crear una ruta que se adapte a su agenda y estilo de viaje.",
-        "en": "Have another destination in mind? Our team designs custom private flights from Buenos Aires to any point in Argentina or South America. Contact us to create a route tailored to your schedule and travel style."
-      }
-    }
-  ]
-},
-
-  //----------------------------------------------------------------------ARTICULO  
-
-{
-  "slug": "jet-privado-mundial-2026",
-  "date": "2025-11-10",
-  "cover": mundial2026,
-  "title": {
-    "es": "Jet privado en el Mundial 2026: cómo ahorrar tiempo y evitar aeropuertos masivos",
-    "en": "Private Jet at the 2026 World Cup: Save Time and Avoid Massive Airports"
-  },
-  "subtitle": {
-    "es": "La forma más eficiente de viajar entre sedes durante el torneo en EE.UU., México y Canadá.",
-    "en": "The most efficient way to travel between venues during the tournament in the US, Mexico and Canada."
-  },
-  "excerpt": {
-    "es": "El Mundial 2026 se jugará en EE.UU., México y Canadá. Volar en jet privado permite evitar esperas, aeropuertos saturados y ganar tiempo entre partidos.",
-    "en": "The 2026 World Cup will take place in the US, Mexico and Canada. Flying private lets you avoid delays, crowded airports and save time between matches."
-  },
-  "content": [
-    {
-      "type": "p",
-      "text": {
-        "es": "Durante el Mundial 2026, miles de aficionados se moverán entre sedes en tres países: Estados Unidos, México y Canadá. Esto representa un desafío logístico importante, especialmente si se viaja entre partidos con poco margen de tiempo. Un jet privado es la opción más eficiente para evitar aeropuertos masivos, largas filas y restricciones de itinerarios.",
-        "en": "During the 2026 World Cup, thousands of fans will travel between host cities across three countries: the United States, Mexico and Canada. This poses a major logistical challenge, especially for those moving between matches on tight schedules. A private jet is the most efficient way to avoid crowded airports, long lines and limited schedules."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Los aeropuertos principales de Estados Unidos y México ya operan con alta ocupación. Durante el torneo, el flujo de pasajeros se multiplicará, generando demoras en seguridad, migraciones, embarque y conexiones. El jet privado ofrece una solución directa para quienes desean evitar estas congestiones.",
-        "en": "Major airports in the US and Mexico already operate at high capacity. During the tournament, passenger flow will multiply, causing delays at security, immigration, boarding and connections. A private jet offers a direct solution for those wishing to avoid this congestion."
-      }
-    },
-    {
-      "type": "img",
-      "src": mundial2026
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Embarque rápido en terminales privadas",
-        "en": "Fast boarding at private terminals"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Con un jet privado, el pasajero puede llegar a la terminal ejecutiva apenas minutos antes del vuelo. No hay filas, no hay esperas. El embarque es directo, rápido y con total privacidad. En muchos casos, todo el proceso —desde la llegada al aeropuerto hasta el despegue— lleva menos de 30 minutos.",
-        "en": "With a private jet, passengers can arrive at the executive terminal just minutes before the flight. No lines, no waiting. Boarding is direct, fast and completely private. In many cases, the whole process—from airport arrival to takeoff—takes less than 30 minutes."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Vuelos directos entre ciudades sede",
-        "en": "Direct flights between host cities"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Muchas sedes del Mundial 2026 no tienen vuelos comerciales directos entre sí. Con un jet privado se puede volar sin escalas entre ciudades como Houston, Guadalajara o Toronto, optimizando tiempos y conectividad. Esto permite asistir a dos partidos consecutivos sin estrés ni conexiones largas.",
-        "en": "Many 2026 World Cup host cities don't have direct commercial flights between them. With a private jet, it's possible to fly nonstop between cities like Houston, Guadalajara or Toronto, optimizing both time and connectivity. This allows attending two consecutive matches without stress or long connections."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "También es ideal para trasladar grupos VIP, equipos de trabajo o invitados especiales, garantizando puntualidad, flexibilidad horaria y máxima seguridad.",
-        "en": "It's also ideal for transporting VIP groups, work teams or special guests, ensuring punctuality, schedule flexibility and maximum security."
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "El resultado es claro: menos tiempo en aeropuertos y más tiempo en el estadio, en el hotel o disfrutando experiencias de hospitalidad de primer nivel.",
-        "en": "The result is clear: less time at airports and more time at the stadium, hotel or enjoying top-tier hospitality experiences."
-      }
-    }
-  ]
-},
-
- //----------------------------------------------------------------------ARTICULO  
-
-{
-  "slug": "jet-privado-lionel-messi-gulfstream-v",
-  "date": "2025-11-11",
-  "cover": jetMessi,
-  "title": {
-    "es": "El jet privado de Lionel Messi: lujo, personalización y vuelos sin escalas",
-    "en": "Lionel Messi’s Private Jet: Luxury, Personalization and Non-Stop Flights"
-  },
-  "subtitle": {
-    "es": "Conozca el Gulfstream V que traslada a Messi por el mundo: un avión ejecutivo de alto rendimiento con detalles únicos.",
-    "en": "Discover the Gulfstream V that carries Messi around the world: a high-performance executive aircraft with unique features."
-  },
-  "excerpt": {
-    "es": "El jet privado de Lionel Messi, un Gulfstream V valuado en 40 millones de dólares, combina lujo, personalización familiar y autonomía para vuelos intercontinentales.",
-    "en": "Lionel Messi’s private jet, a $40 million Gulfstream V, combines luxury, family personalization and long-range autonomy for intercontinental flights."
-  },
-  "content": [
-    {
-      "type": "p",
-      "text": {
-        "es": "El jet privado vinculado a Lionel Messi es un Gulfstream V, una de las aeronaves ejecutivas más lujosas y potentes del mundo. Aunque en el pasado se lo relacionó con un Embraer Legacy 650, actualmente se sabe que alquila este modelo para sus traslados frecuentes entre Estados Unidos, Europa y Sudamérica.",
-        "en": "The private jet associated with Lionel Messi is a Gulfstream V, one of the most luxurious and powerful executive aircraft in the world. While he was previously linked to an Embraer Legacy 650, it is now known that he rents this model for his frequent travels between the US, Europe and South America."
-      }
-    },
+        "type": "p",
+        "text": {
+          "es": "La Copa Mundial de la FIFA 2026 se jugará en 16 ciudades distribuidas entre Estados Unidos, México y Canadá. Esta configuración hace que la logística sea más compleja para los aficionados que quieren seguir varios partidos. Un jet privado simplifica todo el recorrido.",
+          "en": "The 2026 FIFA World Cup will be played in 16 cities across the United States, Mexico and Canada. This setup makes logistics more complex for fans who want to follow several matches. A private jet simplifies the whole journey."
+        }
+      },
       {
-      "type": "img",
-      "src": jetMessi,
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Un jet pensado para el descanso y la privacidad",
-        "en": "A Jet Designed for Rest and Privacy"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "El Gulfstream V tiene capacidad para transportar hasta 16 pasajeros. Ocho de sus asientos pueden convertirse en camas, lo que lo convierte en una opción ideal para deportistas de alto rendimiento y empresarios que necesitan descansar durante vuelos largos. La cabina está diseñada para brindar el máximo confort y privacidad.",
-        "en": "The Gulfstream V can carry up to 16 passengers. Eight of its seats can be converted into beds, making it ideal for high-performance athletes and business travelers who need to rest during long flights. The cabin is designed to offer maximum comfort and privacy."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Detalles únicos: personalización exclusiva para Messi",
-        "en": "Unique Details: Exclusive Personalization for Messi"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Una de las características más llamativas del jet privado de Messi es su personalización. En la cola del avión se puede ver el número 10, símbolo icónico del futbolista. Además, los escalones de acceso llevan grabados los nombres de su familia: Leo, Antonela, Thiago, Mateo y Ciro. Estos detalles transforman al avión en un emblema personal.",
-        "en": "One of the most striking features of Messi’s private jet is its personalization. On the tail of the aircraft, you can see the number 10, his iconic jersey number. Additionally, the boarding steps are engraved with the names of his family members: Leo, Antonela, Thiago, Mateo and Ciro. These details turn the aircraft into a personal emblem."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Interior de lujo: comodidades poco comunes",
-        "en": "Luxury Interior: Rare Comfort Features"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "El interior del Gulfstream V está equipado con dos baños, uno de ellos con ducha, algo inusual en jets ejecutivos. También cuenta con dos cocinas completas, lo que permite ofrecer un servicio gastronómico de alta gama durante vuelos internacionales. Cada detalle apunta a la comodidad total del pasajero.",
-        "en": "The interior of the Gulfstream V includes two bathrooms, one of which has a shower—rare for executive jets. It also features two full kitchens, allowing for high-end catering service during international flights. Every detail is aimed at ensuring total passenger comfort."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "Rendimiento y autonomía del Gulfstream V",
-        "en": "Performance and Range of the Gulfstream V"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "El jet alcanza una velocidad máxima de 966 km/h y una autonomía de 10.742 km. Esto le permite realizar vuelos sin escalas entre continentes, como Miami–Barcelona o Buenos Aires–Nueva York. Esta capacidad lo convierte en una de las aeronaves más eficientes y rápidas del segmento ejecutivo.",
-        "en": "The jet reaches a top speed of 966 km/h and has a range of 10,742 km. This allows it to perform nonstop intercontinental flights, such as Miami–Barcelona or Buenos Aires–New York. Its capabilities make it one of the fastest and most efficient aircraft in the executive segment."
-      }
-    },
-    {
-      "type": "h2",
-      "text": {
-        "es": "¿Querés viajar como Messi?",
-        "en": "Want to Fly Like Messi?"
-      }
-    },
-    {
-      "type": "p",
-      "text": {
-        "es": "Volar en un jet privado similar al de Lionel Messi está al alcance si buscás comodidad, exclusividad y eficiencia. Nuestro equipo puede asesorarte en vuelos privados desde y hacia Argentina, con aeronaves de alta gama y servicio personalizado. Consultanos para cotizar tu próximo viaje.",
-        "en": "Flying in a private jet like Lionel Messi's is within reach if you’re looking for comfort, exclusivity and efficiency. Our team can assist you with private flights from and to Argentina, offering high-end aircraft and personalized service. Contact us to quote your next flight."
-      }
-    }
-  ]
-}
+        "type": "img",
+        "src": itinerarioIdealMundial
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Ruta sugerida para fanáticos latinoamericanos",
+          "en": "Suggested route for Latin American fans"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Una ruta típica puede comenzar en Buenos Aires con un vuelo hacia Ciudad de México para el primer partido. Luego, continuar hacia otra sede mexicana como Guadalajara o Monterrey, y después volar a ciudades de Estados Unidos como Dallas, Los Ángeles o Miami. Si el calendario lo requiere, se puede sumar una última escala en Canadá. Todo se programa según la agenda del pasajero.",
+          "en": "A typical route may start in Buenos Aires with a flight to Mexico City for the first match. Then continue to another Mexican venue such as Guadalajara or Monterrey, and afterwards fly to U.S. cities like Dallas, Los Angeles or Miami. If needed, a last stop in Canada can be added. Everything is scheduled according to the passenger’s agenda."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Ventajas del jet privado frente al avión comercial",
+          "en": "Advantages of a private jet vs commercial flight"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Al volar privado usted evita tiempos muertos en aeropuertos, conexiones innecesarias y esperas en migraciones. En un evento con fechas tan ajustadas, ahorrar incluso una o dos horas por tramo puede significar llegar o no a un partido.",
+          "en": "When flying private you avoid dead time at airports, unnecessary connections and immigration lines. In an event with such a tight schedule, saving even one or two hours per leg can mean making it to a match or not."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Además, al usar aeropuertos ejecutivos o terminales privadas, el embarque es rápido y la experiencia se mantiene en el estándar de lujo que buscan los viajeros de alto poder adquisitivo.",
+          "en": "In addition, by using executive airports or private terminals, boarding is fast and the experience remains at the luxury standard high-net-worth travellers are looking for."
+        }
+      },
 
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
+    ]
+  },
 
+  //----------------------------------------------------------------------ARTICULO  
 
+  {
+    "slug": "vuelos-privados-argentina",
+    "date": "2025-11-05",
+    "cover": ventajasAccesosEficiencia,
+    "title": {
+      "es": "Vuelos privados en Argentina: ventajas, accesos y eficiencia",
+      "en": "Private flights in Argentina: advantages, access and efficiency"
+    },
+    "subtitle": {
+      "es": "Descubra las razones por las que los vuelos privados en Argentina superan a la aviación comercial en accesibilidad, tiempo y servicio.",
+      "en": "Discover why private flights in Argentina outperform commercial aviation in accessibility, time and service."
+    },
+    "excerpt": {
+      "es": "Descubra las ventajas de los vuelos privados en Argentina: más aeropuertos, horarios flexibles y acceso exclusivo sin demoras ni complicaciones.",
+      "en": "Discover the benefits of private flights in Argentina: more airports, flexible schedules and exclusive access without delays or complications."
+    },
+    "content": [
+      {
+        "type": "h2",
+        "text": {
+          "es": "Vuelos privados vs comerciales en Argentina: eficiencia, privacidad y tiempo",
+          "en": "Private vs commercial flights in Argentina: efficiency, privacy and time"
+        }
+      },
 
+      {
+        "type": "p",
+        "text": {
+          "es": "Los vuelos privados en Argentina no solo se eligen por comodidad o lujo, sino por la eficiencia y la privacidad frente a los vuelos comerciales tradicionales. En el país existen más de 276 aeródromos públicos y más de 200 de uso privado, pero la aviación comercial opera regularmente solo en unos 25. En cambio, un jet privado —según su categoría— puede acceder a más de 400 pistas en todo el país, lo que permite aterrizar más cerca del destino final y ahorrar tiempo valioso evitando conexiones terrestres innecesarias.",
+          "en": "Private flights in Argentina are not just about luxury—they are about efficiency and privacy compared to traditional commercial flights. The country has more than 276 public aerodromes and over 200 private ones, yet commercial aviation regularly operates in only around 25. In contrast, a private jet—depending on its category—can access over 400 runways nationwide, allowing passengers to land closer to their final destination and avoid unnecessary ground transfers."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Aeródromos privados: acceda a más de 400 destinos en el país",
+          "en": "Private airfields: access over 400 destinations across the country"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "La aviación privada en Argentina abre un abanico de posibilidades al operar en cientos de aeródromos distribuidos estratégicamente. Desde pistas rurales hasta aeropuertos ejecutivos como San Fernando, Morón o aeródromos regionales, los vuelos privados permiten crear itinerarios más directos y eficientes. Esto representa una ventaja clave tanto para viajes de negocios como para el turismo de lujo.",
+          "en": "Private aviation in Argentina opens up a range of possibilities by operating in hundreds of strategically located airfields. From rural runways to executive airports like San Fernando, Morón or regional aerodromes, private flights allow more direct and efficient itineraries. This is a key advantage for both business travel and luxury tourism."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Agenda flexible: optimice sus viajes de negocio o turismo de lujo",
+          "en": "Flexible schedule: optimize business or luxury travel"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Para ejecutivos y viajeros frecuentes, los vuelos privados en Argentina permiten realizar múltiples reuniones en distintas provincias en un mismo día, sin depender de horarios fijos. Para turistas de alto nivel, significa aterrizar directamente en un lodge de pesca en la Patagonia, una bodega en Mendoza o una estancia remota en la Pampa, evitando los aeropuertos comerciales y sus demoras.",
+          "en": "For executives and frequent travelers, private flights in Argentina allow for multiple meetings in different provinces within the same day—without being tied to fixed schedules. For high-end tourists, it means landing directly at a fishing lodge in Patagonia, a winery in Mendoza or a remote estancia in the Pampas, avoiding commercial airports and delays."
+        }
+      },
+      {
+        "type": "img",
+        "src": ventajasAccesosEficiencia
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "FBO en Argentina: servicios premium sin esperas ni filas",
+          "en": "FBO in Argentina: premium services without queues or delays"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Los FBO (Fixed Base Operators) en Argentina están diseñados para ofrecer una experiencia ejecutiva total: salas VIP privadas, control migratorio y de seguridad acelerado, catering personalizado y traslado directo al avión. Todo en un entorno seguro, sin filas ni tiempos muertos. Este tipo de servicios marcan una diferencia fundamental para quienes priorizan la privacidad y el confort.",
+          "en": "FBOs (Fixed Base Operators) in Argentina are designed to offer a complete executive experience: private VIP lounges, expedited immigration and security control, personalized catering and direct aircraft transfers. All in a secure environment, without queues or wasted time. These services make a fundamental difference for those who prioritize privacy and comfort."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Conclusión: por qué elegir vuelos privados en Argentina hoy",
+          "en": "Conclusion: why choose private flights in Argentina today"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Más que un lujo, los vuelos privados en Argentina representan una herramienta estratégica para optimizar tiempo, mejorar la experiencia de viaje y garantizar privacidad. Con acceso a más de 400 aeródromos, servicios FBO premium y flexibilidad total, la aviación privada es la solución ideal para quienes valoran cada minuto. Si busca eficiencia y confort, no hay mejor opción dentro del país.",
+          "en": "More than a luxury, private flights in Argentina are a strategic tool to optimize time, enhance the travel experience and ensure privacy. With access to over 400 airfields, premium FBO services and total flexibility, private aviation is the ideal solution for those who value every minute. If you're looking for efficiency and comfort, there's no better option within the country."
+        }
+      },
 
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
+    ]
+  },
+
+  //----------------------------------------------------------------------ARTICULO  
+
+  {
+    "slug": "vuelos-privados-desde-buenos-aires",
+    "date": "2025-11-09",
+    "cover": vuelosBuenosAires,
+    "title": {
+      "es": "Vuelos privados desde Buenos Aires: destinos más solicitados",
+      "en": "Private Flights from Buenos Aires: Top Requested Destinations"
+    },
+    "subtitle": {
+      "es": "Conozca los destinos más populares para vuelos privados desde Buenos Aires y por qué son ideales para viajar en jet.",
+      "en": "Discover the most popular private flight destinations from Buenos Aires and why they’re ideal for jet travel."
+    },
+    "excerpt": {
+      "es": "Desde Buenos Aires, los vuelos privados a destinos como Bariloche, Mendoza o Punta del Este combinan eficiencia, confort y acceso directo. Descubra sus atractivos.",
+      "en": "From Buenos Aires, private flights to destinations like Bariloche, Mendoza or Punta del Este offer efficiency, comfort and direct access. Discover more."
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": {
+          "es": "Buenos Aires es el punto de partida principal para vuelos privados en Argentina. Ya sea para viajes corporativos, escapadas de lujo o itinerarios personalizados, las rutas que parten desde la capital ofrecen accesos directos, mayor privacidad y una experiencia a bordo sin comparación.",
+          "en": "Buenos Aires is the main departure point for private flights in Argentina. Whether for corporate travel, luxury getaways or tailored itineraries, routes departing from the capital offer direct access, greater privacy and an unmatched onboard experience."
+        }
+      },
+      {
+        "type": "img",
+        "src": vuelosBuenosAires
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Destinos nacionales preferidos para vuelos privados",
+          "en": "Top Domestic Destinations for Private Flights"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Estos son los destinos dentro de Argentina más elegidos por quienes vuelan en jet privado desde Buenos Aires:",
+          "en": "These are the most chosen destinations within Argentina for those flying private from Buenos Aires:"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Bariloche: perfecto para esquiar o desconectarse en la Patagonia. Los jets aterrizan en un entorno natural rodeado de lagos y montañas.",
+          "en": "• Bariloche: perfect for skiing or relaxing in Patagonia. Jets land in a natural setting surrounded by lakes and mountains."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Mendoza: ideal para el turismo enológico y reuniones empresariales. El vuelo desde Buenos Aires toma aproximadamente 2 horas.",
+          "en": "• Mendoza: ideal for wine tourism and business meetings. The flight from Buenos Aires takes about 2 hours."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Córdoba: importante polo industrial y cultural, con múltiples aeródromos ejecutivos en la región.",
+          "en": "• Córdoba: an important industrial and cultural hub with several executive airfields nearby."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Ushuaia: la ciudad más austral del mundo. Un destino exclusivo para quienes buscan experiencias únicas en el fin del mundo.",
+          "en": "• Ushuaia: the southernmost city in the world. An exclusive destination for those seeking unique end-of-the-world experiences."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Destinos internacionales cercanos en jet privado",
+          "en": "Nearby International Destinations by Private Jet"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Desde Buenos Aires también se realizan vuelos privados a destinos internacionales estratégicos. Estos son los más demandados:",
+          "en": "Private flights from Buenos Aires also reach strategic international destinations. Here are the most in-demand:"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Punta del Este (Uruguay): una ruta clásica por su cercanía y exclusividad. Ideal para fines de semana de relax o eventos de temporada.",
+          "en": "• Punta del Este (Uruguay): a classic route due to its proximity and exclusivity. Perfect for weekend getaways or seasonal events."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• Santiago (Chile): centro de negocios y conexión internacional. Vuelos ejecutivos frecuentes para reuniones corporativas.",
+          "en": "• Santiago (Chile): a business center and international hub. Frequent executive flights for corporate meetings."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "• São Paulo (Brasil): capital empresarial de Sudamérica, con múltiples aeropuertos y helipuertos que permiten máxima flexibilidad.",
+          "en": "• São Paulo (Brazil): the business capital of South America, with multiple airports and helipads for maximum flexibility."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Todos estos destinos cuentan con infraestructura para recibir vuelos privados, incluyendo FBOs, terminales VIP y servicios de asistencia en tierra.",
+          "en": "All these destinations have the infrastructure to handle private flights, including FBOs, VIP terminals and ground support services."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Vuelos personalizados desde Buenos Aires a cualquier destino",
+          "en": "Custom Private Flights from Buenos Aires to Any Destination"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "¿Tiene otro destino en mente? Nuestro equipo diseña vuelos privados a medida desde Buenos Aires a cualquier punto de Argentina o América del Sur. Contáctenos para crear una ruta que se adapte a su agenda y estilo de viaje.",
+          "en": "Have another destination in mind? Our team designs custom private flights from Buenos Aires to any point in Argentina or South America. Contact us to create a route tailored to your schedule and travel style."
+        }
+      },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
+    ]
+  },
+
+  //----------------------------------------------------------------------ARTICULO  
+
+  {
+    "slug": "jet-privado-mundial-2026",
+    "date": "2025-11-10",
+    "cover": mundial2026,
+    "title": {
+      "es": "Jet privado en el Mundial 2026: cómo ahorrar tiempo y evitar aeropuertos masivos",
+      "en": "Private Jet at the 2026 World Cup: Save Time and Avoid Massive Airports"
+    },
+    "subtitle": {
+      "es": "La forma más eficiente de viajar entre sedes durante el torneo en EE.UU., México y Canadá.",
+      "en": "The most efficient way to travel between venues during the tournament in the US, Mexico and Canada."
+    },
+    "excerpt": {
+      "es": "El Mundial 2026 se jugará en EE.UU., México y Canadá. Volar en jet privado permite evitar esperas, aeropuertos saturados y ganar tiempo entre partidos.",
+      "en": "The 2026 World Cup will take place in the US, Mexico and Canada. Flying private lets you avoid delays, crowded airports and save time between matches."
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": {
+          "es": "Durante el Mundial 2026, miles de aficionados se moverán entre sedes en tres países: Estados Unidos, México y Canadá. Esto representa un desafío logístico importante, especialmente si se viaja entre partidos con poco margen de tiempo. Un jet privado es la opción más eficiente para evitar aeropuertos masivos, largas filas y restricciones de itinerarios.",
+          "en": "During the 2026 World Cup, thousands of fans will travel between host cities across three countries: the United States, Mexico and Canada. This poses a major logistical challenge, especially for those moving between matches on tight schedules. A private jet is the most efficient way to avoid crowded airports, long lines and limited schedules."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Los aeropuertos principales de Estados Unidos y México ya operan con alta ocupación. Durante el torneo, el flujo de pasajeros se multiplicará, generando demoras en seguridad, migraciones, embarque y conexiones. El jet privado ofrece una solución directa para quienes desean evitar estas congestiones.",
+          "en": "Major airports in the US and Mexico already operate at high capacity. During the tournament, passenger flow will multiply, causing delays at security, immigration, boarding and connections. A private jet offers a direct solution for those wishing to avoid this congestion."
+        }
+      },
+      {
+        "type": "img",
+        "src": mundial2026
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Embarque rápido en terminales privadas",
+          "en": "Fast boarding at private terminals"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Con un jet privado, el pasajero puede llegar a la terminal ejecutiva apenas minutos antes del vuelo. No hay filas, no hay esperas. El embarque es directo, rápido y con total privacidad. En muchos casos, todo el proceso —desde la llegada al aeropuerto hasta el despegue— lleva menos de 30 minutos.",
+          "en": "With a private jet, passengers can arrive at the executive terminal just minutes before the flight. No lines, no waiting. Boarding is direct, fast and completely private. In many cases, the whole process—from airport arrival to takeoff—takes less than 30 minutes."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Vuelos directos entre ciudades sede",
+          "en": "Direct flights between host cities"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Muchas sedes del Mundial 2026 no tienen vuelos comerciales directos entre sí. Con un jet privado se puede volar sin escalas entre ciudades como Houston, Guadalajara o Toronto, optimizando tiempos y conectividad. Esto permite asistir a dos partidos consecutivos sin estrés ni conexiones largas.",
+          "en": "Many 2026 World Cup host cities don't have direct commercial flights between them. With a private jet, it's possible to fly nonstop between cities like Houston, Guadalajara or Toronto, optimizing both time and connectivity. This allows attending two consecutive matches without stress or long connections."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "También es ideal para trasladar grupos VIP, equipos de trabajo o invitados especiales, garantizando puntualidad, flexibilidad horaria y máxima seguridad.",
+          "en": "It's also ideal for transporting VIP groups, work teams or special guests, ensuring punctuality, schedule flexibility and maximum security."
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "El resultado es claro: menos tiempo en aeropuertos y más tiempo en el estadio, en el hotel o disfrutando experiencias de hospitalidad de primer nivel.",
+          "en": "The result is clear: less time at airports and more time at the stadium, hotel or enjoying top-tier hospitality experiences."
+        }
+      },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
+    ]
+  },
+
+  //----------------------------------------------------------------------ARTICULO  
+
+  {
+    "slug": "jet-privado-lionel-messi-gulfstream-v",
+    "date": "2025-11-11",
+    "cover": jetMessi,
+    "title": {
+      "es": "El jet privado de Lionel Messi: lujo, personalización y vuelos sin escalas",
+      "en": "Lionel Messi’s Private Jet: Luxury, Personalization and Non-Stop Flights"
+    },
+    "subtitle": {
+      "es": "Conozca el Gulfstream V que traslada a Messi por el mundo: un avión ejecutivo de alto rendimiento con detalles únicos.",
+      "en": "Discover the Gulfstream V that carries Messi around the world: a high-performance executive aircraft with unique features."
+    },
+    "excerpt": {
+      "es": "El jet privado de Lionel Messi, un Gulfstream V valuado en 40 millones de dólares, combina lujo, personalización familiar y autonomía para vuelos intercontinentales.",
+      "en": "Lionel Messi’s private jet, a $40 million Gulfstream V, combines luxury, family personalization and long-range autonomy for intercontinental flights."
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": {
+          "es": "El jet privado vinculado a Lionel Messi es un Gulfstream V, una de las aeronaves ejecutivas más lujosas y potentes del mundo. Aunque en el pasado se lo relacionó con un Embraer Legacy 650, actualmente se sabe que alquila este modelo para sus traslados frecuentes entre Estados Unidos, Europa y Sudamérica.",
+          "en": "The private jet associated with Lionel Messi is a Gulfstream V, one of the most luxurious and powerful executive aircraft in the world. While he was previously linked to an Embraer Legacy 650, it is now known that he rents this model for his frequent travels between the US, Europe and South America."
+        }
+      },
+      {
+        "type": "img",
+        "src": jetMessi,
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Un jet pensado para el descanso y la privacidad",
+          "en": "A Jet Designed for Rest and Privacy"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "El Gulfstream V tiene capacidad para transportar hasta 16 pasajeros. Ocho de sus asientos pueden convertirse en camas, lo que lo convierte en una opción ideal para deportistas de alto rendimiento y empresarios que necesitan descansar durante vuelos largos. La cabina está diseñada para brindar el máximo confort y privacidad.",
+          "en": "The Gulfstream V can carry up to 16 passengers. Eight of its seats can be converted into beds, making it ideal for high-performance athletes and business travelers who need to rest during long flights. The cabin is designed to offer maximum comfort and privacy."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Detalles únicos: personalización exclusiva para Messi",
+          "en": "Unique Details: Exclusive Personalization for Messi"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Una de las características más llamativas del jet privado de Messi es su personalización. En la cola del avión se puede ver el número 10, símbolo icónico del futbolista. Además, los escalones de acceso llevan grabados los nombres de su familia: Leo, Antonela, Thiago, Mateo y Ciro. Estos detalles transforman al avión en un emblema personal.",
+          "en": "One of the most striking features of Messi’s private jet is its personalization. On the tail of the aircraft, you can see the number 10, his iconic jersey number. Additionally, the boarding steps are engraved with the names of his family members: Leo, Antonela, Thiago, Mateo and Ciro. These details turn the aircraft into a personal emblem."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Interior de lujo: comodidades poco comunes",
+          "en": "Luxury Interior: Rare Comfort Features"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "El interior del Gulfstream V está equipado con dos baños, uno de ellos con ducha, algo inusual en jets ejecutivos. También cuenta con dos cocinas completas, lo que permite ofrecer un servicio gastronómico de alta gama durante vuelos internacionales. Cada detalle apunta a la comodidad total del pasajero.",
+          "en": "The interior of the Gulfstream V includes two bathrooms, one of which has a shower—rare for executive jets. It also features two full kitchens, allowing for high-end catering service during international flights. Every detail is aimed at ensuring total passenger comfort."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "Rendimiento y autonomía del Gulfstream V",
+          "en": "Performance and Range of the Gulfstream V"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "El jet alcanza una velocidad máxima de 966 km/h y una autonomía de 10.742 km. Esto le permite realizar vuelos sin escalas entre continentes, como Miami–Barcelona o Buenos Aires–Nueva York. Esta capacidad lo convierte en una de las aeronaves más eficientes y rápidas del segmento ejecutivo.",
+          "en": "The jet reaches a top speed of 966 km/h and has a range of 10,742 km. This allows it to perform nonstop intercontinental flights, such as Miami–Barcelona or Buenos Aires–New York. Its capabilities make it one of the fastest and most efficient aircraft in the executive segment."
+        }
+      },
+      {
+        "type": "h2",
+        "text": {
+          "es": "¿Querés viajar como Messi?",
+          "en": "Want to Fly Like Messi?"
+        }
+      },
+      {
+        "type": "p",
+        "text": {
+          "es": "Volar en un jet privado similar al de Lionel Messi está al alcance si buscás comodidad, exclusividad y eficiencia. Nuestro equipo puede asesorarte en vuelos privados desde y hacia Argentina, con aeronaves de alta gama y servicio personalizado. Consultanos para cotizar tu próximo viaje.",
+          "en": "Flying in a private jet like Lionel Messi's is within reach if you’re looking for comfort, exclusivity and efficiency. Our team can assist you with private flights from and to Argentina, offering high-end aircraft and personalized service. Contact us to quote your next flight."
+        }
+      },
+
+      // CTA
+      {
+        type: "cta",
+        text: {
+          es: "✈️ ¿Querés cotizar tu vuelo privado? Respondemos en menos de 5 minutos.",
+          en: "✈️ Want to request your private jet quote? We reply in under 5 minutes."
+        }
+      }
+    ]
+  }
 
 ];
+
 
 /* ===========================
    SELECTORES

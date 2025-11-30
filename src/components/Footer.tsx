@@ -38,7 +38,7 @@ const Footer = () => {
                 title={t("contact.info.phone.title")}
                 content={
                   <a
-                    href="https://wa.me/+17863005652"
+                    href="https://wa.me/+1168668170"
                     className="text-white/70 hover:text-gold transition-colors duration-300"
                   >
                     +1 786 300 5652

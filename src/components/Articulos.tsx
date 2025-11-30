@@ -17,7 +17,6 @@ function truncate(s: string, n = 160) {
   return s.length > n ? s.slice(0, n - 1) + "…" : s;
 }
 
-/** Asegura URL absoluta para crawlers (OpenGraph/Twitter) */
 function toAbsoluteUrl(pathOrUrl: string): string {
   if (!pathOrUrl) return SITE;
   if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
@@ -55,7 +54,6 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
     );
   }
 
-  // SEO dinámico
   const ES_URL = `${SITE}/jetsmagazine/${article.slug}`;
   const EN_URL = `${SITE}/en/jetsmagazine/${article.slug}`;
   const CANONICAL = isEN ? EN_URL : ES_URL;
@@ -63,7 +61,6 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
   const title = `${article.title} | V Golden Jets`;
   const description = truncate(article.excerpt || article.subtitle || article.title, 160);
 
-  // Preferir JPG/PNG social si existe; si no, caer en cover
   const ogImageAbs = toAbsoluteUrl(article.ogImage || article.cover);
 
   const jsonLd = {
@@ -88,18 +85,15 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
   return (
     <article>
       <Helmet>
-        {/* Básico */}
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={CANONICAL} />
 
-        {/* hreflang */}
         <link rel="alternate" hrefLang="es" href={ES_URL} />
         <link rel="alternate" hrefLang="en" href={EN_URL} />
         <link rel="alternate" hrefLang="x-default" href={ES_URL} />
         <meta name="robots" content="index,follow" />
 
-        {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="V Golden Jets" />
         <meta property="og:title" content={title} />
@@ -113,19 +107,16 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
         <meta property="article:published_time" content={article.date} />
         <meta property="article:modified_time" content={article.date} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImageAbs} />
 
-        {/* Structured data */}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <Navbar />
 
-      {/* HERO del artículo */}
       <section className="relative h-[38vh] min-h-[260px]">
         <div className="absolute inset-0 -z-10">
           <div
@@ -139,7 +130,7 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
           <div className="max-w-3xl">
             <Link
               to={`${isEN ? "/en" : ""}/jetsmagazine`}
-              className="inline-flex items-center text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 rounded px-1"
+              className="inline-flex items-center text-white/90 hover:text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4" /> {backLabel}
             </Link>
@@ -151,7 +142,6 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
         </div>
       </section>
 
-      {/* CUERPO */}
       <section className="py-10 sm:py-16 bg-white">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed space-y-6">
@@ -185,24 +175,35 @@ const Articulos: React.FC<Props> = ({ forcedLang }) => {
                         alt={block.alt || "Imagen del artículo"}
                         className="w-full rounded-2xl shadow-sm"
                         loading="lazy"
-                        decoding="async"
                       />
                       {block.alt ? (
                         <figcaption className="mt-2 text-sm text-gray-500">{block.alt}</figcaption>
                       ) : null}
                     </figure>
                   );
+
+                case "cta":
+                  return (
+                    <div
+                      key={idx}
+                      className="my-10 p-6 bg-gold/10 border-l-4 border-gold rounded-xl shadow-sm"
+                    >
+                      <p className="text-xl font-semibold text-black">{block.text}</p>
+                    </div>
+                  );
+
                 default:
                   return null;
               }
             })}
 
-            {/* Barra de compartir */}
             <ShareBar url={CANONICAL} title={article.title} text={description} />
           </div>
         </div>
-      <Contact />
+
+        <Contact />
       </section>
+
       <Footer />
     </article>
   );

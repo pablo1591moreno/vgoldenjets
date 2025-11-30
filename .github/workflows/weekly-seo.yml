@@ -1,0 +1,58 @@
+name: Weekly SEO Optimization
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  optimize-seo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+        # If npm ci fails because of lockfile issues, fallback to npm install
+        # run: npm install
+
+      - name: Install Gemini SDK
+        run: npm install @google/generative-ai
+
+      - name: Run SEO Agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/seo-agent.js
+
+      - name: Read Report
+        id: read_report
+        run: |
+          if [ -f seo_report.md ]; then
+            echo "report_content<<EOF" >> $GITHUB_OUTPUT
+            cat seo_report.md >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "report_content=No report generated." >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(seo): weekly seo optimization"
+          title: "Weekly SEO Optimization"
+          body: ${{ steps.read_report.outputs.report_content }}
+          branch: "seo-optimization-weekly"
+          delete-branch: true
+          base: "main"

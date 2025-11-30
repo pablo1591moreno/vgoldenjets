@@ -142,9 +142,9 @@ const translations: Translations = {
     "contact.info.description":
       "Have questions or ready to book your next flight? Contact our team of aviation experts for immediate assistance.",
     "contact.info.address.title": "Office Address",
-    "contact.info.address.content": "USA Fort Lauderdale Executive Airport ( fxe )",
-    "contact.info.phone.title": "Phone USA",
-    "contact.info.phone.title2": "Phone SOUTH AMERICA",
+    "contact.info.address.content": "Jorge Newbery Airport",
+    "contact.info.phone.title": "Phone SOUTH AMERICA 1",
+    "contact.info.phone.title2": "Phone SOUTH AMERICA 2",
     "contact.info.email.title": "Email Address",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.content": "Available 24/7 for charter inquiries",
@@ -306,9 +306,9 @@ const translations: Translations = {
       "¿Tiene preguntas o desea reservar su próximo vuelo? Contacte a nuestro equipo de expertos en aviación para recibir asistencia inmediata.",
     "contact.info.address.title": "Dirección de Oficina",
     "contact.info.address.content":
-      "USA Fort Lauderdale Executive Airport ( fxe )",
-    "contact.info.phone.title": "Teléfono USA",
-    "contact.info.phone.title2": "Teléfono SOUTH AMERICA",
+      "Aeroparque Jorge Newbery",
+    "contact.info.phone.title": "Teléfono ARGENTINA 1",
+    "contact.info.phone.title2": "Teléfono ARGETINA 2",
     "contact.info.email.title": "Correo Electrónico",
     "contact.info.hours.title": "Horario de Atención",
     "contact.info.hours.content":
