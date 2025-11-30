@@ -18,8 +18,8 @@ if (!API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(API_KEY);
-// FIX 1: Usamos la versión específica para evitar el Error 404
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-001" });
+// FIX FINAL: Usamos "gemini-pro" que es el modelo estándar y nunca falla por región.
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 async function optimizeArticle(article) {
     console.log(`Optimizing article: ${article.slug}`);
@@ -49,13 +49,11 @@ async function optimizeArticle(article) {
         const response = await result.response;
         let text = response.text();
 
-        console.log(`Gemini Raw Response for ${article.slug}:`, text.substring(0, 100) + "..."); // Debug
+        console.log(`Gemini Response (Start):`, text.substring(0, 100) + "...");
 
-        // FIX 2: Limpieza agresiva de JSON
-        // Eliminar bloques de código markdown
+        // LIMPIEZA DE JSON BLINDADA
         text = text.replace(/```json/g, '').replace(/```/g, '');
 
-        // Buscar dónde empieza el primer '{' y dónde termina el último '}'
         const firstBrace = text.indexOf('{');
         const lastBrace = text.lastIndexOf('}');
 
@@ -80,34 +78,29 @@ async function main() {
 
     let content = fs.readFileSync(FILE_PATH, 'utf-8');
 
-    // Robust regex for slug: handles single or double quotes
     const slugRegex = /slug:\s*(["'])([^"']+)\1/g;
     let match;
     const articles = [];
 
     while ((match = slugRegex.exec(content)) !== null) {
-        const slug = match[2]; // Group 2 is the slug value
+        const slug = match[2];
         const slugIndex = match.index;
 
-        // FIX 3: Aumentar rango de lectura a 4000 para artículos con mucha metadata
+        // Leemos 4000 caracteres para asegurar que capturamos todo
         const chunk = content.substring(slugIndex, slugIndex + 4000);
 
-        // Robust regex for date
         const dateMatch = chunk.match(/date:\s*(["'])([^"']+)\1/);
         const date = dateMatch ? dateMatch[2] : '1970-01-01';
 
-        // Robust regex for lastSeoUpdate
         const lastSeoUpdateMatch = chunk.match(/lastSeoUpdate:\s*(["'])([^"']+)\1/);
         const lastSeoUpdate = lastSeoUpdateMatch ? lastSeoUpdateMatch[2] : null;
 
         const extractField = (fieldName) => {
-            // Robust regex for object fields: key: { ... }
             const regex = new RegExp(`${fieldName}:\\s*\\{([\\s\\S]*?)\\}`, 'm');
             const m = chunk.match(regex);
 
             if (m) {
                 const inner = m[1];
-                // Robust regex for inner fields es/en
                 const esMatch = inner.match(/es:\s*(["'])([\s\S]*?)\1/);
                 const enMatch = inner.match(/en:\s*(["'])([\s\S]*?)\1/);
 
@@ -136,16 +129,12 @@ async function main() {
                 title,
                 subtitle,
                 excerpt,
-                slugIndex // Keep track of where the slug is to insert lastSeoUpdate if needed
+                slugIndex
             });
         }
     }
 
-    // Sort logic:
-    // 1. Articles that have NEVER been optimized (lastSeoUpdate is null) come first.
-    // 2. If both have been optimized, sort by lastSeoUpdate ascending (oldest optimization first).
-    // 3. If both never optimized, sort by publication date ascending (oldest article first).
-
+    // Ordenamiento inteligente
     articles.sort((a, b) => {
         if (!a.lastSeoUpdate && !b.lastSeoUpdate) {
             return new Date(a.date) - new Date(b.date);
@@ -155,7 +144,6 @@ async function main() {
         return new Date(a.lastSeoUpdate) - new Date(b.lastSeoUpdate);
     });
 
-    // Take top N
     const articlesToOptimize = articles.slice(0, ARTICLES_TO_PROCESS);
 
     console.log(`Found ${articles.length} total articles.`);
@@ -179,7 +167,6 @@ async function main() {
         if (optimized) {
             const esc = (s) => s.replace(/"/g, '\\"').replace(/\n/g, '\\n');
 
-            // Update Content Fields
             replacements.push({
                 start: article.title.index,
                 end: article.title.index + article.title.fullMatch.length,
@@ -196,10 +183,8 @@ async function main() {
                 text: `excerpt: { es: "${esc(optimized.excerpt.es)}", en: "${esc(optimized.excerpt.en)}" }`
             });
 
-            // Update or Insert lastSeoUpdate
             if (article.lastSeoUpdate) {
-                // Find where it is and replace it
-                const chunk = content.substring(article.slugIndex, article.slugIndex + 4000); // Use larger chunk here too
+                const chunk = content.substring(article.slugIndex, article.slugIndex + 4000);
                 const m = chunk.match(/lastSeoUpdate:\s*(["'])([^"']+)\1/);
                 if (m) {
                     replacements.push({
@@ -209,7 +194,6 @@ async function main() {
                     });
                 }
             } else {
-                // Insert it after slug
                 const slugLineEnd = content.indexOf('\n', article.slugIndex);
                 if (slugLineEnd !== -1) {
                     replacements.push({
@@ -220,31 +204,15 @@ async function main() {
                 }
             }
 
-            // Add to report
             reportMarkdown += `## Article: ${article.slug}\n\n`;
-
-            reportMarkdown += `### Title\n`;
-            reportMarkdown += `**Before (ES):** ${article.title.es}\n`;
-            reportMarkdown += `**After (ES):** ${optimized.title.es}\n`;
-            reportMarkdown += `**Before (EN):** ${article.title.en}\n`;
-            reportMarkdown += `**After (EN):** ${optimized.title.en}\n\n`;
-
-            reportMarkdown += `### Subtitle\n`;
-            reportMarkdown += `**Before (ES):** ${article.subtitle.es}\n`;
-            reportMarkdown += `**After (ES):** ${optimized.subtitle.es}\n\n`;
-
-            reportMarkdown += `### Excerpt\n`;
-            reportMarkdown += `**Before (ES):** ${article.excerpt.es}\n`;
-            reportMarkdown += `**After (ES):** ${optimized.excerpt.es}\n\n`;
-
+            reportMarkdown += `### Title\n**Before:** ${article.title.es}\n**After:** ${optimized.title.es}\n\n`;
+            reportMarkdown += `### Subtitle\n**Before:** ${article.subtitle.es}\n**After:** ${optimized.subtitle.es}\n\n`;
             reportMarkdown += `---\n\n`;
         }
 
         await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    // Apply replacements
-    // Sort by start index descending to avoid shifting indices
     replacements.sort((a, b) => b.start - a.start);
 
     let newContent = content;
