@@ -18,7 +18,8 @@ if (!API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+// FIX 1: Usamos la versión específica para evitar el Error 404
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-001" });
 
 async function optimizeArticle(article) {
     console.log(`Optimizing article: ${article.slug}`);
@@ -47,8 +48,21 @@ async function optimizeArticle(article) {
         const result = await model.generateContent(prompt);
         const response = await result.response;
         let text = response.text();
-        // Clean up markdown code blocks if present
-        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
+
+        console.log(`Gemini Raw Response for ${article.slug}:`, text.substring(0, 100) + "..."); // Debug
+
+        // FIX 2: Limpieza agresiva de JSON
+        // Eliminar bloques de código markdown
+        text = text.replace(/```json/g, '').replace(/```/g, '');
+
+        // Buscar dónde empieza el primer '{' y dónde termina el último '}'
+        const firstBrace = text.indexOf('{');
+        const lastBrace = text.lastIndexOf('}');
+
+        if (firstBrace !== -1 && lastBrace !== -1) {
+            text = text.substring(firstBrace, lastBrace + 1);
+        }
+
         return JSON.parse(text);
     } catch (error) {
         console.error(`Failed to optimize article ${article.slug}:`, error);
@@ -75,8 +89,8 @@ async function main() {
         const slug = match[2]; // Group 2 is the slug value
         const slugIndex = match.index;
 
-        // Extract a chunk of text after the slug to parse fields.
-        const chunk = content.substring(slugIndex, slugIndex + 1500);
+        // FIX 3: Aumentar rango de lectura a 4000 para artículos con mucha metadata
+        const chunk = content.substring(slugIndex, slugIndex + 4000);
 
         // Robust regex for date
         const dateMatch = chunk.match(/date:\s*(["'])([^"']+)\1/);
@@ -185,8 +199,7 @@ async function main() {
             // Update or Insert lastSeoUpdate
             if (article.lastSeoUpdate) {
                 // Find where it is and replace it
-                // We need to find the exact location again because we didn't store the index of lastSeoUpdate
-                const chunk = content.substring(article.slugIndex, article.slugIndex + 1500);
+                const chunk = content.substring(article.slugIndex, article.slugIndex + 4000); // Use larger chunk here too
                 const m = chunk.match(/lastSeoUpdate:\s*(["'])([^"']+)\1/);
                 if (m) {
                     replacements.push({
@@ -197,10 +210,6 @@ async function main() {
                 }
             } else {
                 // Insert it after slug
-                // We assume slug is `slug: "value",` or `slug: "value"`
-                // We want to append `\n    lastSeoUpdate: "${today}",`
-
-                // Find the end of the slug line
                 const slugLineEnd = content.indexOf('\n', article.slugIndex);
                 if (slugLineEnd !== -1) {
                     replacements.push({
