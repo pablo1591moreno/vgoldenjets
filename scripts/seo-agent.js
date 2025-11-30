@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const API_KEY = process.env.GEMINI_API_KEY;
 const FILE_PATH = path.join(process.cwd(), 'src', 'contexts', 'DatosParaArticulos.tsx');
 const REPORT_PATH = path.join(process.cwd(), 'seo_report.md');
-const ARTICLES_TO_PROCESS = 2; // Number of articles to optimize per run
+const ARTICLES_TO_PROCESS = 2;
 
 if (!API_KEY) {
     console.error('Error: GEMINI_API_KEY is not set.');
