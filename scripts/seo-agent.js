@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,9 +18,15 @@ if (!API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(API_KEY);
-// Use gemini-1.5-flash as it is the most cost-effective and fast model for this task.
-// If this fails, it's likely an API Key issue or quota issue, not a model existence issue.
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+// Safety Settings: Force BLOCK_NONE to avoid blocking legitimate content
+const safetySettings = [
+    { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+];
 
 async function optimizeArticle(article) {
     console.log(`Optimizing article: ${article.slug}`);
@@ -46,18 +52,26 @@ async function optimizeArticle(article) {
   `;
 
     try {
-        const result = await model.generateContent(prompt);
+        const result = await model.generateContent({
+            contents: [{ role: "user", parts: [{ text: prompt }] }],
+            safetySettings: safetySettings,
+        });
+
         const response = await result.response;
         let text = response.text();
-        // Clean up markdown code blocks if present
-        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
+
+        // Sanitization: Extract only the JSON object
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) {
+            throw new Error("No JSON object found in response");
+        }
+        text = jsonMatch[0];
+
         return JSON.parse(text);
     } catch (error) {
         console.error(`Failed to optimize article ${article.slug}:`, error.message);
-        if (error.message.includes('404')) {
-            console.error("Tip: Check if your API Key has access to 'gemini-1.5-flash'.");
-        }
-        return null;
+        // Error Propagation: Return the error message to be included in the report
+        return { error: error.message };
     }
 }
 
@@ -71,7 +85,6 @@ async function main() {
 
     let content = fs.readFileSync(FILE_PATH, 'utf-8');
 
-    // Robust regex for slug: handles single or double quotes
     const slugRegex = /slug:\s*(["'])([^"']+)\1/g;
     let match;
     const articles = [];
@@ -79,27 +92,20 @@ async function main() {
     while ((match = slugRegex.exec(content)) !== null) {
         const slug = match[2];
         const slugIndex = match.index;
-
-        // Extract a chunk of text after the slug to parse fields.
-        // Increased chunk size to ensure we catch fields even if they are far apart
         const chunk = content.substring(slugIndex, slugIndex + 4000);
 
-        // Robust regex for date
         const dateMatch = chunk.match(/date:\s*(["'])([^"']+)\1/);
         const date = dateMatch ? dateMatch[2] : '1970-01-01';
 
-        // Robust regex for lastSeoUpdate
         const lastSeoUpdateMatch = chunk.match(/lastSeoUpdate:\s*(["'])([^"']+)\1/);
         const lastSeoUpdate = lastSeoUpdateMatch ? lastSeoUpdateMatch[2] : null;
 
         const extractField = (fieldName) => {
-            // Robust regex for object fields: key: { ... }
             const regex = new RegExp(`${fieldName}:\\s*\\{([\\s\\S]*?)\\}`, 'm');
             const m = chunk.match(regex);
 
             if (m) {
                 const inner = m[1];
-                // Robust regex for inner fields es/en
                 const esMatch = inner.match(/es:\s*(["'])([\s\S]*?)\1/);
                 const enMatch = inner.match(/en:\s*(["'])([\s\S]*?)\1/);
 
@@ -133,11 +139,6 @@ async function main() {
         }
     }
 
-    // Sort logic:
-    // 1. Articles that have NEVER been optimized (lastSeoUpdate is null) come first.
-    // 2. If both have been optimized, sort by lastSeoUpdate ascending (oldest optimization first).
-    // 3. If both never optimized, sort by publication date ascending (oldest article first).
-
     articles.sort((a, b) => {
         if (!a.lastSeoUpdate && !b.lastSeoUpdate) {
             return new Date(a.date) - new Date(b.date);
@@ -147,7 +148,6 @@ async function main() {
         return new Date(a.lastSeoUpdate) - new Date(b.lastSeoUpdate);
     });
 
-    // Take top N
     const articlesToOptimize = articles.slice(0, ARTICLES_TO_PROCESS);
 
     console.log(`Found ${articles.length} total articles.`);
@@ -161,17 +161,12 @@ async function main() {
     const today = new Date().toISOString().split('T')[0];
 
     for (const article of articlesToOptimize) {
-        const optimized = await optimizeArticle({
-            slug: article.slug,
-            title: { es: article.title.es, en: article.title.en },
-            subtitle: { es: article.subtitle.es, en: article.subtitle.en },
-            excerpt: { es: article.excerpt.es, en: article.excerpt.en }
-        });
+        const result = await optimizeArticle(article);
 
-        if (optimized) {
+        if (result && !result.error) {
+            const optimized = result;
             const esc = (s) => s.replace(/"/g, '\\"').replace(/\n/g, '\\n');
 
-            // Update Content Fields
             replacements.push({
                 start: article.title.index,
                 end: article.title.index + article.title.fullMatch.length,
@@ -188,7 +183,6 @@ async function main() {
                 text: `excerpt: { es: "${esc(optimized.excerpt.es)}", en: "${esc(optimized.excerpt.en)}" }`
             });
 
-            // Update or Insert lastSeoUpdate
             if (article.lastSeoUpdate) {
                 const chunk = content.substring(article.slugIndex, article.slugIndex + 4000);
                 const m = chunk.match(/lastSeoUpdate:\s*(["'])([^"']+)\1/);
@@ -210,18 +204,24 @@ async function main() {
                 }
             }
 
-            // Add to report
             reportMarkdown += `## Article: ${article.slug}\n\n`;
+            reportMarkdown += `### Status: ✅ Success\n\n`;
             reportMarkdown += `### Title\n**Before:** ${article.title.es}\n**After:** ${optimized.title.es}\n\n`;
             reportMarkdown += `### Subtitle\n**Before:** ${article.subtitle.es}\n**After:** ${optimized.subtitle.es}\n\n`;
             reportMarkdown += `### Excerpt\n**Before:** ${article.excerpt.es}\n**After:** ${optimized.excerpt.es}\n\n`;
+            reportMarkdown += `---\n\n`;
+        } else {
+            // Handle Error in Report
+            const errorMessage = result ? result.error : "Unknown error";
+            reportMarkdown += `## Article: ${article.slug}\n\n`;
+            reportMarkdown += `### Status: ❌ Failed\n\n`;
+            reportMarkdown += `**Error:** ${errorMessage}\n\n`;
             reportMarkdown += `---\n\n`;
         }
 
         await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    // Apply replacements
     replacements.sort((a, b) => b.start - a.start);
 
     let newContent = content;
