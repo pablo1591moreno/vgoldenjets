@@ -35,6 +35,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/seo-agent.js
 
+      - name: Generate Sitemap
+        run: npm run sitemap
+
       - name: Read Report
         id: read_report
         run: |
