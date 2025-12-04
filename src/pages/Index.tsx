@@ -96,6 +96,7 @@ const Index = () => {
       <Suspense fallback={<div className="py-20 bg-black" />}>
         <Contact />
         <Services />
+        <div className="border-t border-white/10" />
         <Gallery />
         <ArticleCarousel />
         <WhyChooseUs />

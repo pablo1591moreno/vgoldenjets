@@ -25,7 +25,7 @@ const ArticleCarousel = () => {
                 <div className="flex justify-between items-end mb-8">
                     <div>
                         <h2 className="section-title font-serif text-white mb-2">{meta.title}</h2>
-                        <p className="text-gray-400">{meta.subtitle}</p>
+                        <p className="section-subtitle" style={{ color: "rgb(234 213 155 / 0.9)" }}>{meta.subtitle}</p>
                     </div>
 
                     <div className="flex gap-2">

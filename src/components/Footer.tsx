@@ -57,10 +57,14 @@ const Footer = () => {
                   </a>
                 }
               />
-              {/* CENTRAR SOLO ESTA LINEA */}
-              <ContactInfo icon={MapPin} title={t("contact.info.address.content")} centerVertically />
+              <ContactInfo
+                icon={MapPin}
+                title={t("contact.info.office.title")}
+                content={t("contact.info.office.content")}
+              />
             </div>
             <div className="flex flex-col space-y-8 items-start">
+              <ContactInfo icon={MapPin} title={t("contact.info.address.content")} content={null} centerVertically />
               <ContactInfo
                 icon={Mail}
                 title="Email"

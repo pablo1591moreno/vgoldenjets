@@ -137,20 +137,20 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative py-24 sm:py-32 bg-slate-900">
+      <section className="relative py-24 sm:py-32 bg-black">
         <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-20"
             style={{ backgroundImage: `url(${magazineHero})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/0 via-slate-900/50 to-slate-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black" />
         </div>
 
         <div className="section-container relative z-10 text-center">
           <h1 className="text-4xl sm:text-6xl font-serif text-white mb-6 tracking-tight">
             Jets Magazine
           </h1>
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="section-subtitle max-w-2xl mx-auto" style={{ color: "rgb(234 213 155 / 0.9)" }}>
             {metaDescription}
           </p>
         </div>
@@ -165,8 +165,8 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
             <button
               onClick={() => setSelectedCategory(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${selectedCategory === null
-                  ? "bg-slate-900 text-white shadow-md"
-                  : "bg-gray-100 text-slate-600 hover:bg-gray-200"
+                ? "bg-slate-900 text-white shadow-md"
+                : "bg-gray-100 text-slate-600 hover:bg-gray-200"
                 }`}
             >
               {ALL_CATEGORIES}
@@ -176,8 +176,8 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                 key={idx}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${selectedCategory === cat
-                    ? "bg-slate-900 text-white shadow-md"
-                    : "bg-gray-100 text-slate-600 hover:bg-gray-200"
+                  ? "bg-slate-900 text-white shadow-md"
+                  : "bg-gray-100 text-slate-600 hover:bg-gray-200"
                   }`}
               >
                 {getLoc(cat, currentLang)}
@@ -195,7 +195,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
               placeholder={SEARCH_PLACEHOLDER}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="block w-full pl-10 pr-10 py-2 border border-gray-200 rounded-full leading-5 bg-gray-50 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-slate-900/20 focus:border-slate-900 transition-all sm:text-sm"
+              className="block w-full pl-10 pr-10 py-2 border border-gray-200 rounded-full leading-5 bg-gray-50 text-slate-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-slate-900/20 focus:border-slate-900 transition-all sm:text-sm"
             />
             {searchQuery && (
               <button
@@ -231,7 +231,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                 <div className="section-container">
                   <Link
                     to={`${isEN ? "/en" : ""}/jetsmagazine/${featured.slug}`}
-                    className="group grid md:grid-cols-12 items-stretch gap-0 rounded-2xl overflow-hidden bg-white shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                    className="group grid md:grid-cols-12 items-stretch gap-0 rounded-2xl overflow-hidden bg-zinc-900 shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                   >
                     <div className="md:col-span-7 lg:col-span-8 aspect-[16/9] md:aspect-auto overflow-hidden relative">
                       <img
@@ -244,22 +244,22 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                       />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
                       {/* Category Badge */}
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm">
+                      <div className="absolute top-4 left-4 bg-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-sm">
                         {getLoc(featured.category, currentLang)}
                       </div>
                     </div>
-                    <div className="md:col-span-5 lg:col-span-4 p-8 sm:p-10 flex flex-col justify-center bg-white">
+                    <div className="md:col-span-5 lg:col-span-4 p-8 sm:p-10 flex flex-col justify-center bg-zinc-900">
                       <div className="text-xs font-bold uppercase tracking-widest text-gold mb-3">
                         {dateFmt.format(featured.dateMs)}
                       </div>
-                      <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 group-hover:text-gold transition-colors mb-4 leading-tight">
+                      <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white group-hover:text-gold transition-colors mb-4 leading-tight">
                         {getLoc(featured.title, currentLang)}
                       </h2>
-                      <p className="text-slate-600 leading-relaxed line-clamp-4 mb-6">
+                      <p className="text-white leading-relaxed line-clamp-4 mb-6">
                         {getLoc(featured.excerpt, currentLang)}
                       </p>
 
-                      <div className="mt-auto font-medium text-slate-900 group-hover:text-gold transition-colors flex items-center">
+                      <div className="mt-auto font-medium text-white group-hover:text-gold transition-colors flex items-center">
                         {READ_MORE}
                       </div>
                     </div>
@@ -277,7 +277,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                       <Link
                         key={a.slug}
                         to={`${isEN ? "/en" : ""}/jetsmagazine/${a.slug}`}
-                        className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1"
+                        className="group flex flex-col bg-black rounded-xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1"
                       >
                         <div className="aspect-[16/10] overflow-hidden relative">
                           <img
@@ -288,7 +288,7 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                             decoding="async"
                           />
                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-slate-900 shadow-sm">
+                          <div className="absolute top-3 left-3 bg-black/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
                             {getLoc(a.category, currentLang)}
                           </div>
                         </div>
@@ -296,13 +296,13 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
                           <div className="text-xs font-bold uppercase tracking-widest text-gold mb-3">
                             {dateFmt.format(a.dateMs)}
                           </div>
-                          <h3 className="text-xl font-serif font-bold text-slate-900 group-hover:text-gold transition-colors mb-3 leading-snug">
+                          <h3 className="text-xl font-serif font-bold text-white group-hover:text-gold transition-colors mb-3 leading-snug">
                             {getLoc(a.title, currentLang)}
                           </h3>
-                          <p className="text-slate-600 leading-relaxed line-clamp-3 mb-4 flex-grow">
+                          <p className="text-white leading-relaxed line-clamp-3 mb-4 flex-grow">
                             {getLoc(a.excerpt, currentLang)}
                           </p>
-                          <div className="mt-auto font-medium text-slate-900 group-hover:text-gold transition-colors text-sm">
+                          <div className="mt-auto font-medium text-white group-hover:text-gold transition-colors text-sm">
                             {READ_MORE}
                           </div>
                         </div>

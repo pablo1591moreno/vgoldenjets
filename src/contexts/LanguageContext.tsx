@@ -110,7 +110,7 @@ const translations: Translations = {
     // Popular Destinations
     "destinations.title": "Popular Destinations",
     "destinations.routes":
-      "Miami to New York, Miami to Los Angeles, Los Angeles to New York, New York to Los Angeles, New York to Las Vegas, Miami to Las Vegas, Miami to Aspen, Los Angeles to Aspen, New York to Aspen, Teterboro to Napa Valley, Miami to London, Los Angeles to Miami",
+      "Buenos Aires to Punta del Este, Buenos Aires to Cordoba, Buenos Aires to Miami, Miami to New York, Miami to Los Angeles, Los Angeles to New York, New York to Los Angeles, New York to Las Vegas, Miami to Las Vegas, Miami to Aspen, Los Angeles to Aspen, New York to Aspen, Teterboro to Napa Valley, Miami to London, Los Angeles to Miami",
 
     // Contact
     "contact.title": "Contact Us",
@@ -144,8 +144,10 @@ const translations: Translations = {
       "Have questions or ready to book your next flight? Contact our team of aviation experts for immediate assistance.",
     "contact.info.address.title": "Office Address",
     "contact.info.address.content": "Jorge Newbery Airport",
-    "contact.info.phone.title": "Phone SOUTH AMERICA 1",
-    "contact.info.phone.title2": "Phone SOUTH AMERICA 2",
+    "contact.info.office.title": "Office",
+    "contact.info.office.content": "Roma 450, La Lucila, Vicente López",
+    "contact.info.phone.title": "Phone USA",
+    "contact.info.phone.title2": "Phone Argentina",
     "contact.info.email.title": "Email Address",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.content": "Available 24/7 for charter inquiries",
@@ -276,7 +278,7 @@ const translations: Translations = {
     // Popular Destinations
     "destinations.title": "Destinos Populares",
     "destinations.routes":
-      "Miami a Nueva York, Miami a Los Ángeles, Los Ángeles a Nueva York, Nueva York a Los Ángeles, Nueva York a Las Vegas, Miami a Las Vegas, Miami a Aspen, Los Ángeles a Aspen, Nueva York a Aspen, Teterboro a Valle de Napa, Miami a Londres, Los Ángeles a Miami",
+      "Buenos Aires a Punta del Este, Buenos Aires a Córdoba, Buenos Aires a Miami, Miami a Nueva York, Miami a Los Ángeles, Los Ángeles a Nueva York, Nueva York a Los Ángeles, Nueva York a Las Vegas, Miami a Las Vegas, Miami a Aspen, Los Ángeles a Aspen, Nueva York a Aspen, Teterboro a Valle de Napa, Miami a Londres, Los Ángeles a Miami",
 
     // Contacto
     "contact.title": "Contáctenos",
@@ -312,8 +314,10 @@ const translations: Translations = {
     "contact.info.address.title": "Dirección de Oficina",
     "contact.info.address.content":
       "Aeroparque Jorge Newbery",
-    "contact.info.phone.title": "Teléfono ARGENTINA 1",
-    "contact.info.phone.title2": "Teléfono ARGETINA 2",
+    "contact.info.office.title": "Oficina",
+    "contact.info.office.content": "Roma 450, La Lucila, Vicente López",
+    "contact.info.phone.title": "Teléfono EEUU",
+    "contact.info.phone.title2": "Teléfono ARGENTINA",
     "contact.info.email.title": "Correo Electrónico",
     "contact.info.hours.title": "Horario de Atención",
     "contact.info.hours.content":
