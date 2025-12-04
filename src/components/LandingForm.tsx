@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import logo from "@/img/logo vgolden jet-01.png";
 import background from "@/img/527dfc_84ca4ea39e9147589e332ebe5810c677~mv2.gif";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Helmet } from "react-helmet-async";
 
 const LandingPage = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -80,6 +81,19 @@ const LandingPage = () => {
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
 
+      <Helmet htmlAttributes={{ lang: language }}>
+        <title>{language === "en" ? "Request a Quote | V Golden Jets" : "Solicitar Cotización | V Golden Jets"}</title>
+        <meta
+          name="description"
+          content={
+            language === "en"
+              ? "Request a personalized quote for your private jet charter. Fast, secure, and tailored to your needs."
+              : "Solicite una cotización personalizada para su vuelo privado. Rápido, seguro y adaptado a sus necesidades."
+          }
+        />
+        <link rel="canonical" href="https://www.vgoldenjets.com/landingForm" />
+      </Helmet>
+
       {/* Fixed navbar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/80 flex items-center justify-between px-6 py-3 shadow-md">
         <a
@@ -101,7 +115,7 @@ const LandingPage = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/+17863005652"
+        href="https://wa.me/+1168668170"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg z-50"
@@ -112,7 +126,7 @@ const LandingPage = () => {
       <div className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-10 min-h-screen">
         {/* Title */}
         <h1 className="text-center text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-12">
-          {t("hero.subtitle")}
+          {t("hero.subtitle.from")}
         </h1>
 
         {/* Contact Form */}

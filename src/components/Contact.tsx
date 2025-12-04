@@ -149,7 +149,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.fullName.placeholder")}
                     />
                   </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                       value={formData.origin}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.origin.placeholder")}
                     />
                   </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                       value={formData.destination}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.destination.placeholder")}
                     />
                   </div>
@@ -190,7 +190,7 @@ const Contact = () => {
                       required
                       inputMode="numeric"
                       pattern="[0-9]*"
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.passengers.placeholder")}
                     />
                   </div>
@@ -204,7 +204,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.email.placeholder")}
                     />
                   </div>
@@ -220,7 +220,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                       placeholder={t("contact.form.phone.placeholder")}
                     />
                   </div>
@@ -233,7 +233,7 @@ const Contact = () => {
                       value={formData.tripType}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black w-full p-2 h-[calc(2.25rem+2px)]"
+                      className="bg-white border-gray-300 text-black w-full p-2 h-12 text-base"
                     >
                       <option value="oneway">{t("contact.form.tripType.oneWay")}</option>
                       <option value="roundtrip">{t("contact.form.tripType.roundTrip")}</option>
@@ -249,7 +249,7 @@ const Contact = () => {
                       value={formData.departureDate}
                       onChange={handleChange}
                       required
-                      className="bg-white border-gray-300 text-black "
+                      className="bg-white border-gray-300 text-black h-12 text-base"
                     />
                   </div>
 

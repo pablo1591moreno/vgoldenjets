@@ -99,4 +99,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos"/>
   </url>
 
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
+  </url>
+
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-argentina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina"/>
+  </url>
+
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
+  </url>
+
 </urlset>

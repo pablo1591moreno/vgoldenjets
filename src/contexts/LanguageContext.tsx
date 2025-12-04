@@ -26,6 +26,7 @@ const translations: Translations = {
     "hero.subtitle.line2": "Our Priority",
     "hero.services": "Our Services",
     "hero.contact": "Contact Us",
+    "hero.subtitle.from": "Quote your private flight",
 
     // Services
     "services.title": "Our Services",
@@ -153,6 +154,8 @@ const translations: Translations = {
     "contact.toast.title": "Message Sent",
     "contact.toast.description":
       "Thank you for your inquiry. We'll get back to you shortly.",
+    "contact.toast.errorTitle": "Error",
+    "contact.toast.errorDescription": "Something went wrong. Please try again.",
 
     // Footer
     "footer.quickLinks": "Quick Links",
@@ -188,6 +191,8 @@ const translations: Translations = {
     "hero.subtitle.line2": "Nuestra Prioridad",
     "hero.services": "Nuestros Servicios",
     "hero.contact": "Contáctenos",
+    "hero.subtitle.from": "Cotizá tu vuelo privado",
+
 
     // Services
     "services.title": "Nuestros Servicios",
@@ -318,6 +323,8 @@ const translations: Translations = {
     "contact.toast.title": "Mensaje enviado",
     "contact.toast.description":
       "Gracias por tu consulta. Te responderemos pronto.",
+    "contact.toast.errorTitle": "Error",
+    "contact.toast.errorDescription": "Hubo un problema al enviar el formulario. Por favor, intenta nuevamente.",
 
     // Footer
     "footer.quickLinks": "Enlaces Rápidos",

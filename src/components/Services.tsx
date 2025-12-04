@@ -27,9 +27,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const alt = imgAltKey ? t(imgAltKey) : t(titleKey);
 
   return (
-    <article className="rounded-2xl overflow-hidden border border-gold/20 bg-black/80 hover:border-gold/50 transition-all">
+    <article className="rounded-xl overflow-hidden border border-gold/20 bg-black/80 hover:border-gold/50 transition-all">
       {/* Imagen superior con alto 30% más chico */}
-      <div className="relative aspect-[21/9] sm:aspect-[16/7] overflow-hidden">
+      <div className="relative aspect-[16/9] sm:aspect-[16/7] overflow-hidden">
         <img
           src={imgSrc}
           alt={alt}
@@ -45,10 +45,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="mb-3">
           <Icon className="text-gold h-5 w-5 sm:h-6 sm:w-6" />
         </div>
-        <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">
+        <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-white">
           {t(titleKey)}
         </h3>
-        <p className="text-white/70 text-sm sm:text-base">
+        <p className="text-white/80 text-base sm:text-lg leading-relaxed">
           {t(descriptionKey)}
         </p>
       </div>

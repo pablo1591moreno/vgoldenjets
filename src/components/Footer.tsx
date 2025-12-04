@@ -86,10 +86,18 @@ const Footer = () => {
         <div className="mt-12 flex flex-col items-center">
           <img className="w-40 object-center mb-4" src={logo} alt="V Golden Jets logo" />
           <div className="flex space-x-4 mt-2">
-            <a href="https://www.instagram.com/vgoldenjets?igsh=aHMxcmltaGwzNm8=" className="text-white hover:text-gold transition-colors">
+            <a
+              href="https://www.instagram.com/vgoldenjets?igsh=aHMxcmltaGwzNm8="
+              className="text-white hover:text-gold transition-colors"
+              aria-label="Visit our Instagram page"
+            >
               <Instagram size={24} />
             </a>
-            <a href="https://www.linkedin.com/company/vgoldenjetsarg" className="text-white hover:text-gold transition-colors">
+            <a
+              href="https://www.linkedin.com/company/vgoldenjetsarg"
+              className="text-white hover:text-gold transition-colors"
+              aria-label="Visit our LinkedIn page"
+            >
               <Linkedin size={24} />
             </a>
           </div>

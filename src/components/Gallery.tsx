@@ -62,97 +62,85 @@ const Gallery = () => {
     };
 
     return (
-        <section id="fleet" className="bg-secondary py-10 sm:py-16 ">
+        <section id="fleet" className="bg-white py-10 sm:py-16 ">
             <div className="section-container">
-                <h2 className="section-title font-serif">{t("fleet.title")}</h2>
-                <p className="section-subtitle">{t("fleet.subtitle")}</p>
-
-                {/* Jet Categories */}
-                {/*
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-12">
-                    <div className="bg-black/40 p-5">
-                        <img src={lightJet} alt="Light Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
-                        <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.lightJets.title")}</h3>
-                        <p className="text-white/80">{t("fleet.lightJets.description")}</p>
-                    </div>
-                    <div className="bg-black/40 p-5">
-                        <img src={MidSizeJets} alt="Mid Size Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
-                        <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.midSizeJets.title")}</h3>
-                        <p className="text-white/80">{t("fleet.midSizeJets.description")}</p>
-                    </div>
-                    <div className="bg-black/40 p-5">
-                        <img src={HeavyJets} alt="Heavy Jet" className="h-20 w-auto object-contain mb-4 rounded mx-auto" />
-                        <h3 className="text-xl font-bold text-gold mb-3">{t("fleet.heavyJets.title")}</h3>
-                        <p className="text-white/80">{t("fleet.heavyJets.description")}</p>
-                    </div>
-                </div> */}
-
+                <h2 className="section-title font-serif text-slate-900">{t("fleet.title")}</h2>
+                <p className="section-subtitle text-slate-600">{t("fleet.subtitle")}</p>
 
                 {/* Fleet Gallery */}
-
-                <div className="mt-8 relative overflow-hidden">
-                    <div className="relative bg-black overflow-hidden flex flex-col lg:flex-row"> {/* Mantiene flex-col para móvil */}
-                        {/* Contenedor de Imagen y Botones (Izquierda en web) */}
-                        <div className="relative w-full h-64 sm:h-auto lg:w-4/5">
+                <div className="mt-8 relative">
+                    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
+                        {/* Image Section */}
+                        <div className="relative w-full h-[400px] sm:h-[500px] lg:w-3/5 xl:w-2/3 flex items-center justify-center overflow-hidden bg-gray-100">
                             <img
                                 src={currentAircraft.image}
                                 alt={currentAircraft.name}
-                                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+                                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                                 style={{ objectPosition: 'center' }}
+                                loading="lazy"
+                                decoding="async"
                             />
-                            <div className="absolute inset-0 bg-black/30"></div>
-                            {/* Navigation Buttons on Image */}
-                            <button
-                                onClick={prevSlide}
-                                className="absolute top-1/2 left-2 sm:left-5 -translate-y-1/2 bg-black/50 hover:bg-gold/80 text-white p-2 rounded-full z-10 transition-colors"
-                            >
-                                <ChevronLeft size={20} />
-                            </button>
-                            <button
-                                onClick={nextSlide}
-                                className="absolute top-1/2 right-2 sm:right-5 -translate-y-1/2 bg-black/50 hover:bg-gold/80 text-white p-2 rounded-full z-10 transition-colors"
-                            >
-                                <ChevronRight size={20} />
-                            </button>
+
+                            {/* Navigation Buttons */}
+                            <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
+                                <button
+                                    onClick={prevSlide}
+                                    className="pointer-events-auto bg-white/80 hover:bg-white text-slate-900 p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 backdrop-blur-sm border border-gray-100"
+                                >
+                                    <ChevronLeft size={24} />
+                                </button>
+                                <button
+                                    onClick={nextSlide}
+                                    className="pointer-events-auto bg-white/80 hover:bg-white text-slate-900 p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 backdrop-blur-sm border border-gray-100"
+                                >
+                                    <ChevronRight size={24} />
+                                </button>
+                            </div>
                         </div>
 
-                        {/* Detalles (Derecha en web) */}
-                        <div className="w-full lg:w-3/5 p-5 lg:pl-8 flex flex-col justify-between"> {/* Flex column para nombre arriba */}
-                            <h3 className="text-2xl font-bold text-white lg:mb-4">{currentAircraft.name}</h3>
-                            <div className="space-y-3">
-                                <div>
-                                    <p className="text-gold text-sm mb-1">{t("fleet.capacity")}</p>
-                                    <p className="text-white">{currentAircraft.capacity}</p>
-                                </div>
-                                <div>
-                                    <p className="text-gold text-sm mb-1">{t("fleet.range")}</p>
-                                    <p className="text-white">{currentAircraft.range}</p>
-                                </div>
-                                <div>
-                                    <p className="text-gold text-sm mb-1">{t("fleet.speed")}</p>
-                                    <p className="text-white">{currentAircraft.speed}</p>
+                        {/* Details Section */}
+                        <div className="w-full lg:w-2/5 xl:w-1/3 p-6 sm:p-8 lg:p-10 flex flex-col justify-center bg-white">
+                            <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6">{currentAircraft.name}</h3>
+
+                            <div className="space-y-6">
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p className="text-gold text-xs font-bold uppercase tracking-wider mb-1">{t("fleet.capacity")}</p>
+                                        <p className="text-slate-700 font-medium">{currentAircraft.capacity}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-gold text-xs font-bold uppercase tracking-wider mb-1">{t("fleet.speed")}</p>
+                                        <p className="text-slate-700 font-medium">{currentAircraft.speed}</p>
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <p className="text-gold text-sm mb-1">{t("fleet.features")}</p>
-                                    <ul className="mt-2 space-y-1.5">
-                                        {currentAircraft.features.map((feature, index) => (
+                                    <p className="text-gold text-xs font-bold uppercase tracking-wider mb-1">{t("fleet.range")}</p>
+                                    <p className="text-slate-700 font-medium">{currentAircraft.range}</p>
+                                </div>
+
+                                <div>
+                                    <p className="text-gold text-xs font-bold uppercase tracking-wider mb-2">{t("fleet.features")}</p>
+                                    <ul className="space-y-2">
+                                        {currentAircraft.features.slice(0, 4).map((feature, index) => (
                                             <li key={index} className="flex items-start">
-                                                <Check size={16} className="text-gold mr-2 mt-0.5 flex-shrink-0" />
-                                                <span className="text-white/80">{feature}</span>
+                                                <Check size={16} className="text-gold mr-2 mt-1 flex-shrink-0" />
+                                                <span className="text-slate-600 text-sm">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                             </div>
 
-                            {/* Pagination Dots (Abajo de los detalles en ambos casos) */}
-                            <div className="flex justify-center mt-6 lg:mt-8">
+                            {/* Pagination Dots */}
+                            <div className="flex justify-center mt-8 space-x-2">
                                 {fleet[language].map((_, index) => (
-                                    <span
+                                    <button
                                         key={index}
-                                        className={`block w-2 h-2 rounded-full mx-1 cursor-pointer ${index === currentIndex ? 'bg-gold' : 'bg-white/30'}`}
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-gold w-6' : 'bg-gray-300 hover:bg-gold/50'
+                                            }`}
                                         onClick={() => setCurrentIndex(index)}
+                                        aria-label={`Go to slide ${index + 1}`}
                                     />
                                 ))}
                             </div>
@@ -160,14 +148,13 @@ const Gallery = () => {
                     </div>
                 </div>
 
-
                 {/* Available Jets List */}
-                <div className="mt-12">
-                    <h3 className="text-2xl font-bold text-center text-white mb-5">{t("fleet.availableJets")}</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-center">
+                <div className="mt-16">
+                    <h3 className="text-2xl font-serif font-bold text-center text-slate-900 mb-8">{t("fleet.availableJets")}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {filteredJetModels().split(",").map((jet, index) => (
-                            <div key={index} className="bg-black/30 p-3 ">
-                                <p className="text-white">{jet.trim()}</p>
+                            <div key={index} className="bg-gray-50 hover:bg-white p-4 rounded-xl border border-gray-100 hover:border-gold/30 shadow-sm hover:shadow-md transition-all duration-300 text-center group">
+                                <p className="text-slate-700 font-medium group-hover:text-gold transition-colors">{jet.trim()}</p>
                             </div>
                         ))}
                     </div>

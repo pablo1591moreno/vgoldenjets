@@ -13,12 +13,15 @@ const Hero = () => {
     <section id="home" className={`relative ${isMobile ? 'pt-10' : 'pt-0'} min-h-[60vh] flex items-center `}>
       {/* Background image */}
       <div className="absolute inset-0 bg-black">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
+        <img
+          src={background}
+          alt="Private Jet Hero"
+          className="absolute inset-0 w-full h-full object-cover"
           style={{
-            backgroundImage: `url(${background})`,
-            backgroundPosition: isMobile ? '-170px center' : 'center', // Aplica el desplazamiento solo en modo móvil
+            objectPosition: isMobile ? '35% center' : 'center', // Adjusted for mobile to match previous -170px visual
           }}
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black" />
       </div>
@@ -28,7 +31,7 @@ const Hero = () => {
           <h1 className="text-white text-xl sm:text-2xl md:text-2xl mt-2 font-sans">
             {t("hero.subtitle.line1")}<br />
             {t("hero.subtitle.line2")}
-          </h1>          
+          </h1>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-20">
             <a href="#contact" className="btn-primary flex items-center justify-center rounded-full">
               {t("hero.contact")}

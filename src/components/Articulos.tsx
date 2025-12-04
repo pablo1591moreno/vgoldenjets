@@ -1,211 +1,304 @@
-import React, { useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+// Articulos.tsx
+import React, { useState, useEffect, useRef } from "react";
+import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft } from "lucide-react";
-import { selectArticleBySlug, selectMagazineMeta } from "@/contexts/DatosParaArticulos";
+import { ArrowLeft, Calendar, Clock, Share2, Quote, CheckCircle2, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Footer from "./Footer";
+import { getArticleContent } from "@/data/articles";
+import { ArticleView, LStr } from "@/types/article";
 import Navbar from "./Navbar";
-import ShareBar from "./ShareBar";
-import Contact from "@/components/Contact";
-
-type Props = { forcedLang?: "en" | "es" };
+import Footer from "./Footer";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import QuoteForm from "./QuoteForm";
 
 const SITE = "https://www.vgoldenjets.com";
 
-function truncate(s: string, n = 160) {
-  return s.length > n ? s.slice(0, n - 1) + "…" : s;
+// Helper to get localized string
+function getLoc(content: LStr | string | undefined, lang: "en" | "es"): string {
+  if (!content) return "";
+  if (typeof content === "string") return content;
+  return (lang === "en" ? content.en : content.es) || content.es || "";
 }
 
-function toAbsoluteUrl(pathOrUrl: string): string {
-  if (!pathOrUrl) return SITE;
-  if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
-  return `${SITE}${pathOrUrl.startsWith("/") ? "" : "/"}${pathOrUrl}`;
-}
-
-const Articulos: React.FC<Props> = ({ forcedLang }) => {
-  const { slug } = useParams();
+const Articulos = ({ forcedLang }: { forcedLang?: "en" | "es" }) => {
+  const { slug } = useParams<{ slug: string }>();
   const ctx = useLanguage();
   const language = forcedLang ?? ctx.language;
   const isEN = language === "en";
+  const currentLang = isEN ? "en" : "es";
 
-  const { volver: backLabel, heroImage } = useMemo(
-    () => selectMagazineMeta(language),
-    [language]
-  );
+  const [article, setArticle] = useState<ArticleView | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [readingProgress, setReadingProgress] = useState(0);
 
-  const article = useMemo(
-    () => (slug ? selectArticleBySlug(slug, language) : undefined),
-    [slug, language]
-  );
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
-  if (!article) {
+  // Fetch Article Data
+  useEffect(() => {
+    if (!slug) return;
+
+    setIsLoading(true);
+    setError(false);
+
+    getArticleContent(slug)
+      .then((data) => {
+        if (data) {
+          setArticle(data);
+        } else {
+          setError(true);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        setError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [slug]);
+
+  // Reading Progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setReadingProgress(progress);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  if (isLoading) {
     return (
-      <div className="section-container py-16">
-        <Link
-          to={`${isEN ? "/en" : ""}/jetsmagazine`}
-          className="inline-flex items-center text-gold hover:underline"
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" /> {backLabel}
-        </Link>
-        <h1 className="mt-6 text-2xl font-semibold text-black">{"Artículo no encontrado"}</h1>
-        <p className="mt-2 text-gray-700">{"El contenido que buscás no existe o fue movido."}</p>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
       </div>
     );
   }
 
-  const ES_URL = `${SITE}/jetsmagazine/${article.slug}`;
-  const EN_URL = `${SITE}/en/jetsmagazine/${article.slug}`;
+  if (error || !article) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+        <h1 className="text-2xl font-serif text-slate-900 mb-4">
+          {isEN ? "Article not found" : "Artículo no encontrado"}
+        </h1>
+        <Link to={isEN ? "/en/jetsmagazine" : "/jetsmagazine"} className="text-gold hover:underline">
+          {isEN ? "Back to Magazine" : "Volver a Magazine"}
+        </Link>
+      </div>
+    );
+  }
+
+  // SEO
+  const ES_URL = `${SITE}/jetsmagazine/${slug}`;
+  const EN_URL = `${SITE}/en/jetsmagazine/${slug}`;
   const CANONICAL = isEN ? EN_URL : ES_URL;
 
-  const title = `${article.title} | V Golden Jets`;
-  const description = truncate(article.excerpt || article.subtitle || article.title, 160);
+  const title = getLoc(article.title, currentLang);
+  const excerpt = getLoc(article.excerpt, currentLang);
+  const category = getLoc(article.category, currentLang);
 
-  const ogImageAbs = toAbsoluteUrl(article.ogImage || article.cover);
+  // Helper to render content blocks
+  const renderContent = () => {
+    return article.content.map((block, idx) => {
+      const text = (block as any).text; // Cast to any to be safe if we change types later
+      const localizedText = typeof text === 'object' ? getLoc(text, currentLang) : text;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description,
-    image: [ogImageAbs],
-    datePublished: article.date,
-    dateModified: article.date,
-    mainEntityOfPage: CANONICAL,
-    publisher: {
-      "@type": "Organization",
-      name: "V Golden Jets",
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE}/logo192.png`,
-      },
-    },
+      switch (block.type) {
+        case "h2":
+          return (
+            <h2 key={idx} className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-12 mb-6 leading-tight">
+              {localizedText}
+            </h2>
+          );
+        case "h3":
+          return (
+            <h3 key={idx} className="text-2xl sm:text-3xl font-serif font-semibold text-slate-800 mt-10 mb-4">
+              {localizedText}
+            </h3>
+          );
+        case "p":
+          return (
+            <p key={idx} className="text-lg text-slate-700 leading-relaxed mb-6 font-light">
+              {localizedText}
+            </p>
+          );
+        case "img":
+          const alt = (block as any).alt;
+          const localizedAlt = typeof alt === 'object' ? getLoc(alt, currentLang) : alt;
+          return (
+            <figure key={idx} className="my-10 -mx-4 sm:mx-0">
+              <img
+                src={block.src}
+                alt={localizedAlt}
+                className="w-full h-auto rounded-none sm:rounded-xl shadow-lg"
+                loading="lazy"
+              />
+              {localizedAlt && (
+                <figcaption className="text-center text-sm text-slate-500 mt-3 italic">
+                  {localizedAlt}
+                </figcaption>
+              )}
+            </figure>
+          );
+        case "cta":
+          return (
+            <div key={idx} className="my-12 p-8 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+              <p className="text-xl font-serif text-slate-900 italic mb-6">
+                "{localizedText}"
+              </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="btn-primary w-full sm:w-auto">
+                    {isEN ? "Request a Quote" : "Solicitar Cotización"}
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[500px] bg-black border-gray-800 text-white">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-serif text-gold">
+                      {isEN ? "Request a Quote" : "Solicitar Cotización"}
+                    </DialogTitle>
+                  </DialogHeader>
+                  <QuoteForm onClose={() => { }} />
+                </DialogContent>
+              </Dialog>
+            </div>
+          );
+        default:
+          return null;
+      }
+    });
   };
 
   return (
-    <article>
-      <Helmet>
+    <div className="bg-white min-h-screen font-sans selection:bg-gold/30 selection:text-slate-900">
+      <Helmet htmlAttributes={{ lang: language }}>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={excerpt} />
         <link rel="canonical" href={CANONICAL} />
-
         <link rel="alternate" hrefLang="es" href={ES_URL} />
         <link rel="alternate" hrefLang="en" href={EN_URL} />
         <link rel="alternate" hrefLang="x-default" href={ES_URL} />
-        <meta name="robots" content="index,follow" />
 
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="V Golden Jets" />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={excerpt} />
         <meta property="og:url" content={CANONICAL} />
-        <meta property="og:image" content={ogImageAbs} />
-        <meta property="og:image:secure_url" content={ogImageAbs} />
-        <meta property="og:image:alt" content={article.title} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="article:published_time" content={article.date} />
-        <meta property="article:modified_time" content={article.date} />
+        <meta property="og:image" content={article.cover} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImageAbs} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:image" content={article.cover} />
 
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: SITE
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Jets Magazine",
+                item: `${SITE}/jetsmagazine`
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: title,
+                item: CANONICAL
+              }
+            ]
+          })}
+        </script>
       </Helmet>
+
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-100 z-50">
+        <div
+          className="h-full bg-gold transition-all duration-150 ease-out"
+          style={{ width: `${readingProgress}%` }}
+        />
+      </div>
 
       <Navbar />
 
-      <section className="relative h-[38vh] min-h-[260px]">
-        <div className="absolute inset-0 -z-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${heroImage})` }}
-            aria-hidden="true"
-          />
-          <div className="absolute inset-0 bg-black/70" aria-hidden="true" />
-        </div>
-        <div className="section-container h-full flex items-end pb-8">
-          <div className="max-w-3xl">
-            <Link
-              to={`${isEN ? "/en" : ""}/jetsmagazine`}
-              className="inline-flex items-center text-white/90 hover:text-white"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" /> {backLabel}
-            </Link>
-            <h1 className="mt-3 text-3xl sm:text-4xl font-semibold font-serif text-white">
-              {article.title}
-            </h1>
-            <p className="mt-2 text-white/85 text-base sm:text-lg">{article.subtitle}</p>
+      {/* HERO PARALLAX */}
+      <header className="relative h-[60vh] sm:h-[70vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: `url(${article.cover})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90" />
+
+        <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl mt-20 animate-fade-in">
+          <Link
+            to={isEN ? "/en/jetsmagazine" : "/jetsmagazine"}
+            className="inline-flex items-center text-white/80 hover:text-gold transition-colors mb-6 text-sm font-medium uppercase tracking-widest backdrop-blur-sm bg-white/10 px-4 py-2 rounded-full"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {isEN ? "Back to Magazine" : "Volver a Magazine"}
+          </Link>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            {title}
+          </h1>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 text-white/90 text-sm sm:text-base font-light">
+            <div className="flex items-center">
+              <Calendar className="w-4 h-4 mr-2 text-gold" />
+              {new Date(article.date).toLocaleDateString(language === "en" ? "en-US" : "es-AR", { year: 'numeric', month: 'long', day: 'numeric' })}
+            </div>
+            {category && (
+              <div className="flex items-center px-3 py-1 rounded-full bg-gold/20 border border-gold/30 text-gold">
+                {category}
+              </div>
+            )}
           </div>
         </div>
-      </section>
+      </header>
 
-      <section className="py-10 sm:py-16 bg-white">
-        <div className="section-container">
-          <div className="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed space-y-6">
-            {article.content.map((block, idx) => {
-              switch (block.type) {
-                case "h1":
-                  return (
-                    <h1 key={idx} className="text-3xl sm:text-4xl font-semibold font-serif text-black mt-8">
-                      {block.text}
-                    </h1>
-                  );
-                case "h2":
-                  return (
-                    <h2 key={idx} className="text-2xl sm:text-3xl font-semibold font-serif text-black mt-8">
-                      {block.text}
-                    </h2>
-                  );
-                case "h3":
-                  return (
-                    <h3 key={idx} className="text-xl sm:text-2xl font-semibold font-serif text-black mt-6">
-                      {block.text}
-                    </h3>
-                  );
-                case "p":
-                  return <p key={idx}>{block.text}</p>;
-                case "img":
-                  return (
-                    <figure key={idx} className="my-6">
-                      <img
-                        src={block.src}
-                        alt={block.alt || "Imagen del artículo"}
-                        className="w-full rounded-2xl shadow-sm"
-                        loading="lazy"
-                      />
-                      {block.alt ? (
-                        <figcaption className="mt-2 text-sm text-gray-500">{block.alt}</figcaption>
-                      ) : null}
-                    </figure>
-                  );
-
-                case "cta":
-                  return (
-                    <div
-                      key={idx}
-                      className="my-10 p-6 bg-gold/10 border-l-4 border-gold rounded-xl shadow-sm"
-                    >
-                      <p className="text-xl font-semibold text-black">{block.text}</p>
-                    </div>
-                  );
-
-                default:
-                  return null;
-              }
-            })}
-
-            <ShareBar url={CANONICAL} title={article.title} text={description} />
-          </div>
+      {/* CONTENT */}
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        {/* Excerpt */}
+        <div className="text-xl sm:text-2xl font-serif text-slate-600 leading-relaxed mb-12 border-l-4 border-gold pl-6 italic">
+          {excerpt}
         </div>
 
-        <Contact />
-      </section>
+        {/* Main Content */}
+        <div className="prose prose-lg prose-slate max-w-none">
+          {renderContent()}
+        </div>
+
+        {/* Share & Tags */}
+        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-4">
+            <span className="text-slate-500 font-medium text-sm uppercase tracking-wider">
+              {isEN ? "Share this article" : "Compartir este artículo"}
+            </span>
+            <div className="flex gap-2">
+              <button className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-gold hover:text-white transition-all">
+                <Share2 className="w-5 h-5" />
+              </button>
+              {/* Add more social buttons here if needed */}
+            </div>
+          </div>
+        </div>
+      </article>
 
       <Footer />
-    </article>
+    </div>
   );
 };
 

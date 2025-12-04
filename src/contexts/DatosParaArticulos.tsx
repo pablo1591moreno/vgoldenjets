@@ -80,7 +80,8 @@ type JsonContentBlock =
   | { type: "h2"; text: LStr }
   | { type: "h3"; text: LStr }
   | { type: "p"; text: LStr }
-  | { type: "img"; src: string; alt?: LStr };
+  | { type: "img"; src: string; alt?: LStr }
+  | { type: "cta"; text: LStr };
 
 interface JsonArticle {
   slug: string;
@@ -101,7 +102,8 @@ export type ContentBlock =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "p"; text: string }
-  | { type: "img"; src: string; alt?: string };
+  | { type: "img"; src: string; alt?: string }
+  | { type: "cta"; text: string };
 
 export interface ArticleView {
   slug: string;
@@ -235,7 +237,7 @@ const articlesJSON: JsonArticle[] = [
   //----------------------------------------------------------------------ARTICULO 
   {
     slug: "charter-jet-privado-para-negocios",
-    date: "2025-09-13",
+    date: "2025-09-12",
     cover: bussines,
     title: {
       es: "Charter de jet privado para negocios: Tu oficina en las nubes",

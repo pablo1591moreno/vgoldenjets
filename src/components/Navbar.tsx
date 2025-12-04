@@ -45,9 +45,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/90 shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/90 shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
@@ -81,9 +80,9 @@ const Navbar = () => {
               {t("Jets Magazine")}
             </a>
 
-            <a href="https://wa.me/+17863005652" className="flex items-center text-gold hover:text-gold-light">
+            <a href="https://wa.me/+1168668170" className="flex items-center text-gold hover:text-gold-light">
               <Phone size={18} className="mr-2" />
-              + 1 7863005652
+              + 11 6866 8170
             </a>
             <Button
               variant="ghost"
@@ -120,11 +119,10 @@ const Navbar = () => {
 
       {/* Mobile navigation */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-        }`}
+        className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          }`}
       >
-        <div className="px-4 py-2 bg-black/95 border-t border-gray-800 space-y-3">
+        <div className="px-4 py-2 bg-black/80 backdrop-blur-md border-t border-gray-800 space-y-3">
           <a href={toHomeHash("home")} onClick={closeMenu} className="block py-2 text-white hover:text-gold">
             {t("nav.home")}
           </a>
@@ -143,9 +141,9 @@ const Navbar = () => {
           <a href={`${base}/jetsmagazine`} onClick={closeMenu} className="block py-2 text-white hover:text-gold">
             {t("Jets Magazine")}
           </a>
-          <a href="https://wa.me/+17863005652" className="flex items-center py-2 text-gold">
+          <a href="https://wa.me/+1168668170" className="flex items-center py-2 text-gold">
             <Phone size={18} className="mr-2" />
-            + 1 7863005652
+            + 11 6866 8170
           </a>
         </div>
       </div>
