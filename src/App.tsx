@@ -10,6 +10,7 @@ import Blog from "./components/JetsMagazine";
 import Articulos from "./components/Articulos";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
         <HelmetProvider>
           <Toaster />
           <Sonner />
+          <WhatsAppButton />
           <BrowserRouter>
             <Routes>
               {/* ES (default) */}

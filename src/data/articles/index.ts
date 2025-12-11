@@ -1,4 +1,5 @@
 import { ArticleMeta, ArticleView, LStr } from "@/types/article";
+import imgRutaMendoza from "@/img/Articulos/rutaMendoza.webp";
 
 // Importamos solo las imágenes de portada para la lista principal (metadata)
 import cuantoCuesta from "@/img/Articulos/CuántoCuesta.webp";
@@ -24,6 +25,25 @@ const CAT_FLOTA: LStr = { es: "Flota", en: "Fleet" };
 
 // Lista ligera de metadatos (sin el contenido pesado)
 export const articlesMeta: ArticleMeta[] = [
+    {
+        slug: "ruta-del-vino-mendoza-jet-privado-gastronomia",
+        date: "2025-12-08",
+        dateMs: 1765221871672,
+        cover: imgRutaMendoza,
+        title: {
+            es: "La Ruta del Vino de Lujo: Mendoza en Jet Privado y Experiencias Gastronómicas Exclusivas",
+            en: "The Luxury Wine Route: Mendoza by Private Jet and Exclusive Gastronomic Experiences"
+        },
+        subtitle: {
+            es: "Cómo el Alquiler de Aviones Privados redefine la inmersión enológica y el acceso a bodegas premium en el Valle de Uco.",
+            en: "How Private Jet Charter redefines wine immersion and access to premium wineries in Uco Valley."
+        },
+        excerpt: {
+            es: "Descubra la experiencia de viajar a Mendoza en **jet privado Argentina** para acceder a bodegas boutique en el Valle de Uco, optimizando el tiempo con **vuelos privados** y cenas de chef.",
+            en: "Discover the experience of traveling to Mendoza by private jet to access boutique wineries in Uco Valley, optimizing time with private flights and chef dinners."
+        },
+        category: CAT_TURISMO
+    },
     {
         slug: "vuelos-privados-desde-buenos-aires",
         date: "2025-11-09",
@@ -236,10 +256,21 @@ export const articlesMeta: ArticleMeta[] = [
 ];
 
 // Función para obtener el contenido completo de un artículo (Lazy Loading)
+// Map of all article modules
+const modules = import.meta.glob('./*.ts');
+
+// Función para obtener el contenido completo de un artículo (Lazy Loading)
 export async function getArticleContent(slug: string): Promise<ArticleView | null> {
+    const path = `./${slug}.ts`;
+    const importer = modules[path];
+
+    if (!importer) {
+        console.error(`Article module not found for slug: ${slug}`);
+        return null;
+    }
+
     try {
-        // Import dinámico
-        const module = await import(`./${slug}.ts`);
+        const module = await importer() as { default: ArticleView };
         return module.default;
     } catch (error) {
         console.error(`Error loading article: ${slug}`, error);

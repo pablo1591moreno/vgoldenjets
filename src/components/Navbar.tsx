@@ -80,10 +80,7 @@ const Navbar = () => {
               {t("Jets Magazine")}
             </a>
 
-            <a href="https://wa.me/+1168668170" className="flex items-center text-gold hover:text-gold-light">
-              <Phone size={18} className="mr-2" />
-              + 11 6866 8170
-            </a>
+
             <Button
               variant="ghost"
               size="icon"
@@ -141,10 +138,7 @@ const Navbar = () => {
           <a href={`${base}/jetsmagazine`} onClick={closeMenu} className="block py-2 text-white hover:text-gold">
             {t("Jets Magazine")}
           </a>
-          <a href="https://wa.me/+1168668170" className="flex items-center py-2 text-gold">
-            <Phone size={18} className="mr-2" />
-            + 11 6866 8170
-          </a>
+
         </div>
       </div>
     </nav>

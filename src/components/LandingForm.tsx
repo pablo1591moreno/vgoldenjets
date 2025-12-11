@@ -131,7 +131,7 @@ const LandingPage = () => {
 
         {/* Contact Form */}
         <div className="w-full max-w-6xl bg-black/80 p-6 md:p-10 rounded-xl shadow-xl">
-          <form ref={form} onSubmit={handleSubmit}>
+          <form id="quote-form" ref={form} onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="space-y-4">
                 <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder={t("contact.form.fullName.placeholder")} className="bg-secondary border-gray-700 focus:border-gold/70 text-white rounded-xl" />

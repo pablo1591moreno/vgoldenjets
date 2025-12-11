@@ -99,7 +99,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
     };
 
     return (
-        <form ref={form} onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
+        <form id="quote-form" ref={form} onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-4">
                     <Input

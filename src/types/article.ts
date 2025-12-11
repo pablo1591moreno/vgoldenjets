@@ -4,12 +4,12 @@ export type Language = "en" | "es";
 export type LStr = Partial<Record<Language, string>> & { es?: string; en?: string };
 
 export type ContentBlock =
-    | { type: "h1"; text: string }
-    | { type: "h2"; text: string }
-    | { type: "h3"; text: string }
-    | { type: "p"; text: string }
-    | { type: "img"; src: string; alt?: string }
-    | { type: "cta"; text: string };
+    | { type: "h1"; text: string | LStr }
+    | { type: "h2"; text: string | LStr }
+    | { type: "h3"; text: string | LStr }
+    | { type: "p"; text: string | LStr }
+    | { type: "img"; src: string; alt?: string | LStr }
+    | { type: "cta"; text: string | LStr };
 
 export interface ArticleView {
     slug: string;
@@ -18,10 +18,10 @@ export interface ArticleView {
     cover: string;
     /** Imagen preferida para OG/Twitter */
     ogImage?: string;
-    title: string;
-    subtitle: string;
-    excerpt: string;
-    category: string; // Added category
+    title: LStr | string;
+    subtitle: LStr | string;
+    excerpt: LStr | string;
+    category: LStr | string;
     content: ContentBlock[];
 }
 
@@ -30,8 +30,8 @@ export interface ArticleMeta {
     date: string;
     dateMs: number;
     cover: string;
-    title: string;
-    subtitle: string;
-    excerpt: string;
-    category: string;
+    title: LStr | string;
+    subtitle: LStr | string;
+    excerpt: LStr | string;
+    category: LStr | string;
 }

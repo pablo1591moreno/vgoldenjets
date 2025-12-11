@@ -1,132 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.vgoldenjets.com/</loc>
-    <lastmod>2025-11-30</lastmod>
+    <loc>https://www.vgoldenjets.com</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine</loc>
-    <lastmod>2025-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine"/>
   </url>
-
   <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/precio-charter-jet-privado"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado"/>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/alquilar-jet-privado-para-8-personas</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/alquilar-jet-privado-para-8-personas"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/alquilar-jet-privado-para-8-personas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/alquilar-jet-privado-para-8-personas"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/alquilar-jet-privado-para-8-personas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/charter-jet-privado-para-negocios</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/charter-jet-privado-para-negocios"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/charter-jet-privado-para-negocios"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/charter-jet-privado-para-negocios"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelo-privado-de-ultima-hora"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora"/>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/charter-jet-privado-para-negocios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/charter-negocios-latam-rutas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/charter-negocios-latam-rutas"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/charter-negocios-latam-rutas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/empty-legs-argentina-acceso-smart"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/empty-legs-argentina-acceso-smart"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/empty-legs-argentina-acceso-smart</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina</loc>
-    <lastmod>2025-11-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/factores-precio-vuelo-privado-argentina"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos</loc>
-    <lastmod>2025-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-eventos-grupos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos"/>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/factores-precio-vuelo-privado-argentina</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado</loc>
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/itinerario-ideal-sedes-mundial-2026-jet-privado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/precio-charter-jet-privado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/precio-charter-jet-privado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/ruta-del-vino-mendoza-jet-privado-gastronomia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/ruta-del-vino-mendoza-jet-privado-gastronomia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelo-privado-de-ultima-hora</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/vuelo-privado-de-ultima-hora</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina</loc>
-    <lastmod>2025-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-argentina"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-argentina"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-argentina</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-desde-buenos-aires"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-desde-buenos-aires</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/jetsmagazine/vuelos-privados-eventos-grupos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vgoldenjets.com/en/jetsmagazine/vuelos-privados-eventos-grupos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
