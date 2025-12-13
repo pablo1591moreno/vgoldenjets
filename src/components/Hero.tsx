@@ -26,13 +26,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black" />
       </div>
 
-      <div className={`section-container w-full px-4 sm:px-6 lg:px-8 relative z-10 ${isMobile ? 'mt-[80px]' : 'mt-[130px]'}`}>
+      <div className={`section-container w-full px-4 sm:px-6 lg:px-8 relative z-10 ${isMobile ? 'mt-[20px]' : 'mt-[130px]'}`}>
         <div className="flex flex-col items-start max-w-3xl animate-fade-in">
-          <h1 className="text-white text-xl sm:text-2xl md:text-2xl mt-2 font-sans">
-            {t("hero.subtitle.line1")}<br />
+          <h1 className={`text-white text-base sm:text-2xl md:text-2xl font-sans whitespace-nowrap sm:whitespace-normal mt-0`}>
+            {t("hero.subtitle.line1")} {isMobile ? "" : <br />}
             {t("hero.subtitle.line2")}
           </h1>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-20">
+          <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 ${isMobile ? 'mt-[240px]' : 'mt-20'}`}>
             <a href="#contact" className="btn-primary flex items-center justify-center rounded-full">
               {t("hero.contact")}
             </a>

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import EmptyLegsBanner from "@/components/EmptyLegsBanner";
 
 // Lazy load below-the-fold components
 const Services = React.lazy(() => import("@/components/Services"));
@@ -92,6 +93,7 @@ const Index = () => {
 
       <Navbar />
       <Hero />
+      <EmptyLegsBanner />
 
       <Suspense fallback={<div className="py-20 bg-black" />}>
         <Contact />

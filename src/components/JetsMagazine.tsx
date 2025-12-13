@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import { Search, X } from "lucide-react"; // Icons for search
 import magazineHero from "@/img/527dfc_84ca4ea39e9147589e332ebe5810c677~mv2.gif";
 import { LStr } from "@/types/article";
+import EmptyLegsBanner from "./EmptyLegsBanner";
 
 type Props = { forcedLang?: "en" | "es" };
 
@@ -155,6 +156,8 @@ const JetsMagazine: React.FC<Props> = ({ forcedLang }) => {
           </p>
         </div>
       </section>
+
+      <EmptyLegsBanner />
 
       {/* SEARCH & FILTERS */}
       <section className="py-8 border-b border-gray-100 sticky top-0 z-30 bg-white/80 backdrop-blur-md">

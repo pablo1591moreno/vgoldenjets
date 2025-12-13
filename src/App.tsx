@@ -11,6 +11,7 @@ import Articulos from "./components/Articulos";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "./components/WhatsAppButton";
+import EmptyLegs from "./components/EmptyLegs";
 
 const queryClient = new QueryClient();
 
@@ -36,12 +37,14 @@ const App = () => (
               <Route path="/landingForm" element={<LandingPage />} />
               <Route path="/jetsmagazine" element={<Blog />} />
               <Route path="/jetsmagazine/:slug" element={<Articulos />} />
+              <Route path="/emptylegs" element={<EmptyLegs />} />
 
               {/* EN: magazine con prefijo /en y espejo básico para Index/Landing */}
               <Route path="/en" element={<Index />} />
               <Route path="/en/landingForm" element={<LandingPage />} />
               <Route path="/en/jetsmagazine" element={<Blog forcedLang="en" />} />
               <Route path="/en/jetsmagazine/:slug" element={<Articulos forcedLang="en" />} />
+              <Route path="/en/emptylegs" element={<EmptyLegs forcedLang="en" />} />
 
               {/* Cualquier /es/... se redirige a la versión sin prefijo */}
               <Route path="/es/*" element={<StripEsRedirect />} />

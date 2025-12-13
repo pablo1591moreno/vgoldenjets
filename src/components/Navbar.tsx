@@ -79,6 +79,9 @@ const Navbar = () => {
             <a href={`${base}/jetsmagazine`} className="text-white hover:text-gold transition-colors">
               {t("Jets Magazine")}
             </a>
+            <a href={`${base}/emptylegs`} className="text-white hover:text-gold transition-colors">
+              {language === "en" ? "Empty Legs" : "Empty Legs"}
+            </a>
 
 
             <Button
@@ -137,6 +140,9 @@ const Navbar = () => {
           </a>
           <a href={`${base}/jetsmagazine`} onClick={closeMenu} className="block py-2 text-white hover:text-gold">
             {t("Jets Magazine")}
+          </a>
+          <a href={`${base}/emptylegs`} onClick={closeMenu} className="block py-2 text-white hover:text-gold">
+            {language === "en" ? "Empty Legs" : "Empty Legs"}
           </a>
 
         </div>

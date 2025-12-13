@@ -118,4 +118,30 @@
   .delay-300 {
     animation-delay: 300ms;
   }
+
+  /* Ticker Animation - Seamless Loop */
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-ticker {
+    animation: ticker 900s linear infinite;
+    /* Much slower duration */
+    display: flex;
+    /* Flex to keep items in row */
+    min-width: 100%;
+    /* Ensure it takes full width */
+    flex-shrink: 0;
+    /* Prevent squeezing */
+  }
+
+  .animate-ticker:hover {
+    animation-play-state: paused;
+  }
 }
