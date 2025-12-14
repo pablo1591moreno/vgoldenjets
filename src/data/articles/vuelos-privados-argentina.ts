@@ -9,7 +9,10 @@ const article: ArticleView = {
     title: "Vuelos privados en Argentina: ventajas, accesos y eficiencia",
     subtitle: "Descubra las razones por las que los vuelos privados en Argentina superan a la aviación comercial en accesibilidad, tiempo y servicio.",
     excerpt: "Descubra las ventajas de los vuelos privados en Argentina: más aeropuertos, horarios flexibles y acceso exclusivo sin demoras ni complicaciones.",
-    category: "Turismo",
+    category: {
+        es: "Servicios",
+        en: "Services"
+    },
     content: [
         {
             type: "h2",

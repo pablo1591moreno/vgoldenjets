@@ -106,8 +106,9 @@ const Articulos = ({ forcedLang }: { forcedLang?: "en" | "es" }) => {
   // Helper to render content blocks
   const renderContent = () => {
     return article.content.map((block, idx) => {
-      const text = (block as any).text; // Cast to any to be safe if we change types later
-      const localizedText = typeof text === 'object' ? getLoc(text, currentLang) : text;
+      // Safe access to text property if it exists
+      const text = 'text' in block ? block.text : undefined;
+      const localizedText = text && (typeof text === 'object' ? getLoc(text, currentLang) : text);
 
       switch (block.type) {
         case "h2":
@@ -128,8 +129,8 @@ const Articulos = ({ forcedLang }: { forcedLang?: "en" | "es" }) => {
               {localizedText}
             </p>
           );
-        case "img":
-          const alt = (block as any).alt;
+        case "img": {
+          const alt = block.alt;
           const localizedAlt = typeof alt === 'object' ? getLoc(alt, currentLang) : alt;
           return (
             <figure key={idx} className="my-10 -mx-4 sm:mx-0">
@@ -146,6 +147,7 @@ const Articulos = ({ forcedLang }: { forcedLang?: "en" | "es" }) => {
               )}
             </figure>
           );
+        }
         case "cta":
           return (
             <div key={idx} className="my-12 p-8 bg-slate-50 border-l-4 border-gold rounded-r-xl">
@@ -154,17 +156,17 @@ const Articulos = ({ forcedLang }: { forcedLang?: "en" | "es" }) => {
               </p>
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="btn-primary w-full sm:w-auto">
+                  <button className="btn-primary rounded-full w-full sm:w-auto px-6 py-2 text-sm shadow-md hover:shadow-lg transform transition-all hover:-translate-y-1">
                     {isEN ? "Request a Quote" : "Solicitar Cotización"}
                   </button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[500px] bg-black border-gray-800 text-white">
+                <DialogContent className="sm:max-w-[500px] bg-black/80 backdrop-blur-xl border border-gold/30 text-white shadow-2xl shadow-gold/5">
                   <DialogHeader>
-                    <DialogTitle className="text-2xl font-serif text-gold">
+                    <DialogTitle className="text-2xl font-serif text-gold text-center mb-4">
                       {isEN ? "Request a Quote" : "Solicitar Cotización"}
                     </DialogTitle>
                   </DialogHeader>
-                  <QuoteForm onClose={() => { }} />
+                  <QuoteForm className="mt-2" />
                 </DialogContent>
               </Dialog>
             </div>

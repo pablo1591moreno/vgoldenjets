@@ -11,6 +11,14 @@ import emptyLegsArgentina from "@/img/Articulos/emptyLegsArgentina.webp";
 import determinanPrecio from "@/img/Articulos/determinanPrecio.webp";
 import JetPtivadoGrupo from "@/img/Articulos/JetPtivadoGrupo.webp";
 import itinerarioIdealMundial from "@/img/Articulos/itinerarioIdealMundial.webp";
+import jetMessi from "@/img/Articulos/jetMessi.webp";
+import PuntaDelEste from "@/img/Articulos/PuntaDelEste.webp";
+import caballos from "@/img/Articulos/caballos.webp";
+import Chapelco from "@/img/Articulos/Chapelco.webp";
+import vacaMuerta from "@/img/Articulos/vacaMuerta.webp";
+import AngraTrancoso from "@/img/Articulos/AngraTrancoso.webp";
+import BarthsTurks from "@/img/Articulos/BarthsTurks.webp";
+import bariloche from "@/img/Articulos/bariloche.webp";
 import ventajasAccesosEficiencia from "@/img//Articulos/ventajas_accesos_eficiencia.webp";
 import vuelosBuenosAires from "@/img//Articulos/Vuelos privados Buenos Aires.webp";
 
@@ -25,6 +33,158 @@ const CAT_FLOTA: LStr = { es: "Flota", en: "Fleet" };
 
 // Lista ligera de metadatos (sin el contenido pesado)
 export const articlesMeta: ArticleMeta[] = [
+    {
+        slug: "patagonia-secreta-estancias-de-lujo-lejos-de-la-multitud",
+        date: "2025-12-14",
+        dateMs: 1765674639717,
+        cover: bariloche,
+        title: {
+            es: "Patagonia Secreta: Estancias de Lujo Lejos de la Multitud",
+            en: "Secret Patagonia: Luxury Estancias Far From the Crowds" 
+        },
+        subtitle: {
+            es: "La única forma de experimentar la verdadera Patagonia es aterrizando donde las aerolíneas no llegan.",
+            en: "The only way to experience the true Patagonia is by landing where commercial airlines do not reach."
+        },
+        excerpt: {
+            es: "Evite las demoras y el tráfico del aeropuerto de Bariloche. Descubra estancias exclusivas en San Martín de los Andes y Esquel, accesibles únicamente mediante jet privado o alquiler de aviones. Su itinerario de lujo comienza en el hangar.",
+            en: "Avoid the delays and traffic of Bariloche airport. Discover exclusive estancias in San Martin de los Andes and Esquel, accessible only by private jet or aircraft charter. Your luxury itinerary starts in the hangar."
+        },
+        category: CAT_TURISMO
+    },
+    {
+        slug: "el-caribe-exclusivo-st-barths-y-turks-caicos",
+        date: "2025-12-13",
+        dateMs: 1765668728323,
+        cover: BarthsTurks,
+        title: {
+            es: "El Caribe Exclusivo: St. Barths y Turks & Caicos",
+            en: "The Exclusive Caribbean: St. Barths and Turks & Caicos"
+        },
+        subtitle: {
+            es: "Jets de largo alcance y la redefinición del lujo en el Atlántico",
+            en: "Long-Range Jets and the Redefinition of Luxury in the Atlantic"
+        },
+        excerpt: {
+            es: "Descubra cómo el servicio de jet privado Argentina permite a los viajeros de élite acceder a los destinos caribeños más exclusivos (St. Barths, Turks & Caicos) sin escalas, optimizando el tiempo y maximizando la privacidad. Vuelos privados que evitan la congestión de Miami.",
+            en: "Discover how private jet service from Argentina allows elite travelers to access the most exclusive Caribbean destinations (St. Barths, Turks & Caicos) non-stop, optimizing time and maximizing privacy. Private flights that bypass Miami congestion."
+        },
+        category: CAT_TURISMO
+    },
+    {
+        slug: "angra-y-trancoso-brasil-directo-sin-pasar-por-san-pablo",
+        date: "2025-12-13",
+        dateMs: 1765668093769,
+        cover: AngraTrancoso,
+        title: {
+            es: "Angra y Trancoso: Brasil Directo, Sin Pasar por San Pablo",
+            en: "Angra and Trancoso: Direct Brazil Flights, Bypassing São Paulo"
+        },
+        subtitle: {
+            es: "Optimice su tiempo y maximice el lujo. La verdadera exclusividad comienza al aterrizar.",
+            en: "Optimize Your Time and Maximize Luxury. True Exclusivity Starts Upon Landing."
+        },
+        excerpt: {
+            es: "Para el viajero de alto nivel, la eficiencia es lujo. Descubra cómo nuestros servicios de jet privado Argentina permiten vuelos directos a los aeropuertos cercanos a Angra y Trancoso, eliminando las escalas y las largas transferencias terrestres. La solución definitiva para vuelos privados de lujo.",
+            en: "For the high-level traveler, efficiency is luxury. Discover how our private jet services from Argentina allow direct flights to airports near Angra and Trancoso, eliminating layovers and long ground transfers. The definitive solution for luxury private flights."
+        },
+        category: CAT_TURISMO
+    },
+    {
+        slug: "inversiones-en-vaca-muerta-y-litio-eficiencia-corporativa",
+        date: "2025-12-13",
+        dateMs: 1765666242939,
+        cover: vacaMuerta,
+        title: {
+            es: "Inversiones en Vaca Muerta y Litio: Eficiencia Corporativa",
+            en: "Vaca Muerta and Lithium Investments: Corporate Efficiency Maximized"
+        },
+        subtitle: {
+            es: "La Agenda Ejecutiva Optimizada: Neuquén y Jujuy en un Solo Día",
+            en: "The Optimized Executive Agenda: Neuquén and Jujuy in a Single Day"
+        },
+        excerpt: {
+            es: "El tiempo de un ejecutivo de alto nivel es invaluable. Explore cómo los vuelos privados facilitan la inspección crítica de los yacimientos de Vaca Muerta y el Triángulo del Litio en una jornada, maximizando la productividad de su Jet privado en Argentina.",
+            en: "A high-level executive's time is invaluable. Explore how private flights facilitate critical inspection of Vaca Muerta and the Lithium Triangle operations within a single day, maximizing productivity using private jet services in Argentina."
+        },
+        category: CAT_NEGOCIOS
+    },
+    {
+        slug: "esqui-de-alta-gama-de-la-oficina-a-la-pista-en-las-lenas-o-chapelco",
+        date: "2025-12-13",
+        dateMs: 1765666058338,
+        cover: Chapelco,
+        title: {
+            es: "Esquí de Alta Gama: De la Oficina a la Pista en Las Leñas o Chapelco",
+            en: "High-End Skiing: From the Office to the Slopes in Las Leñas or Chapelco"
+        },
+        subtitle: {
+            es: "El Jet Privado como clave para maximizar la temporada invernal en el Hemisferio Sur.",
+            en: "The Private Jet as the Key to Maximizing the Winter Season in the Southern Hemisphere."
+        },
+        excerpt: {
+            es: "Mientras esquiadores comerciales se enfrentan a largos traslados terrestres desde aeropuertos como Mendoza o Bariloche, el alquiler de aviones privados permite aterrizar directamente en Malargüe o San Martín de los Andes, transformando el viaje invernal en una experiencia de lujo y eficiencia. Descubra la solución definitiva para su esquí de alta gama en Argentina.",
+            en: "While commercial skiers face long ground transfers from airports like Mendoza or Bariloche, private aircraft rental allows direct landing in Malargüe or San Martín de los Andes, transforming the winter trip into an experience of luxury and efficiency. Discover the ultimate solution for your high-end skiing in Argentina."
+        },
+        category: CAT_TURISMO
+    },
+    {
+        slug: "el-negocio-de-los-caballos-pura-sangre",
+        date: "2025-12-13",
+        dateMs: 1765665459821,
+        cover: caballos,
+        title: {
+            es: "EL NEGOCIO EXCLUSIVO DE LOS CABALLOS PURA SANGRE EN ARGENTINA",
+            en: "THE EXCLUSIVE THOROUGHBRED HORSE BUSINESS IN ARGENTINA"
+        },
+        subtitle: {
+            es: "Una Inversión de Lujo y Pasión para el Inversor Global de Alto Patrimonio.",
+            en: "A Luxury Investment Blending Passion and Profit for High-Net-Worth Individuals."
+        },
+        excerpt: {
+            es: "Descubra cómo el inversor de alto patrimonio puede entrar en el prestigioso mercado de los pura sangre en Argentina. Combine su pasión ecuestre con la rentabilidad, volando en Jet privado Argentina para asistir a los remates más exclusivos.",
+            en: "Discover how high-net-worth investors can enter the prestigious thoroughbred market in Argentina. Blend your equestrian passion with profitability, flying via private jet to attend the most exclusive auctions."
+        },
+        category: CAT_NEGOCIOS
+    },
+    {
+        slug: "punta-del-este",
+        date: "2025-12-13",
+        dateMs: 1765665024418,
+        cover: PuntaDelEste,
+        title: {
+            es: "Punta del Este: El Refugio de Lujo del Jet Set Sudamericano",
+            en: "Punta del Este: The Luxury Retreat of the South American Jet Set"
+        },
+        subtitle: {
+            es: "Exclusividad, sofisticación y la ruta perfecta para su vuelo privado desde Argentina.",
+            en: "Exclusivity, sophistication, and the perfect route for your private flight from Argentina."
+        },
+        excerpt: {
+            es: "Descubra por qué Punta del Este es el destino preferido por la élite. Información esencial sobre vuelos privados, alquiler de aviones y la vida de lujo que espera en La Barra y José Ignacio.",
+            en: "Discover why Punta del Este is the preferred destination for the elite. Essential information about private flights, aircraft rental, and the luxury lifestyle awaiting in La Barra and José Ignacio."
+        },
+        category: CAT_TURISMO
+    },
+    {
+        slug: "jet-de-leo-messi",
+        date: "2025-12-13",
+        dateMs: 1765660475426,
+        cover: jetMessi,
+        title: {
+            es: "La Aeronave de la Leyenda: Análisis del Jet Privado de Leo Messi",
+            en: "The Legend's Aircraft: An Analysis of Leo Messi's Private Jet"
+        },
+        subtitle: {
+            es: "Más allá del campo de juego: El Gulfstream V, símbolo de exclusividad y eficiencia para el astro argentino.",
+            en: "Beyond the Pitch: The Gulfstream V, a symbol of exclusivity and efficiency for the Argentine star."
+        },
+        excerpt: {
+            es: "Conozca el jet privado que utiliza Leo Messi, un Gulfstream V valuado en millones. Analizamos por qué ejecutivos y viajeros de lujo en Argentina eligen este modelo para sus vuelos privados de largo alcance. Una guía sobre el alquiler de aviones de alto rendimiento.",
+            en: "Discover the private jet used by Leo Messi, a Gulfstream V valued in the millions. We analyze why executives and luxury travelers in Argentina choose this model for their long-range private flights. A guide to high-performance aircraft chartering."
+        },
+        category: CAT_FLOTA
+    },
     {
         slug: "ruta-del-vino-mendoza-jet-privado-gastronomia",
         date: "2025-12-08",
@@ -80,7 +240,7 @@ export const articlesMeta: ArticleMeta[] = [
             es: "Descubra las ventajas de los vuelos privados en Argentina: más aeropuertos, horarios flexibles y acceso exclusivo sin demoras ni complicaciones.",
             en: "Discover the advantages of private flights in Argentina: more airports, flexible schedules, and exclusive access without delays or complications."
         },
-        category: CAT_TURISMO
+        category: CAT_SERVICIOS
     },
     {
         slug: "itinerario-ideal-sedes-mundial-2026-jet-privado",

@@ -1,0 +1,142 @@
+﻿
+> vite_react_shadcn_ts@0.0.0 sync:sheets
+> npx tsx scripts/sync-sheets.ts
+
+­ƒÜÇ Starting Google Sheets Sync...
+Ô£à Found 19 articles in codebase.
+node.exe : ÔØî Error syncing with Google Sheets: 
+GaxiosError: This operation is not supported for 
+this document
+En C:\Program Files\nodejs\npm.ps1: 29 Carácter: 3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified:     
+(ÔØî Error synci...r this document:Strin    g) 
+[], RemoteException
+    + FullyQualifiedErrorId : NativeCommandE    
+rror
+ 
+    at Gaxios._request 
+(C:\Users\pablo\OneDrive\Documentos\Todo Vgolden\v
+goldenjets\node_modules\googleapis-common\node_mod
+ules\gaxios\src\gaxios.ts:213:15)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:105:5)
+    at async JWT.requestAsync 
+(C:\Users\pablo\OneDrive\Documentos\Todo Vgolden\v
+goldenjets\node_modules\googleapis-common\node_mod
+ules\google-auth-library\build\src\auth\oauth2clie
+nt.js:463:20)
+    at async createAPIRequestAsync 
+(C:\Users\pablo\OneDrive\Documentos\Todo Vgolden\v
+goldenjets\node_modules\googleapis-common\build\sr
+c\apirequest.js:308:25)
+    at async main 
+(C:\Users\pablo\OneDrive\Documentos\Todo 
+Vgolden\vgoldenjets\scripts\sync-sheets.ts:38:26) 
+{
+  config: {
+    url: URL {
+      href: 'https://sheets.googleapis.com/v4/spre
+adsheets/1TWHWMFHHkWMUIfkTchyXiAQs09-Bnppn/values/
+Sheet1%21A%3AA',
+      origin: 'https://sheets.googleapis.com',
+      protocol: 'https:',
+      username: '',
+      password: '',
+      host: 'sheets.googleapis.com',
+      hostname: 'sheets.googleapis.com',
+      port: '',
+      pathname: '/v4/spreadsheets/1TWHWMFHHkWMUIfk
+TchyXiAQs09-Bnppn/values/Sheet1%21A%3AA',
+      search: '',
+      searchParams: URLSearchParams {},
+      hash: ''
+    },
+    method: 'GET',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    headers: Headers {
+      'accept-encoding': 'gzip',
+      authorization: '<<REDACTED> - See 
+`errorRedactor` option in `gaxios` for 
+configuration>.',
+      'user-agent': 
+'google-api-nodejs-client/8.0.1 (gzip)',
+      'x-goog-api-client': 'gdcl/8.0.1 
+gl-node/22.14.0'
+    },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    responseType: 'unknown',
+    errorRedactor: [Function: 
+defaultErrorRedactor],
+    retryConfig: {
+      currentRetryAttempt: 0,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1765671001686,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: Response {
+    size: 0,
+    data: { error: [Object] },
+    config: {
+      url: URL {},
+      method: 'GET',
+      apiVersion: '',
+      userAgentDirectives: [Array],
+      headers: Headers {
+        'accept-encoding': 'gzip',
+        authorization: '<<REDACTED> - See 
+`errorRedactor` option in `gaxios` for 
+configuration>.',
+        'user-agent': 
+'google-api-nodejs-client/8.0.1 (gzip)',
+        'x-goog-api-client': 'gdcl/8.0.1 
+gl-node/22.14.0'
+      },
+      validateStatus: [Function (anonymous)],
+      retry: true,
+      responseType: 'unknown',
+      errorRedactor: [Function: 
+defaultErrorRedactor]
+    },
+    [Symbol(Body internals)]: {
+      body: [Gunzip],
+      stream: [Gunzip],
+      boundary: null,
+      disturbed: true,
+      error: null
+    },
+    [Symbol(Response internals)]: {
+      type: 'default',
+      url: 'https://sheets.googleapis.com/v4/sprea
+dsheets/1TWHWMFHHkWMUIfkTchyXiAQs09-Bnppn/values/S
+heet1%21A%3AA',
+      status: 400,
+      statusText: 'Bad Request',
+      headers: [Object],
+      counter: 0,
+      highWaterMark: 16384
+    }
+  },
+  code: 400,
+  status: 400,
+  error: undefined,
+  [Symbol(gaxios-gaxios-error)]: '7.1.3',
+  [cause]: {
+    message: 'This operation is not supported for 
+this document',
+    code: 400,
+    status: 'FAILED_PRECONDITION',
+    errors: [ [Object] ]
+  }
+}
+   Make sure the Service Account has 'Editor' 
+permissions on the Sheet.

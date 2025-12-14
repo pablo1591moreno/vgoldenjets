@@ -61,7 +61,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                 "3I1ux3m4EoGaMZscD"
             );
 
-            console.log("EmailJS OK:", res);
+
             toast({
                 title: t("contact.toast.title"),
                 description: t("contact.toast.description"),
@@ -81,16 +81,17 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
             });
             if (onSuccess) onSuccess();
 
-        } catch (error: any) {
-            console.error("EmailJS error:", error);
+        } catch (error: unknown) {
+            console.error("FAILED...", error);
+            const errorMessage = (typeof error === "string" && error) ||
+                (error as { text?: string })?.text ||
+                (error as Error)?.message ||
+                t("contact.toast.errorDescription") ||
+                "Algo salió mal al enviar el formulario.";
+
             toast({
                 title: t("contact.toast.errorTitle") || "Error",
-                description:
-                    (typeof error === "string" && error) ||
-                    error?.text ||
-                    error?.message ||
-                    t("contact.toast.errorDescription") ||
-                    "Algo salió mal al enviar el formulario.",
+                description: errorMessage,
                 variant: "destructive",
             });
         } finally {
@@ -109,7 +110,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         onChange={handleChange}
                         required
                         placeholder={t("contact.form.fullName.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                     <Input
                         id="origin"
@@ -118,7 +119,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         onChange={handleChange}
                         required
                         placeholder={t("contact.form.origin.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                     <Input
                         id="destination"
@@ -127,7 +128,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         onChange={handleChange}
                         required
                         placeholder={t("contact.form.destination.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                     <Input
                         id="passengers"
@@ -138,7 +139,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         inputMode="numeric"
                         pattern="[0-9]*"
                         placeholder={t("contact.form.passengers.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                 </div>
                 <div className="space-y-4">
@@ -150,7 +151,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         onChange={handleChange}
                         required
                         placeholder={t("contact.form.email.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                     <Input
                         id="phone"
@@ -160,7 +161,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         onChange={handleChange}
                         required
                         placeholder={t("contact.form.phone.placeholder")}
-                        className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                        className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl"
                     />
                     <select
                         id="tripType"
@@ -168,10 +169,10 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                         value={formData.tripType}
                         onChange={handleChange}
                         required
-                        className="flex h-10 w-full items-center justify-between rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-slate-900"
+                        className="flex h-10 w-full items-center justify-between rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm ring-offset-background placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white"
                     >
-                        <option value="oneway">{t("contact.form.tripType.oneWay")}</option>
-                        <option value="roundtrip">{t("contact.form.tripType.roundTrip")}</option>
+                        <option value="oneway" className="bg-black text-white">{t("contact.form.tripType.oneWay")}</option>
+                        <option value="roundtrip" className="bg-black text-white">{t("contact.form.tripType.roundTrip")}</option>
                     </select>
                     <div className="grid grid-cols-2 gap-2">
                         <Input
@@ -181,7 +182,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                             value={formData.departureDate}
                             onChange={handleChange}
                             required
-                            className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 rounded-xl"
+                            className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 rounded-xl [color-scheme:dark]"
                         />
                         <Input
                             id="returnDate"
@@ -190,7 +191,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                             value={formData.returnDate}
                             onChange={handleChange}
                             disabled={formData.tripType === "oneway"}
-                            className="bg-gray-50 border-gray-200 focus:border-gold focus:ring-gold text-slate-900 disabled:opacity-50 rounded-xl"
+                            className="bg-white/5 border-white/10 focus:border-gold focus:ring-gold text-white placeholder:text-gray-400 disabled:opacity-30 rounded-xl [color-scheme:dark]"
                         />
                     </div>
                 </div>
@@ -199,7 +200,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
                 <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto bg-gold hover:bg-gold-dark text-black rounded-full px-12 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+                    className="btn-primary rounded-full w-full md:w-auto px-8"
                 >
                     {isSubmitting ? "Enviando..." : t("contact.form.submit")}
                 </Button>

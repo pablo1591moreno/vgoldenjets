@@ -73,10 +73,11 @@ export const useEmptyLegs = () => {
                 fetchedFlights.sort((a, b) => a.date.localeCompare(b.date));
 
                 setFlights(fetchedFlights);
-                console.log("Firestore: Fetched", fetchedFlights.length, "flights.");
-            } catch (err: any) {
+
+            } catch (err: unknown) {
                 console.error("Error fetching empty legs:", err);
-                setError(err.message || "Failed to load flights.");
+                const errorMessage = err instanceof Error ? err.message : "Failed to load flights.";
+                setError(errorMessage);
             } finally {
                 setLoading(false);
             }

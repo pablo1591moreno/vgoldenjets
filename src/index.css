@@ -68,7 +68,7 @@
   }
 
   .btn-primary {
-    @apply bg-gold hover:bg-gold-dark text-black font-semibold py-2 sm:py-3 px-5 sm:px-6 rounded transition-all duration-300 inline-block;
+    @apply bg-gold hover:bg-gold-dark text-black font-semibold py-2 sm:py-3 px-5 sm:px-6 rounded transition-all duration-300 inline-block hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:scale-105;
   }
 
   .btn-outline {

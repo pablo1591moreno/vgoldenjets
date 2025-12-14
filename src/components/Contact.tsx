@@ -94,7 +94,7 @@ const Contact = () => {
         "3I1ux3m4EoGaMZscD"
       );
 
-      console.log("EmailJS OK:", res);
+
       toast({
         title: t("contact.toast.title"),
         description: t("contact.toast.description"),
@@ -113,16 +113,16 @@ const Contact = () => {
         returnDate: ""
       });
       // Si no fueran 100% controlados, también podrías hacer: form.current.reset();
-    } catch (error: any) {
-      console.error("EmailJS error:", error);
+    } catch (error: unknown) {
+      console.error("FAILED...", error);
+      const errorMessage = (error as { text?: string; message?: string })?.text ||
+        (error as Error)?.message ||
+        t("contact.toast.errorDescription") ||
+        "Algo salió mal al enviar el formulario.";
+
       toast({
         title: t("contact.toast.errorTitle") || "Error",
-        description:
-          (typeof error === "string" && error) ||
-          error?.text ||
-          error?.message ||
-          t("contact.toast.errorDescription") ||
-          "Algo salió mal al enviar el formulario.",
+        description: errorMessage,
         variant: "destructive",
       });
     }

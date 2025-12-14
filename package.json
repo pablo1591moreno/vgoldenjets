@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "postbuild": "node scripts/generate-sitemap.js",
-    "generar": "npx tsx scripts/generate-articles.ts"
+    "generar": "npx tsx scripts/generate-articles.ts && npm run sync:sheets",
+    "sync:sheets": "npx tsx scripts/sync-sheets.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -51,6 +52,8 @@
     "dotenv": "^17.2.3",
     "embla-carousel-react": "^8.3.0",
     "firebase": "^12.6.0",
+    "firebase-admin": "^13.6.0",
+    "googleapis": "^168.0.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
