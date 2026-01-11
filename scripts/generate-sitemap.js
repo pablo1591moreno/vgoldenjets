@@ -23,7 +23,11 @@ const staticRoutes = [
   '/contact',
   '/en/contact',
   '/about',
-  '/en/about'
+  '/en/about',
+  '/landingForm',
+  '/en/landingForm',
+  '/form',
+  '/en/form'
 ];
 
 function generateSitemap() {

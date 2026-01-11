@@ -6,6 +6,8 @@ import { toast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import emailjs from "@emailjs/browser";
 
+import { useNavigate } from "react-router-dom";
+
 const ContactInfo = ({
   icon: Icon,
   title,
@@ -31,6 +33,7 @@ const ContactInfo = ({
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -47,7 +50,7 @@ const Contact = () => {
   // Inicializar EmailJS una sola vez (opcional pero recomendado)
   useEffect(() => {
     // Si ya usás la public key como 4to parámetro en sendForm, esto es opcional.
-    emailjs.init("Hlap8_HHq2vJfOs3N");
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   // Si el usuario cambia a "oneway", limpiamos returnDate
@@ -88,17 +91,13 @@ const Contact = () => {
       // Enviar usando sendForm (DOM del <form>)
       // Podés seguir pasando la public key acá; como ya hicimos init, también funciona sin el 4to parámetro.
       const res = await emailjs.sendForm(
-        "service_i8rzt5e",
-        "template_hp4utjd",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "3I1ux3m4EoGaMZscD"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
-
-      toast({
-        title: t("contact.toast.title"),
-        description: t("contact.toast.description"),
-      });
+      navigate("/thank-you");
 
       // Reset
       setFormData({

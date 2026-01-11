@@ -42,7 +42,7 @@ const Index = () => {
     logo: `${SITE}/logo192.png`,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1168668170",
+      telephone: "+5491173745726",
       contactType: "customer service",
       areaServed: ["AR", "US", "BR", "CL", "UY"],
       availableLanguage: ["es", "en"],

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 interface QuoteFormProps {
     onSuccess?: () => void;
@@ -12,6 +13,7 @@ interface QuoteFormProps {
 
 const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
     const { t } = useLanguage();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
         origin: "",
@@ -55,17 +57,14 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onSuccess, className }) => {
 
             // Enviar usando sendForm (DOM del <form>)
             const res = await emailjs.sendForm(
-                "service_i8rzt5e",
-                "template_hp4utjd",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 form.current,
-                "3I1ux3m4EoGaMZscD"
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
-
-            toast({
-                title: t("contact.toast.title"),
-                description: t("contact.toast.description"),
-            });
+            // Redirect to Thank You
+            navigate("/thank-you");
 
             // Reset
             setFormData({

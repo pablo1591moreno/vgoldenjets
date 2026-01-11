@@ -20,7 +20,7 @@ const Hero = () => {
           style={{
             objectPosition: isMobile ? '35% center' : 'center', // Adjusted for mobile to match previous -170px visual
           }}
-          fetchPriority="high"
+          fetchpriority="high"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black" />

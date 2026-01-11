@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocation } from "react-router-dom";
 
 const WhatsAppButton = () => {
     const [showBubble, setShowBubble] = useState(true);
     const { language } = useLanguage();
-
-    const ctaText = language === "en"
-        ? "Where do you want to travel today?"
-        : "¿A dónde querés viajar hoy?";
+    const location = useLocation();
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -17,6 +15,13 @@ const WhatsAppButton = () => {
 
         return () => clearTimeout(timer);
     }, []);
+
+    const ctaText = language === "en"
+        ? "Where do you want to travel today?"
+        : "¿A dónde querés viajar hoy?";
+
+    // Hide on Thank You page and Landing Form
+    if (location.pathname === "/thank-you" || location.pathname === "/landingForm" || location.pathname === "/en/landingForm") return null;
 
     return (
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 animate-fade-in">
@@ -30,7 +35,7 @@ const WhatsAppButton = () => {
 
             {/* WhatsApp Button */}
             <a
-                href="https://wa.me/5491168668170"
+                href="https://wa.me/5491173745726"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`bg-[#25D366] hover:bg-[#128C7E] text-white shadow-xl transition-all duration-500 hover:scale-105 flex items-center justify-center ${!showBubble ? "rounded-full px-6 py-3 gap-2" : "rounded-full p-4"

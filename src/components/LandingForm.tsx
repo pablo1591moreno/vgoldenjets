@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Globe } from "lucide-react";
@@ -12,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 
 const LandingPage = () => {
   const { language, setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
   const isMobile = useIsMobile();
   const [formData, setFormData] = useState({
     name: "",
@@ -44,13 +46,19 @@ const LandingPage = () => {
     e.preventDefault();
     if (form.current) {
       emailjs
-        .sendForm("service_i8rzt5e", "template_hp4utjd", form.current, "Hlap8_HHq2vJfOs3N")
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
         .then(
           () => {
             toast({
               title: t("contact.toast.title"),
               description: t("contact.toast.description")
             });
+            navigate("/thank-you");
           },
           () => {
             toast({
@@ -114,14 +122,7 @@ const LandingPage = () => {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/+1168668170"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg z-50"
-      >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6" />
-      </a>
+
 
       <div className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-10 min-h-screen">
         {/* Title */}

@@ -38,7 +38,7 @@ const Footer = () => {
                 title={t("contact.info.phone.title")}
                 content={
                   <a
-                    href="https://wa.me/+1168668170"
+                    href="https://wa.me/5491173745726"
                     className="text-white/70 hover:text-gold transition-colors duration-300"
                   >
                     +1 786 300 5652
@@ -50,10 +50,10 @@ const Footer = () => {
                 title={t("contact.info.phone.title2")}
                 content={
                   <a
-                    href="https://wa.me/+1168668170"
+                    href="https://wa.me/5491173745726"
                     className="text-white/70 hover:text-gold transition-colors duration-300"
                   >
-                    +11 6866 8170
+                    +54 9 11 7374-5726
                   </a>
                 }
               />
