@@ -11,35 +11,16 @@ const EmptyLegsBanner = () => {
 
     const TITLE = isEN ? "EMPTY LEGS AVAILABLE:" : "EMPTY LEGS DISPONIBLES:";
 
-    // Helper to translate (duplicated from EmptyLegs.tsx for now)
-    const translateAvailability = (text: string) => {
-        if (!isEN) return text;
-        let translated = text;
-        translated = translated.replace(/Lunes/gi, "Monday").replace(/Lun\.?/gi, "Mon");
-        translated = translated.replace(/Martes/gi, "Tuesday").replace(/Mar\.?/gi, "Tue");
-        translated = translated.replace(/Miércoles|Miercoles/gi, "Wednesday").replace(/Mié\.?|Mie\.?/gi, "Wed");
-        translated = translated.replace(/Jueves/gi, "Thursday").replace(/Jue\.?/gi, "Thu");
-        translated = translated.replace(/Viernes/gi, "Friday").replace(/Vie\.?/gi, "Fri");
-        translated = translated.replace(/Sábado|Sabado/gi, "Saturday").replace(/Sáb\.?|Sab\.?/gi, "Sat");
-        translated = translated.replace(/Domingo/gi, "Sunday").replace(/Dom\.?/gi, "Sun");
-        translated = translated.replace(/Enero/gi, "January").replace(/Ene\.?/gi, "Jan");
-        translated = translated.replace(/Febrero/gi, "February").replace(/Feb\.?/gi, "Feb");
-        translated = translated.replace(/Marzo/gi, "March").replace(/Mar\.?/gi, "Mar");
-        translated = translated.replace(/Abril/gi, "April").replace(/Abr\.?/gi, "Apr");
-        translated = translated.replace(/Mayo/gi, "May");
-        translated = translated.replace(/Junio/gi, "June").replace(/Jun\.?/gi, "Jun");
-        translated = translated.replace(/Julio/gi, "July").replace(/Jul\.?/gi, "Jul");
-        translated = translated.replace(/Agosto/gi, "August").replace(/Ago\.?/gi, "Aug");
-        translated = translated.replace(/Septiembre/gi, "September").replace(/Sep\.?/gi, "Sep");
-        translated = translated.replace(/Octubre/gi, "October").replace(/Oct\.?/gi, "Oct");
-        translated = translated.replace(/Noviembre/gi, "November").replace(/Nov\.?/gi, "Nov");
-        translated = translated.replace(/Diciembre/gi, "December").replace(/Dic\.?/gi, "Dec");
-        translated = translated.replace(/\bde\b/gi, "of");
-        translated = translated.replace(/\ba las\b/gi, "at");
-        translated = translated.replace(/\ba la\b/gi, "at");
-        translated = translated.replace(/\(local\)/gi, "(local)");
-        translated = translated.replace(/Disponible:/gi, "Available:");
-        return translated;
+    // Helper to format date
+    const formatDate = (dateStr: string) => {
+        if (!dateStr) return "";
+        const [year, month, day] = dateStr.split('-').map(Number);
+        const dateObj = new Date(year, month - 1, day);
+
+        return new Intl.DateTimeFormat(isEN ? "en-US" : "es-AR", {
+            month: "short",
+            day: "numeric",
+        }).format(dateObj);
     };
 
     // Filter out expired flights
@@ -72,10 +53,10 @@ const EmptyLegsBanner = () => {
                             className="flex items-center gap-2 mx-8 text-white/80 hover:text-gold transition-colors whitespace-nowrap"
                         >
                             <Plane size={14} className="text-gold" />
-                            <span className="font-medium">{flight.from}</span>
+                            <span className="font-medium">{flight.origin}</span>
                             <ChevronRight size={12} className="text-white/40" />
-                            <span className="font-medium">{flight.to}</span>
-                            <span className="text-white/60 ml-1">({translateAvailability(flight.availability)})</span>
+                            <span className="font-medium">{flight.destination}</span>
+                            <span className="text-white/60 ml-1">({formatDate(flight.date)})</span>
                         </Link>
                     ))}
                 </div>
@@ -89,10 +70,10 @@ const EmptyLegsBanner = () => {
                             className="flex items-center gap-2 mx-8 text-white/80 hover:text-gold transition-colors whitespace-nowrap"
                         >
                             <Plane size={14} className="text-gold" />
-                            <span className="font-medium">{flight.from}</span>
+                            <span className="font-medium">{flight.origin}</span>
                             <ChevronRight size={12} className="text-white/40" />
-                            <span className="font-medium">{flight.to}</span>
-                            <span className="text-white/60 ml-1">({translateAvailability(flight.availability)})</span>
+                            <span className="font-medium">{flight.destination}</span>
+                            <span className="text-white/60 ml-1">({formatDate(flight.date)})</span>
                         </Link>
                     ))}
                 </div>
