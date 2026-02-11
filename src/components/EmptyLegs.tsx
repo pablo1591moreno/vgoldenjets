@@ -28,42 +28,19 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
         : "Oportunidades exclusivas para vuelos privados de tramo vacío a una fracción del costo.";
 
     // Helper to translate the raw Spanish availability string to English
-    const translateAvailability = (text: string) => {
-        if (!isEN) return text;
+    // Helper to format date
+    const formatDate = (dateStr: string) => {
+        if (!dateStr) return "";
+        // Create date object (treating strictly as YYYY-MM-DD)
+        const [year, month, day] = dateStr.split('-').map(Number);
+        const dateObj = new Date(year, month - 1, day);
 
-        let translated = text;
-
-        // Days
-        translated = translated.replace(/Lunes/gi, "Monday").replace(/Lun\.?/gi, "Mon");
-        translated = translated.replace(/Martes/gi, "Tuesday").replace(/Mar\.?/gi, "Tue");
-        translated = translated.replace(/Miércoles|Miercoles/gi, "Wednesday").replace(/Mié\.?|Mie\.?/gi, "Wed");
-        translated = translated.replace(/Jueves/gi, "Thursday").replace(/Jue\.?/gi, "Thu");
-        translated = translated.replace(/Viernes/gi, "Friday").replace(/Vie\.?/gi, "Fri");
-        translated = translated.replace(/Sábado|Sabado/gi, "Saturday").replace(/Sáb\.?|Sab\.?/gi, "Sat");
-        translated = translated.replace(/Domingo/gi, "Sunday").replace(/Dom\.?/gi, "Sun");
-
-        // Months
-        translated = translated.replace(/Enero/gi, "January").replace(/Ene\.?/gi, "Jan");
-        translated = translated.replace(/Febrero/gi, "February").replace(/Feb\.?/gi, "Feb");
-        translated = translated.replace(/Marzo/gi, "March").replace(/Mar\.?/gi, "Mar");
-        translated = translated.replace(/Abril/gi, "April").replace(/Abr\.?/gi, "Apr");
-        translated = translated.replace(/Mayo/gi, "May");
-        translated = translated.replace(/Junio/gi, "June").replace(/Jun\.?/gi, "Jun");
-        translated = translated.replace(/Julio/gi, "July").replace(/Jul\.?/gi, "Jul");
-        translated = translated.replace(/Agosto/gi, "August").replace(/Ago\.?/gi, "Aug");
-        translated = translated.replace(/Septiembre/gi, "September").replace(/Sep\.?/gi, "Sep");
-        translated = translated.replace(/Octubre/gi, "October").replace(/Oct\.?/gi, "Oct");
-        translated = translated.replace(/Noviembre/gi, "November").replace(/Nov\.?/gi, "Nov");
-        translated = translated.replace(/Diciembre/gi, "December").replace(/Dic\.?/gi, "Dec");
-
-        // Other terms
-        translated = translated.replace(/\bde\b/gi, "of");
-        translated = translated.replace(/\ba las\b/gi, "at");
-        translated = translated.replace(/\ba la\b/gi, "at");
-        translated = translated.replace(/\(local\)/gi, "(local)");
-        translated = translated.replace(/Disponible:/gi, "Available:");
-
-        return translated;
+        return new Intl.DateTimeFormat(isEN ? "en-US" : "es-AR", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        }).format(dateObj);
     };
 
     const SEARCH_PLACEHOLDER = isEN ? "Search destinations or aircraft..." : "Buscar destinos o aeronaves...";
@@ -87,8 +64,8 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
 
             const searchLower = searchQuery.toLowerCase();
             const matchesSearch =
-                flight.from.toLowerCase().includes(searchLower) ||
-                flight.to.toLowerCase().includes(searchLower) ||
+                flight.origin.toLowerCase().includes(searchLower) ||
+                flight.destination.toLowerCase().includes(searchLower) ||
                 flight.aircraft.toLowerCase().includes(searchLower);
             return matchesSearch;
         });
@@ -126,11 +103,11 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
             "position": index + 1,
             "itemOffered": {
                 "@type": "Flight",
-                "departureAirport": { "@type": "Airport", "name": flight.from },
-                "arrivalAirport": { "@type": "Airport", "name": flight.to },
+                "departureAirport": { "@type": "Airport", "name": flight.origin },
+                "arrivalAirport": { "@type": "Airport", "name": flight.destination },
                 "departureTime": flight.date,
                 "provider": { "@type": "Airline", "name": "V Golden Jets" },
-                "name": `Empty Leg: ${flight.from} to ${flight.to}`
+                "name": `Empty Leg: ${flight.origin} to ${flight.destination}`
             }
         }))
     };
@@ -243,7 +220,7 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                                         <div>
                                             <div className="flex items-start gap-2 mb-4 text-slate-500 text-sm font-medium">
                                                 <Calendar size={16} className="text-gold shrink-0 mt-0.5" />
-                                                <span>{translateAvailability(flight.availability)}</span>
+                                                <span>{formatDate(flight.date)}</span>
                                             </div>
 
                                             <div className="flex flex-col gap-4 mb-6">
@@ -251,14 +228,14 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                                                     <div className="w-2 h-2 rounded-full bg-slate-300 mt-2" />
                                                     <div>
                                                         <p className="text-xs text-slate-400 uppercase tracking-wider">{FROM}</p>
-                                                        <h3 className="text-lg font-serif font-bold text-slate-900 leading-tight">{flight.from}</h3>
+                                                        <h3 className="text-lg font-serif font-bold text-slate-900 leading-tight">{flight.origin}</h3>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-3">
                                                     <div className="w-2 h-2 rounded-full bg-gold mt-2" />
                                                     <div>
                                                         <p className="text-xs text-slate-400 uppercase tracking-wider">{TO}</p>
-                                                        <h3 className="text-lg font-serif font-bold text-slate-900 leading-tight">{flight.to}</h3>
+                                                        <h3 className="text-lg font-serif font-bold text-slate-900 leading-tight">{flight.destination}</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -268,8 +245,8 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                                             <a
                                                 href={`https://wa.me/5491130635467?text=${encodeURIComponent(
                                                     isEN
-                                                        ? `Hello, I'm interested in the Empty Leg from ${flight.from} to ${flight.to} on ${flight.date} (${flight.aircraft})`
-                                                        : `Hola, me interesa el Empty Leg de ${flight.from} a ${flight.to} el ${flight.date} (${flight.aircraft})`
+                                                        ? `Hello, I'm interested in the Empty Leg from ${flight.origin} to ${flight.destination} on ${flight.date} (${flight.aircraft})`
+                                                        : `Hola, me interesa el Empty Leg de ${flight.origin} a ${flight.destination} el ${flight.date} (${flight.aircraft})`
                                                 )}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
