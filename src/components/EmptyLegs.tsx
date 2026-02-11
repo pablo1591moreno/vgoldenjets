@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Search, X, Plane, Calendar, ArrowRight, Loader2 } from "lucide-react";
 import { useEmptyLegs } from "@/hooks/useEmptyLegs";
+import { fleet } from "@/data/fleet";
 
 // Reusing the same hero image for now, or use a specific one if available
 import magazineHero from "@/img/527dfc_84ca4ea39e9147589e332ebe5810c677~mv2.gif";
@@ -65,7 +66,7 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
         return translated;
     };
 
-    const SEARCH_PLACEHOLDER = isEN ? "Search destinations..." : "Buscar destinos...";
+    const SEARCH_PLACEHOLDER = isEN ? "Search destinations or aircraft..." : "Buscar destinos o aeronaves...";
     const NO_RESULTS = isEN ? "No empty legs found matching your criteria." : "No se encontraron tramos vacíos con esos criterios.";
     const BOOK_NOW = isEN ? "Inquire Now" : "Consultar Ahora";
     const FROM = isEN ? "From" : "Desde";
@@ -92,6 +93,14 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
             return matchesSearch;
         });
     }, [searchQuery, emptyLegs]);
+
+    const filteredFleet = useMemo(() => {
+        if (!searchQuery) return [];
+        const searchLower = searchQuery.toLowerCase();
+        return fleet[language].filter((aircraft) =>
+            aircraft.name.toLowerCase().includes(searchLower)
+        );
+    }, [searchQuery, language]);
 
     // SEO
     const ES_URL = `${SITE}/emptylegs`;
@@ -201,7 +210,7 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                             <p>Error loading flights: {error}</p>
                             <p className="text-sm mt-2 text-gray-500">Check console for details.</p>
                         </div>
-                    ) : filteredFlights.length === 0 ? (
+                    ) : filteredFlights.length === 0 && filteredFleet.length === 0 ? (
                         <div className="text-center py-20">
                             <p className="text-slate-500 text-lg">{NO_RESULTS}</p>
                             <button
@@ -275,6 +284,47 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                         </div>
                     )}
                 </div>
+
+                {/* FLEET EXPERIMENTAL SEARCH RESULT */}
+                {filteredFleet.length > 0 && (
+                    <div className="section-container mt-12 pt-12 border-t border-gray-200">
+                        <h2 className="text-2xl font-serif text-slate-900 mb-6">
+                            {isEN ? "Fleet Results (Brochure)" : "Resultados en Flota (Brochure)"}
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {filteredFleet.map((aircraft) => (
+                                <div key={aircraft.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col group">
+                                    <div className="relative h-48 overflow-hidden bg-slate-900">
+                                        <img
+                                            src={aircraft.image}
+                                            alt={aircraft.name}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <div className="p-6 flex-1 flex flex-col">
+                                        <h3 className="text-xl font-bold font-serif text-slate-900 mb-2">{aircraft.name}</h3>
+                                        <div className="space-y-2 mb-4 text-sm text-slate-600">
+                                            <p><span className="text-gold font-bold uppercase text-xs">Capacity:</span> {aircraft.capacity}</p>
+                                            <p><span className="text-gold font-bold uppercase text-xs">Range:</span> {aircraft.range}</p>
+                                        </div>
+                                        <a
+                                            href={`https://wa.me/5491130635467?text=${encodeURIComponent(
+                                                isEN
+                                                    ? `Hello, I'm interested in chartering a ${aircraft.name}`
+                                                    : `Hola, me interesa chartear un ${aircraft.name}`
+                                            )}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-auto inline-flex items-center text-gold font-medium hover:underline"
+                                        >
+                                            {BOOK_NOW} <ArrowRight size={14} className="ml-1" />
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* FAQ / STATIC SEO CONTENT */}

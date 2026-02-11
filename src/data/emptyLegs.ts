@@ -1,240 +1,453 @@
-
-import img3 from '@/img/img 3.webp';
-import imgLear60 from '@/img/Lear60.webp';
-import imgGulfstream from '@/img/Gulfstream.webp';
-import imgChallenger from '@/img/Challenger601.webp';
-import imgCitation from '@/img/CessnaCitationCJ1.webp';
-
 export interface EmptyLeg {
     id: string;
-    from: string; // Origin
-    to: string;   // Destination
-    date: string; // YYYY-MM-DD
-    availability: string; // Friendly string e.g. "Lunes 14 de Octubre"
+    origin: string;
+    destination: string;
+    date: string;
     aircraft: string;
     seats: number;
-    image: string;
+    price: string;
+    available: boolean;
 }
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        id: "1",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-05",
-        from: "San Fernando, AR (SADF)",
-        to: "Porto Alegre, BR (SBPA)",
-        availability: "Lunes 05 de Enero",
-        image: imgLear60
+        "id": "4lfxnv1p4",
+        "origin": "Buenos Aires",
+        "destination": "Concordia",
+        "date": "2026-02-06",
+        "aircraft": "Piper Seneca",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "2",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-05",
-        from: "Maldonado, UY (SULS)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Lunes 05 de Enero",
-        image: imgLear60
+        "id": "o6vtp8m9w",
+        "origin": "Punta del Este",
+        "destination": "Buenos Aires",
+        "date": "2026-02-06",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "3",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-05",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Lunes 05 de Enero",
-        image: imgCitation
+        "id": "iwsocj66g",
+        "origin": "Punta del Este",
+        "destination": "Buenos Aires",
+        "date": "2026-02-07",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "4",
-        aircraft: "Gulfstream G-400",
-        seats: 14,
-        date: "2026-01-05",
-        from: "Punta Arenas, CL (SCCI)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Lunes 05 de Enero",
-        image: imgGulfstream
+        "id": "khx9shqpw",
+        "origin": "Buenos Aires",
+        "destination": "Milan",
+        "date": "2026-02-09",
+        "aircraft": "Gulfstream V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "5",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-05",
-        from: "Maldonado, UY (SULS)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Lunes 05 de Enero",
-        image: imgLear60
+        "id": "a3hu70688",
+        "origin": "Esquel",
+        "destination": "Buenos Aires",
+        "date": "2026-02-10",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "6",
-        aircraft: "Gulfstream G-400",
-        seats: 14,
-        date: "2026-01-05",
-        from: "San Fernando, AR (SADF)",
-        to: "Punta Arenas, CL (SCCI)",
-        availability: "Lunes 05 de Enero",
-        image: imgGulfstream
+        "id": "gfzf8w6je",
+        "origin": "Miami",
+        "destination": "Aspen",
+        "date": "2026-02-11",
+        "aircraft": "Gulfstream V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "7",
-        aircraft: "Learjet 60",
-        seats: 8,
-        date: "2026-01-06",
-        from: "San Fernando, AR (SADF)",
-        to: "San Carlos De Bariloche, AR",
-        availability: "Martes 06 de Enero",
-        image: imgLear60
+        "id": "ln32ai7gf",
+        "origin": "Miami, FL, US",
+        "destination": "Cabo San Lucas, MX",
+        "date": "2026-02-12",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "8",
-        aircraft: "Learjet 60",
-        seats: 8,
-        date: "2026-01-06",
-        from: "San Fernando, AR (SADF)",
-        to: "Rio De Janeiro, BR (SBGL)",
-        availability: "Martes 06 de Enero",
-        image: imgLear60
+        "id": "3nuz1dp1i",
+        "origin": "Salt Lake City, UT, US",
+        "destination": "Aspen, CO, US",
+        "date": "2026-02-12",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "9",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-07",
-        from: "Maldonado, UY (SULS)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Miércoles 07 de Enero",
-        image: imgLear60
+        "id": "sf8shzsgl",
+        "origin": "Miami",
+        "destination": "Cabo San Lucas",
+        "date": "2026-02-12",
+        "aircraft": "Gulfstream V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "10",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-08",
-        from: "El Bolson, AR (SAVB)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Jueves 08 de Enero",
-        image: imgLear60
+        "id": "2bgpxslpw",
+        "origin": "Salt Lake City",
+        "destination": "Aspen",
+        "date": "2026-02-12",
+        "aircraft": "Gulfstream V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "11",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-11",
-        from: "Mar Del Plata, AR (SAZM)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Domingo 11 de Enero",
-        image: imgLear60
+        "id": "28jznqit9",
+        "origin": "El Bolson, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-02-13",
+        "aircraft": "Learjet 40XR",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "12",
-        aircraft: "Challenger 605",
-        seats: 10,
-        date: "2026-01-11",
-        from: "San Fernando, AR (SADF)",
-        to: "San Carlos De Bariloche, AR",
-        availability: "Domingo 11 de Enero",
-        image: imgChallenger
+        "id": "nnsxuqx0a",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-13",
+        "aircraft": "Phenom 100",
+        "seats": 6,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "13",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-12",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Lunes 12 de Enero",
-        image: imgCitation
+        "id": "61xr5jvl0",
+        "origin": "El Bolson",
+        "destination": "Buenos Aires",
+        "date": "2026-02-13",
+        "aircraft": "Learjet 45",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "14",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-13",
-        from: "Maldonado, UY (SULS)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Martes 13 de Enero",
-        image: imgCitation
+        "id": "6c3xunq5f",
+        "origin": "Bariloche",
+        "destination": "Buenos Aires",
+        "date": "2026-02-13",
+        "aircraft": "Hawker 800",
+        "seats": 8,
+        "price": "USD 8.000 + IVA (10,5%)",
+        "available": true
     },
     {
-        id: "15",
-        aircraft: "Learjet 60",
-        seats: 8,
-        date: "2026-01-14",
-        from: "Rio De Janeiro, BR (SBGL)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Miércoles 14 de Enero",
-        image: imgLear60
+        "id": "fgtoomzlc",
+        "origin": "Esquel, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-02-14",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "16",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-15",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Jueves 15 de Enero",
-        image: imgCitation
+        "id": "3xukyrnwy",
+        "origin": "Esquel",
+        "destination": "Buenos Aires",
+        "date": "2026-02-14",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "17",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-15",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Jueves 15 de Enero",
-        image: imgLear60
+        "id": "a7mk2cilu",
+        "origin": "Buenos Aires",
+        "destination": "Punta del Este",
+        "date": "2026-02-15",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     },
     {
-        id: "18",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-15",
-        from: "Maldonado, UY (SULS)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Jueves 15 de Enero",
-        image: imgCitation
+        "id": "i3p0gdb1z",
+        "origin": "San Fernando, AR",
+        "destination": "Montevideo, UY",
+        "date": "2026-02-16",
+        "aircraft": "Challenger 605",
+        "seats": 10,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "19",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-22",
-        from: "Cordoba, AR (SACO)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Jueves 22 de Enero",
-        image: imgLear60
+        "id": "wp26afaid",
+        "origin": "Buenos Aires",
+        "destination": "Bariloche",
+        "date": "2026-02-16",
+        "aircraft": "Hawker 800",
+        "seats": 8,
+        "price": "USD 8.000 + IVA (10,5%)",
+        "available": true
     },
     {
-        id: "20",
-        aircraft: "Learjet 40XR",
-        seats: 7,
-        date: "2026-01-22",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Jueves 22 de Enero",
-        image: imgLear60
+        "id": "par1y1201",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "21",
-        aircraft: "Gulfstream G-V",
-        seats: 14,
-        date: "2026-01-25",
-        from: "Sao Paulo, BR (SBGR)",
-        to: "San Fernando, AR (SADF)",
-        availability: "Domingo 25 de Enero",
-        image: imgGulfstream
+        "id": "7e5h1qc3l",
+        "origin": "Rio De Janeiro, BR",
+        "destination": "San Fernando, AR",
+        "date": "2026-02-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
     },
     {
-        id: "22",
-        aircraft: "Phenom 100",
-        seats: 6,
-        date: "2026-01-28",
-        from: "San Fernando, AR (SADF)",
-        to: "Maldonado, UY (SULS)",
-        availability: "Miércoles 28 de Enero",
-        image: imgCitation
+        "id": "y95xfyccb",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "yzm8vzstr",
+        "origin": "Buenos Aires",
+        "destination": "Punta del Este",
+        "date": "2026-02-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "n2n0wrr8o",
+        "origin": "Rio de Janeiro",
+        "destination": "Buenos Aires",
+        "date": "2026-02-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "lvnh07amp",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-18",
+        "aircraft": "Phenom 100",
+        "seats": 6,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "9zwhi1o40",
+        "origin": "Buenos Aires",
+        "destination": "Montevideo",
+        "date": "2026-02-18",
+        "aircraft": "Gulfstream G-400",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "6689w4zlo",
+        "origin": "Cartagena, CO",
+        "destination": "Miami, FL, US",
+        "date": "2026-02-20",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "pv6vex9nu",
+        "origin": "Cartagena",
+        "destination": "Miami",
+        "date": "2026-02-20",
+        "aircraft": "Gulfstream V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "kua8xv7lw",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-21",
+        "aircraft": "Phenom 100",
+        "seats": 6,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "2lzkiqe76",
+        "origin": "San Fernando, AR",
+        "destination": "Rio De Janeiro, BR",
+        "date": "2026-02-21",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "a21p5ykot",
+        "origin": "San Fernando, AR",
+        "destination": "Esquel, AR",
+        "date": "2026-02-21",
+        "aircraft": "Gulfstream G",
+        "seats": 400,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "u3hjgsk5j",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-21",
+        "aircraft": "Phenom 100",
+        "seats": 6,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "ecbhpjguy",
+        "origin": "Puerto Natales, CL",
+        "destination": "San Fernando, AR",
+        "date": "2026-02-21",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "l493ka383",
+        "origin": "Buenos Aires",
+        "destination": "Punta del Este",
+        "date": "2026-02-21",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "kn283ef6f",
+        "origin": "Buenos Aires",
+        "destination": "Esquel",
+        "date": "2026-02-21",
+        "aircraft": "Gulfstream G-400",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "zyqy133dm",
+        "origin": "San Fernando, AR",
+        "destination": "Maldonado, UY",
+        "date": "2026-02-25",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "x73tt9wqu",
+        "origin": "San Fernando, AR",
+        "destination": "Rosario, AR",
+        "date": "2026-03-03",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "ucmzhs1qk",
+        "origin": "Rio De Janeiro, BR",
+        "destination": "San Fernando, AR",
+        "date": "2026-03-05",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "i1um1ugc2",
+        "origin": "San Fernando, AR",
+        "destination": "Punta Arenas, CL",
+        "date": "2026-03-05",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "h0b24ge8a",
+        "origin": "Buenos Aires",
+        "destination": "Cataratas del Iguaz�",
+        "date": "2026-04-24",
+        "aircraft": "Citation V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "xdjbbq9ad",
+        "origin": "Mendoza",
+        "destination": "Buenos Aires",
+        "date": "2026-04-24",
+        "aircraft": "Citation V",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "9f59phqrr",
+        "origin": "Buenos Aires",
+        "destination": "C�rdoba",
+        "date": "2026-05-01",
+        "aircraft": "Citation Sovereign",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "0plcqro4x",
+        "origin": "Chapelco",
+        "destination": "Buenos Aires",
+        "date": "2026-05-01",
+        "aircraft": "Citation Sovereign",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "zchq6oo6a",
+        "origin": "Buenos Aires",
+        "destination": "Chapelco",
+        "date": "2026-05-04",
+        "aircraft": "Citation Sovereign",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
     }
 ];

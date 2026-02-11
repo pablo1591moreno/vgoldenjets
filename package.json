@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "postbuild": "node scripts/generate-sitemap.js",
     "generar": "npx tsx scripts/generate-articles.ts && npm run sync:sheets",
-    "sync:sheets": "npx tsx scripts/sync-sheets.ts"
+    "sync:sheets": "npx tsx scripts/sync-sheets.ts",
+    "sync:emptylegs": "npx tsx scripts/sync-emptylegs.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -45,6 +46,8 @@
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@tanstack/react-query": "^5.56.2",
+    "axios": "^1.13.4",
+    "cheerio": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
