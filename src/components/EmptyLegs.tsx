@@ -243,7 +243,7 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
 
                                         <div className="mt-4 pt-6 border-t border-gray-100 flex items-center w-full">
                                             <a
-                                                href={`https://wa.me/5491130635467?text=${encodeURIComponent(
+                                                href={`https://wa.me/5491173745726?text=${encodeURIComponent(
                                                     isEN
                                                         ? `Hello, I'm interested in the Empty Leg from ${flight.origin} to ${flight.destination} on ${flight.date} (${flight.aircraft})`
                                                         : `Hola, me interesa el Empty Leg de ${flight.origin} a ${flight.destination} el ${flight.date} (${flight.aircraft})`
@@ -285,7 +285,7 @@ const EmptyLegs: React.FC<Props> = ({ forcedLang }) => {
                                             <p><span className="text-gold font-bold uppercase text-xs">Range:</span> {aircraft.range}</p>
                                         </div>
                                         <a
-                                            href={`https://wa.me/5491130635467?text=${encodeURIComponent(
+                                            href={`https://wa.me/5491173745726?text=${encodeURIComponent(
                                                 isEN
                                                     ? `Hello, I'm interested in chartering a ${aircraft.name}`
                                                     : `Hola, me interesa chartear un ${aircraft.name}`
