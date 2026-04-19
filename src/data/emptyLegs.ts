@@ -11,117 +11,17 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "uixu3kp63",
-        "origin": "Punta del Este",
-        "destination": "Buenos Aires",
-        "date": "2026-04-04",
-        "aircraft": "Learjet 45",
-        "seats": 8,
-        "price": "consultar",
+        "id": "7f65uweha",
+        "origin": "Maldonado, UY",
+        "destination": "San Fernando, AR",
+        "date": "2026-04-19",
+        "aircraft": "Learjet 40XR",
+        "seats": 7,
+        "price": "Consultar",
         "available": true
     },
     {
-        "id": "gho276zti",
-        "origin": "Santiago",
-        "destination": "Mendoza",
-        "date": "2026-04-04",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "xoyovjrul",
-        "origin": "Buenos Aires",
-        "destination": "Bariloche",
-        "date": "2026-04-05",
-        "aircraft": "Learjet 45",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "tsxbds2zz",
-        "origin": "Buenos Aires",
-        "destination": "C�rdoba",
-        "date": "2026-04-06",
-        "aircraft": "Phenom 100",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "bz0fwl3nd",
-        "origin": "Montevideo",
-        "destination": "Buenos Aires",
-        "date": "2026-04-06",
-        "aircraft": "Gulfstream V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "luz4kg684",
-        "origin": "Buenos Aires",
-        "destination": "Bariloche",
-        "date": "2026-04-07",
-        "aircraft": "Phenom 100",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "wef0ne7py",
-        "origin": "Buenos Aires",
-        "destination": "Bariloche",
-        "date": "2026-04-07",
-        "aircraft": "Phenom 100",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "bvhulprmk",
-        "origin": "Buenos Aires",
-        "destination": "Punta del Este",
-        "date": "2026-04-08",
-        "aircraft": "Gulfstream V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "3y57qpqh7",
-        "origin": "Buenos Aires",
-        "destination": "Montevideo",
-        "date": "2026-04-10",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "4gaye1daw",
-        "origin": "Buenos Aires",
-        "destination": "Bariloche",
-        "date": "2026-04-13",
-        "aircraft": "Gulfstream V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "o2hkwheom",
-        "origin": "Ibiza",
-        "destination": "Buenos Aires",
-        "date": "2026-04-14",
-        "aircraft": "Gulfstream V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "v0veue4m9",
+        "id": "wp8zhciad",
         "origin": "Mendoza, AR",
         "destination": "San Fernando, AR",
         "date": "2026-04-21",
@@ -131,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "v96bfkxnb",
+        "id": "iplloucnv",
         "origin": "San Fernando, AR",
         "destination": "Foz Do Iguacu, BR",
         "date": "2026-04-21",
@@ -141,7 +41,27 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "pc33m7o0m",
+        "id": "3r5krjm3e",
+        "origin": "Mendoza",
+        "destination": "Buenos Aires",
+        "date": "2026-04-21",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "coguludbv",
+        "origin": "Buenos Aires",
+        "destination": "Foz do Iguacu",
+        "date": "2026-04-21",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "g1sa06lse",
         "origin": "Buenos Aires",
         "destination": "Cataratas del Iguaz�",
         "date": "2026-04-24",
@@ -151,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "9nd5yzx2p",
+        "id": "vnyauwozb",
         "origin": "Mendoza",
         "destination": "Buenos Aires",
         "date": "2026-04-24",
@@ -161,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "8qrwrhlhw",
+        "id": "ar7qfgl39",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-04-30",
@@ -171,7 +91,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "4b76g19zb",
+        "id": "6ad1fh3qy",
+        "origin": "Montevideo",
+        "destination": "Buenos Aires",
+        "date": "2026-04-30",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "if3jqcoeh",
         "origin": "Buenos Aires",
         "destination": "C�rdoba",
         "date": "2026-05-01",
@@ -181,7 +111,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "2cwgrfhnr",
+        "id": "vz9oaw129",
         "origin": "Chapelco",
         "destination": "Buenos Aires",
         "date": "2026-05-01",
@@ -191,7 +121,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "quv3d6csk",
+        "id": "7irp6s0x9",
         "origin": "San Fernando, AR",
         "destination": "Lima, PE",
         "date": "2026-05-03",
@@ -201,7 +131,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "gjzajwvq7",
+        "id": "7dr54kw2f",
+        "origin": "Buenos Aires",
+        "destination": "Lima",
+        "date": "2026-05-03",
+        "aircraft": "Gulfstream G-400",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "erp9ez5dv",
         "origin": "Lima, PE",
         "destination": "San Fernando, AR",
         "date": "2026-05-04",
@@ -211,7 +151,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "nx68j2pzr",
+        "id": "3rzej4zjb",
+        "origin": "Lima",
+        "destination": "Buenos Aires",
+        "date": "2026-05-04",
+        "aircraft": "Gulfstream G-400",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "jp0zj68xa",
         "origin": "Buenos Aires",
         "destination": "Chapelco",
         "date": "2026-05-04",
