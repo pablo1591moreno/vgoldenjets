@@ -11,67 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "7pxsyoswn",
-        "origin": "Buenos Aires",
-        "destination": "C�rdoba",
-        "date": "2026-05-01",
-        "aircraft": "Citation Sovereign",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "6cxdywqzv",
-        "origin": "Chapelco",
-        "destination": "Buenos Aires",
-        "date": "2026-05-01",
-        "aircraft": "Citation Sovereign",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "kq0ayv1sh",
-        "origin": "Buenos Aires",
-        "destination": "Lima",
-        "date": "2026-05-03",
-        "aircraft": "Gulfstream G-V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "ee3m39uy3",
-        "origin": "Buenos Aires",
-        "destination": "Chapelco",
-        "date": "2026-05-04",
-        "aircraft": "Citation Sovereign",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "f7gjcu4es",
-        "origin": "Lima",
-        "destination": "Buenos Aires",
-        "date": "2026-05-04",
-        "aircraft": "Gulfstream G-V",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "ohppcruab",
-        "origin": "Asuncion",
-        "destination": "Buenos Aires",
-        "date": "2026-05-12",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "razqbf95h",
+        "id": "tjknwvpbm",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-05-18",
@@ -81,7 +21,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "3ygurxpf9",
+        "id": "lpsq1m6je",
+        "origin": "Montevideo",
+        "destination": "Buenos Aires",
+        "date": "2026-05-18",
+        "aircraft": "Phenom 100",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "tilf6sghr",
         "origin": "Mendoza, AR",
         "destination": "San Fernando, AR",
         "date": "2026-05-22",
@@ -91,27 +41,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "zzbh1vz0x",
+        "id": "fjy5eyebe",
         "origin": "Mendoza",
         "destination": "Buenos Aires",
         "date": "2026-05-22",
-        "aircraft": "Gulfstream G-400",
+        "aircraft": "Learjet 60",
         "seats": 8,
         "price": "consultar",
         "available": true
     },
     {
-        "id": "fqfl0pbbt",
-        "origin": "Buenos Aires",
-        "destination": "Mendoza",
-        "date": "2026-05-22",
-        "aircraft": "Gulfstream G-400",
-        "seats": 8,
-        "price": "consultar",
-        "available": true
-    },
-    {
-        "id": "x9zvl2g8u",
+        "id": "tqk5tww3o",
         "origin": "San Fernando, AR",
         "destination": "Asuncion, PY",
         "date": "2026-05-25",
@@ -121,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "efsc3rytx",
+        "id": "s2fapy38e",
         "origin": "Cusco, PE",
         "destination": "San Fernando, AR",
         "date": "2026-05-25",
@@ -131,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "idi7r8jsx",
+        "id": "5ibigdx79",
         "origin": "Buenos Aires",
         "destination": "Asuncion",
         "date": "2026-05-25",
@@ -141,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "hxjwjctkw",
+        "id": "ko9d2rr50",
         "origin": "Cusco",
         "destination": "Buenos Aires",
         "date": "2026-05-25",
@@ -151,7 +91,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "m2meqnbei",
+        "id": "qpzrpg3x3",
         "origin": "Miami, FL, US",
         "destination": "San Fernando, AR",
         "date": "2026-05-26",
@@ -161,7 +101,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "rhffiqpet",
+        "id": "bg8ntdagi",
         "origin": "San Fernando, AR",
         "destination": "Mendoza, AR",
         "date": "2026-05-27",
@@ -171,7 +111,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "bhf6irmiu",
+        "id": "pw2be41g4",
+        "origin": "Buenos Aires",
+        "destination": "Mendoza",
+        "date": "2026-05-27",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "w5nqsjswk",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-05-28",
@@ -181,13 +131,43 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "v1a27xnxt",
+        "id": "zfw0v0nur",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-05-28",
         "aircraft": "Learjet 40XR",
         "seats": 7,
         "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "ae1qrosh0",
+        "origin": "Buenos Aires",
+        "destination": "Montevideo",
+        "date": "2026-05-28",
+        "aircraft": "Learjet 40XR",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "todp3xspn",
+        "origin": "Rio De Janeiro",
+        "destination": "Buenos Aires",
+        "date": "2026-05-28",
+        "aircraft": "Learjet 40XR",
+        "seats": 8,
+        "price": "consultar",
+        "available": true
+    },
+    {
+        "id": "ztpg25arw",
+        "origin": "Miami",
+        "destination": "Buenos Aires",
+        "date": "2026-05-31",
+        "aircraft": "Gulfstream G-400",
+        "seats": 8,
+        "price": "consultar",
         "available": true
     }
 ];
