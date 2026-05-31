@@ -11,38 +11,18 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "hf15xprt6",
-        "origin": "Montevideo, UY",
-        "destination": "San Fernando, AR",
-        "date": "2026-05-31",
-        "aircraft": "Learjet 40XR",
-        "seats": 7,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "jcmdan0fq",
-        "origin": "Campinas, BR",
-        "destination": "San Fernando, AR",
-        "date": "2026-05-31",
+        "id": "d0lrughd7",
+        "origin": "London (luton), GB",
+        "destination": "Alton/St Louis, IL, US",
+        "date": "2026-06-05",
         "aircraft": "Gulfstream G",
-        "seats": 400,
+        "seats": 8,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "8h8pcamux",
-        "origin": "Santiago Del Estero, AR",
-        "destination": "San Fernando, AR",
-        "date": "2026-06-03",
-        "aircraft": "Gulfstream G",
-        "seats": 400,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "xxos12vjs",
-        "origin": "Alton/St Louis, IL, US",
+        "id": "qe0ng2964",
+        "origin": "San Fernando, AR",
         "destination": "Asuncion, PY",
         "date": "2026-06-09",
         "aircraft": "Gulfstream G",
@@ -51,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "lcwf70moj",
+        "id": "67i096tt2",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-06-14",
@@ -61,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "q3176pqfk",
+        "id": "8y1m9ujp0",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-16",
@@ -71,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "n6wdaxy8a",
+        "id": "u18w1l9oz",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-21",
@@ -81,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "dhgogtsu5",
+        "id": "qs3m4a4oi",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-06-24",
@@ -91,11 +71,21 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "xn27nppie",
+        "id": "ch1q85cbq",
         "origin": "Van Nuys, CA, US",
         "destination": "Oakland, CA, US",
         "date": "2026-06-25",
         "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "9vgjwt8b5",
+        "origin": "Rosario, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-06-26",
+        "aircraft": "Learjet 60",
         "seats": 8,
         "price": "Consultar",
         "available": true
