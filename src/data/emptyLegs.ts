@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "d0lrughd7",
+        "id": "c7nwye7yf",
         "origin": "London (luton), GB",
         "destination": "Alton/St Louis, IL, US",
         "date": "2026-06-05",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "qe0ng2964",
+        "id": "9g60d9ga8",
         "origin": "San Fernando, AR",
         "destination": "Asuncion, PY",
         "date": "2026-06-09",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "67i096tt2",
+        "id": "yr1t9u0kk",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-06-14",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "8y1m9ujp0",
+        "id": "dea5qze7d",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-16",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "u18w1l9oz",
+        "id": "wo57gcgpm",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-21",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "qs3m4a4oi",
+        "id": "3i03iow68",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-06-24",
@@ -71,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ch1q85cbq",
+        "id": "luyf006rd",
         "origin": "Van Nuys, CA, US",
         "destination": "Oakland, CA, US",
         "date": "2026-06-25",
@@ -81,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "9vgjwt8b5",
+        "id": "er6tmzvx6",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-06-26",
