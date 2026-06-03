@@ -11,17 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "c7nwye7yf",
-        "origin": "London (luton), GB",
-        "destination": "Alton/St Louis, IL, US",
-        "date": "2026-06-05",
-        "aircraft": "Gulfstream G",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "9g60d9ga8",
+        "id": "0tkknx86i",
         "origin": "San Fernando, AR",
         "destination": "Asuncion, PY",
         "date": "2026-06-09",
@@ -31,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "yr1t9u0kk",
+        "id": "i13kummfd",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-06-14",
@@ -41,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "dea5qze7d",
+        "id": "a9wt2ipgo",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-16",
@@ -51,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "wo57gcgpm",
+        "id": "gwhckngps",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-21",
@@ -61,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "3i03iow68",
+        "id": "f8xs9sbzh",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-06-24",
@@ -71,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "luyf006rd",
+        "id": "mqrud6ycq",
         "origin": "Van Nuys, CA, US",
         "destination": "Oakland, CA, US",
         "date": "2026-06-25",
@@ -81,12 +71,32 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "er6tmzvx6",
+        "id": "ei218ks1i",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-06-26",
         "aircraft": "Learjet 60",
         "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "g1svbwegm",
+        "origin": "Foz Do Iguacu, BR",
+        "destination": "San Fernando, AR",
+        "date": "2026-06-30",
+        "aircraft": "Learjet 60",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "0m68fafb5",
+        "origin": "San Fernando, AR",
+        "destination": "Cusco, PE",
+        "date": "2026-06-30",
+        "aircraft": "Learjet 60",
+        "seats": 7,
         "price": "Consultar",
         "available": true
     }
