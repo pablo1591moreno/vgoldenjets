@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "ljbgd79w7",
+        "id": "6ipe6wh2n",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-06-14",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "whyddydcl",
+        "id": "at4wnifss",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-16",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "faiubvvl1",
+        "id": "it8e40ko2",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-06-21",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "7rum0ghsk",
+        "id": "4o4cj0oob",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-06-24",
@@ -51,17 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "52akkanwh",
-        "origin": "Van Nuys, CA, US",
-        "destination": "Oakland, CA, US",
-        "date": "2026-06-25",
-        "aircraft": "Gulfstream G",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "p6togfe6z",
+        "id": "s36xke59f",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-06-26",
@@ -71,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "1414mlzi6",
+        "id": "nj3uowm47",
         "origin": "Foz Do Iguacu, BR",
         "destination": "San Fernando, AR",
         "date": "2026-06-30",
@@ -81,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "tzgljzu14",
+        "id": "isra7r2sd",
         "origin": "San Fernando, AR",
         "destination": "Cusco, PE",
         "date": "2026-06-30",
