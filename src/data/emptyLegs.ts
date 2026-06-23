@@ -11,17 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "fj23fmxbv",
-        "origin": "Montevideo, UY",
-        "destination": "Maldonado, UY",
-        "date": "2026-06-21",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "qrzyke5ay",
+        "id": "8t2l5j3ac",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-06-24",
@@ -31,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "xp1jl78uw",
+        "id": "8nc156nxd",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-06-26",
@@ -41,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "fjdqwwk27",
+        "id": "592slyvio",
         "origin": "Foz Do Iguacu, BR",
         "destination": "San Fernando, AR",
         "date": "2026-06-30",
@@ -51,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "icibhjn40",
+        "id": "q613pwolh",
         "origin": "San Fernando, AR",
         "destination": "Cusco, PE",
         "date": "2026-06-30",
@@ -61,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "6bjmk5rjc",
+        "id": "yoq26eku7",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -71,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "zv04rdilk",
+        "id": "azj4ymiq5",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -81,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "90p74znq6",
+        "id": "9ubhbdkxi",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
