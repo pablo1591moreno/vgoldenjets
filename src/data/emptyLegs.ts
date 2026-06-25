@@ -11,17 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "8t2l5j3ac",
-        "origin": "San Fernando, AR",
-        "destination": "Rosario, AR",
-        "date": "2026-06-24",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "8nc156nxd",
+        "id": "79pbc7x5d",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-06-26",
@@ -31,27 +21,27 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "592slyvio",
+        "id": "uprq9xtce",
         "origin": "Foz Do Iguacu, BR",
         "destination": "San Fernando, AR",
         "date": "2026-06-30",
         "aircraft": "Learjet 60",
-        "seats": 7,
+        "seats": 8,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "q613pwolh",
+        "id": "ntpt76xsf",
         "origin": "San Fernando, AR",
         "destination": "Cusco, PE",
         "date": "2026-06-30",
         "aircraft": "Learjet 60",
-        "seats": 7,
+        "seats": 8,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "yoq26eku7",
+        "id": "0bceo5ysa",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -61,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "azj4ymiq5",
+        "id": "5xluc3lrp",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -71,7 +61,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "9ubhbdkxi",
+        "id": "8a7r4hj5m",
+        "origin": "San Martin De Los Andes, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-07-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "mb0wikdtr",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
