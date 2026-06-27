@@ -11,27 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "79pbc7x5d",
-        "origin": "Rosario, AR",
-        "destination": "San Fernando, AR",
-        "date": "2026-06-26",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "uprq9xtce",
-        "origin": "Foz Do Iguacu, BR",
-        "destination": "San Fernando, AR",
-        "date": "2026-06-30",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "ntpt76xsf",
+        "id": "va2ihlkne",
         "origin": "San Fernando, AR",
         "destination": "Cusco, PE",
         "date": "2026-06-30",
@@ -41,7 +21,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "0bceo5ysa",
+        "id": "oo0hu27pp",
+        "origin": "Foz Do Iguacu, BR",
+        "destination": "San Fernando, AR",
+        "date": "2026-06-30",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "u6iy4xzrr",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -51,7 +41,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "5xluc3lrp",
+        "id": "peq5ubtvc",
+        "origin": "San Fernando, AR",
+        "destination": "Santa Cruz, BO",
+        "date": "2026-07-12",
+        "aircraft": "Learjet 60",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "xfcww8uzh",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "8a7r4hj5m",
+        "id": "2nwxnse7u",
         "origin": "San Martin De Los Andes, AR",
         "destination": "San Fernando, AR",
         "date": "2026-07-17",
@@ -71,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "mb0wikdtr",
+        "id": "6yf2sztne",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
