@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "va2ihlkne",
+        "id": "okrj7id00",
         "origin": "San Fernando, AR",
         "destination": "Cusco, PE",
         "date": "2026-06-30",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "oo0hu27pp",
+        "id": "o75d4yr2h",
         "origin": "Foz Do Iguacu, BR",
         "destination": "San Fernando, AR",
         "date": "2026-06-30",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "u6iy4xzrr",
+        "id": "7uwszbc3r",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "peq5ubtvc",
+        "id": "ajnmx1uti",
         "origin": "San Fernando, AR",
         "destination": "Santa Cruz, BO",
         "date": "2026-07-12",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "xfcww8uzh",
+        "id": "n4nrw5lic",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "2nwxnse7u",
+        "id": "iuy2ily4t",
         "origin": "San Martin De Los Andes, AR",
         "destination": "San Fernando, AR",
         "date": "2026-07-17",
@@ -71,12 +71,22 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "6yf2sztne",
+        "id": "xpji11rvi",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
         "aircraft": "Gulfstream G",
         "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "0ncr0tjlh",
+        "origin": "Santa Cruz, BO",
+        "destination": "San Fernando, AR",
+        "date": "2026-07-26",
+        "aircraft": "Learjet 60",
+        "seats": 7,
         "price": "Consultar",
         "available": true
     }
