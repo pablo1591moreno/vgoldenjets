@@ -11,27 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "okrj7id00",
-        "origin": "San Fernando, AR",
-        "destination": "Cusco, PE",
-        "date": "2026-06-30",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "o75d4yr2h",
-        "origin": "Foz Do Iguacu, BR",
-        "destination": "San Fernando, AR",
-        "date": "2026-06-30",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "7uwszbc3r",
+        "id": "83dveew7i",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -41,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ajnmx1uti",
+        "id": "90348w88i",
         "origin": "San Fernando, AR",
         "destination": "Santa Cruz, BO",
         "date": "2026-07-12",
@@ -51,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "n4nrw5lic",
+        "id": "48cjru2tn",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -61,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "iuy2ily4t",
+        "id": "y3tvhl8je",
         "origin": "San Martin De Los Andes, AR",
         "destination": "San Fernando, AR",
         "date": "2026-07-17",
@@ -71,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "xpji11rvi",
+        "id": "u12xw4kow",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
@@ -81,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "0ncr0tjlh",
+        "id": "fr7uzjef4",
         "origin": "Santa Cruz, BO",
         "destination": "San Fernando, AR",
         "date": "2026-07-26",
