@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "kt5nujj7w",
+        "id": "c0dd437zu",
         "origin": "San Fernando, AR",
         "destination": "Rio De Janeiro, BR",
         "date": "2026-07-12",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "mn7n1zb69",
+        "id": "f210fy73d",
         "origin": "San Fernando, AR",
         "destination": "Santa Cruz, BO",
         "date": "2026-07-12",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "tutkvlcil",
+        "id": "bdht211av",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-12",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ax442joiq",
+        "id": "an770sadl",
         "origin": "San Martin De Los Andes, AR",
         "destination": "San Fernando, AR",
         "date": "2026-07-17",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "0pym2k5uy",
+        "id": "9370ji8wt",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-18",
@@ -61,7 +61,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "38sc6otla",
+        "id": "5h4bkl6f9",
+        "origin": "San Fernando, AR",
+        "destination": "San Martin De Los Andes, AR",
+        "date": "2026-07-25",
+        "aircraft": "Learjet 40XR",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "mlbqtffif",
         "origin": "Santa Cruz, BO",
         "destination": "San Fernando, AR",
         "date": "2026-07-26",
@@ -71,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "5kv5upboe",
+        "id": "ix1q3vjob",
         "origin": "San Fernando, AR",
         "destination": "San Martin De Los Andes, AR",
         "date": "2026-08-01",
