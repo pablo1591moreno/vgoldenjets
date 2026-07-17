@@ -11,27 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "h00lrfclw",
-        "origin": "San Martin De Los Andes, AR",
-        "destination": "San Fernando, AR",
-        "date": "2026-07-17",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "ld2kykx0y",
-        "origin": "Porto Alegre, BR",
-        "destination": "The Valley, AI",
-        "date": "2026-07-17",
-        "aircraft": "Gulfstream G",
-        "seats": 400,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "bwsq4s3uo",
+        "id": "3i3uczuo9",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-07-19",
@@ -41,7 +21,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "g8cs3tcwu",
+        "id": "lq6p7bmjs",
+        "origin": "San Martin De Los Andes, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-07-20",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "zs77p22gj",
         "origin": "San Fernando, AR",
         "destination": "Sao Paulo, BR",
         "date": "2026-07-25",
@@ -51,17 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "iq1y7m1rw",
-        "origin": "San Fernando, AR",
-        "destination": "San Martin De Los Andes, AR",
-        "date": "2026-07-25",
-        "aircraft": "Learjet 40XR",
-        "seats": 7,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "122lu96zc",
+        "id": "ayrwaad40",
         "origin": "Santa Cruz, BO",
         "destination": "San Fernando, AR",
         "date": "2026-07-26",
@@ -71,7 +51,27 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "emi96yzyq",
+        "id": "fxz5jsv4f",
+        "origin": "San Fernando, AR",
+        "destination": "San Martin De Los Andes, AR",
+        "date": "2026-07-26",
+        "aircraft": "Learjet 40XR",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "xtwaldz9v",
+        "origin": "San Fernando, AR",
+        "destination": "Sao Paulo, BR",
+        "date": "2026-07-26",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "gfzrxbkp5",
         "origin": "San Fernando, AR",
         "destination": "San Martin De Los Andes, AR",
         "date": "2026-08-01",
