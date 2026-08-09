@@ -11,37 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "jj30vm2r9",
-        "origin": "San Fernando, AR",
-        "destination": "Campo Grande, BR",
-        "date": "2026-08-07",
-        "aircraft": "Phenom 100",
-        "seats": 6,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "21flvcvdj",
-        "origin": "Maldonado, UY",
-        "destination": "San Fernando, AR",
-        "date": "2026-08-07",
-        "aircraft": "Phenom 100",
-        "seats": 6,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "v5j98zkwc",
-        "origin": "Santiago, CL",
-        "destination": "San Fernando, AR",
-        "date": "2026-08-08",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "0gisihdmz",
+        "id": "4q7joasa3",
         "origin": "Santa Cruz, BO",
         "destination": "San Fernando, AR",
         "date": "2026-08-10",
@@ -51,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "cxdrd6wt1",
+        "id": "kojk1odif",
         "origin": "San Fernando, AR",
         "destination": "Sao Roque, BR",
         "date": "2026-08-10",
@@ -61,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "g7vq3ysci",
+        "id": "m1krmoipd",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-08-19",
@@ -71,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ii0o2lcg0",
+        "id": "4e14m1a0j",
         "origin": "Washington, DC, US",
         "destination": "San Fernando, AR",
         "date": "2026-08-19",
