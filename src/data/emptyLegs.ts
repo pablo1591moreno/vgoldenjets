@@ -11,27 +11,47 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "4q7joasa3",
-        "origin": "Santa Cruz, BO",
+        "id": "yzfmoayjo",
+        "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
-        "date": "2026-08-10",
-        "aircraft": "Learjet 60",
-        "seats": 7,
+        "date": "2026-08-11",
+        "aircraft": "Phenom 100",
+        "seats": 6,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "kojk1odif",
+        "id": "lkdhr7duj",
         "origin": "San Fernando, AR",
-        "destination": "Sao Roque, BR",
-        "date": "2026-08-10",
-        "aircraft": "Learjet 60",
-        "seats": 7,
+        "destination": "Maldonado, UY",
+        "date": "2026-08-11",
+        "aircraft": "Phenom 100",
+        "seats": 6,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "m1krmoipd",
+        "id": "jditkj9dv",
+        "origin": "San Fernando, AR",
+        "destination": "Miami, FL, US",
+        "date": "2026-08-13",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "agl1qha4y",
+        "origin": "San Fernando, AR",
+        "destination": "San Carlos De Bariloche, AR",
+        "date": "2026-08-17",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "ttuzb736q",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-08-19",
@@ -41,10 +61,10 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "4e14m1a0j",
+        "id": "7sy9enmn2",
         "origin": "Washington, DC, US",
         "destination": "San Fernando, AR",
-        "date": "2026-08-19",
+        "date": "2026-08-21",
         "aircraft": "Gulfstream G",
         "seats": 8,
         "price": "Consultar",
