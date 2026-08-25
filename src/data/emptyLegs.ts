@@ -11,37 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "e6ka77bya",
-        "origin": "Montevideo, UY",
-        "destination": "San Fernando, AR",
-        "date": "2026-08-23",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "2j8azz7u8",
-        "origin": "Toronto, ON, CA",
-        "destination": "Teterboro, NJ, US",
-        "date": "2026-08-24",
-        "aircraft": "Gulfstream G",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "klopq0k3t",
-        "origin": "San Fernando, AR",
-        "destination": "Montevideo, UY",
-        "date": "2026-08-24",
-        "aircraft": "Phenom 100",
-        "seats": 6,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "cloqc4fym",
+        "id": "a0qqs970h",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-08-31",
@@ -51,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "qej1i4aro",
+        "id": "w5hv2dox4",
         "origin": "San Fernando, AR",
         "destination": "Lima, PE",
         "date": "2026-09-03",
@@ -61,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "4mcxiv0jn",
+        "id": "ocphx5j2o",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-05",
@@ -71,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "257ysj1bf",
+        "id": "jnexee61r",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-08",
@@ -81,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "5ig1vpht1",
+        "id": "iu1483jgq",
         "origin": "Nashville, TN, US",
         "destination": "San Fernando, AR",
         "date": "2026-09-10",
