@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "a0qqs970h",
+        "id": "afn56fnii",
         "origin": "Montevideo, UY",
         "destination": "San Fernando, AR",
         "date": "2026-08-31",
@@ -21,7 +21,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "w5hv2dox4",
+        "id": "dkt5rx10w",
+        "origin": "Nashville, TN, US",
+        "destination": "San Fernando, AR",
+        "date": "2026-09-02",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "4mfzaxu0v",
         "origin": "San Fernando, AR",
         "destination": "Lima, PE",
         "date": "2026-09-03",
@@ -31,7 +41,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ocphx5j2o",
+        "id": "ex63ffqe6",
+        "origin": "Montevideo, UY",
+        "destination": "Campinas, BR",
+        "date": "2026-09-05",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "pj68kxag5",
         "origin": "Rio De Janeiro, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-05",
@@ -41,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "jnexee61r",
+        "id": "87pkfe679",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-08",
@@ -51,10 +71,10 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "iu1483jgq",
-        "origin": "Nashville, TN, US",
+        "id": "6t3aluj29",
+        "origin": "Campinas, BR",
         "destination": "San Fernando, AR",
-        "date": "2026-09-10",
+        "date": "2026-09-14",
         "aircraft": "Gulfstream G",
         "seats": 8,
         "price": "Consultar",
