@@ -11,37 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "0hbxyy6k9",
-        "origin": "Maldonado, UY",
-        "destination": "San Fernando, AR",
-        "date": "2026-09-03",
-        "aircraft": "Gulfstream G",
-        "seats": 400,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "f5bnqs6sp",
-        "origin": "Philipsburg, SX",
-        "destination": "Lima, PE",
-        "date": "2026-09-03",
-        "aircraft": "Gulfstream G",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "xzciisclp",
-        "origin": "Montevideo, UY",
-        "destination": "San Fernando, AR",
-        "date": "2026-09-04",
-        "aircraft": "Gulfstream G",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "e0r1lr41b",
+        "id": "0yupdan6g",
         "origin": "San Fernando, AR",
         "destination": "Maldonado, UY",
         "date": "2026-09-06",
@@ -51,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "d9j36g2uz",
+        "id": "zo195y0hc",
         "origin": "Sao Paulo, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-08",
@@ -61,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ankpkpfwn",
+        "id": "76k0am3n6",
         "origin": "Campinas, BR",
         "destination": "San Fernando, AR",
         "date": "2026-09-14",
@@ -71,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "x9r26k3t6",
+        "id": "shqiy9pjq",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-09-22",
@@ -81,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "zhhlt9tic",
+        "id": "91uq1yhsk",
         "origin": "San Carlos De Bariloche, AR",
         "destination": "San Fernando, AR",
         "date": "2026-09-22",
