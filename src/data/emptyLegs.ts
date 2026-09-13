@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "hx3srlih8",
+        "id": "2g0v4uxi6",
         "origin": "Villa Dolores, AR",
         "destination": "San Fernando, AR",
         "date": "2026-09-13",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "9kgh0nkyg",
+        "id": "khlm7xkud",
         "origin": "San Fernando, AR",
         "destination": "Asuncion, PY",
         "date": "2026-09-15",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ygbg63gpe",
+        "id": "kxuzr7em8",
         "origin": "La Paz, BO",
         "destination": "San Fernando, AR",
         "date": "2026-09-16",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "hpbicjjdx",
+        "id": "y0mbuq0kd",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-09-22",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "so0hdj28q",
+        "id": "vb3vveh1l",
         "origin": "San Carlos De Bariloche, AR",
         "destination": "San Fernando, AR",
         "date": "2026-09-22",
