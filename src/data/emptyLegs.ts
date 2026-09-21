@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "6422e5tzp",
+        "id": "vpavodz8j",
         "origin": "San Fernando, AR",
         "destination": "Montevideo, UY",
         "date": "2026-09-22",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ckde5zbut",
+        "id": "0q76s6xnm",
         "origin": "San Carlos De Bariloche, AR",
         "destination": "San Fernando, AR",
         "date": "2026-09-22",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "xotkqlo6x",
+        "id": "l99dhr0ri",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-09-26",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "r2aw23pld",
+        "id": "kky62edjk",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-09-26",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "oj62njmbb",
+        "id": "cq59k5bcj",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-02",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "ampx9fv7y",
+        "id": "nkrx5ztke",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-02",
@@ -71,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "no1bwnuod",
+        "id": "ba5ofex3l",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-06",
@@ -81,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "8e9e6xfbp",
+        "id": "lp7bzriyv",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-07",
