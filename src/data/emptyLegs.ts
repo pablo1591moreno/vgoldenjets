@@ -11,7 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "hozomurjq",
+        "id": "jtl6041ri",
         "origin": "San Fernando, AR",
         "destination": "Mendoza, AR",
         "date": "2026-09-27",
@@ -21,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "j0qb43fu5",
+        "id": "t2e3nk0oq",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-02",
@@ -31,7 +31,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "uablsh2j1",
+        "id": "o4q2f63pq",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-02",
@@ -41,7 +41,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "z4y1jfaj8",
+        "id": "j7uj2v11m",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-06",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "08d3v29k6",
+        "id": "wztyn8s3z",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-10-06",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "p995cb16f",
+        "id": "48h9kwm98",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-07",
@@ -71,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "uczcblb2w",
+        "id": "s6mtd70k9",
         "origin": "San Fernando, AR",
         "destination": "Maldonado, UY",
         "date": "2026-10-09",
@@ -81,10 +81,30 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "gurijfsc3",
+        "id": "7i571zfck",
         "origin": "Cape Town, ZA",
         "destination": "San Fernando, AR",
         "date": "2026-10-14",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "telg7phxr",
+        "origin": "San Fernando, AR",
+        "destination": "Ibiza, ES",
+        "date": "2026-10-23",
+        "aircraft": "Gulfstream G",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "2e94o5lro",
+        "origin": "San Carlos De Bariloche, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-10-24",
         "aircraft": "Gulfstream G",
         "seats": 8,
         "price": "Consultar",
