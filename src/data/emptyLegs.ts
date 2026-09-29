@@ -11,17 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "jtl6041ri",
-        "origin": "San Fernando, AR",
-        "destination": "Mendoza, AR",
-        "date": "2026-09-27",
-        "aircraft": "Learjet 60",
-        "seats": 8,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "t2e3nk0oq",
+        "id": "dco77b8i9",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-02",
@@ -31,7 +21,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "o4q2f63pq",
+        "id": "lvv12qn6j",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-02",
@@ -41,7 +31,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "j7uj2v11m",
+        "id": "zauhhc5i7",
+        "origin": "San Juan, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-10-03",
+        "aircraft": "Learjet 40XR",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "3jyiqieb5",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-06",
@@ -51,7 +51,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "wztyn8s3z",
+        "id": "sqgxr1617",
         "origin": "Maldonado, UY",
         "destination": "San Fernando, AR",
         "date": "2026-10-06",
@@ -61,7 +61,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "48h9kwm98",
+        "id": "zw5rmbs7x",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-07",
@@ -71,7 +71,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "s6mtd70k9",
+        "id": "7lvpqs1dg",
         "origin": "San Fernando, AR",
         "destination": "Maldonado, UY",
         "date": "2026-10-09",
@@ -81,7 +81,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "7i571zfck",
+        "id": "16e2ijhm3",
         "origin": "Cape Town, ZA",
         "destination": "San Fernando, AR",
         "date": "2026-10-14",
@@ -91,7 +91,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "telg7phxr",
+        "id": "yoheat8xg",
         "origin": "San Fernando, AR",
         "destination": "Ibiza, ES",
         "date": "2026-10-23",
@@ -101,7 +101,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "2e94o5lro",
+        "id": "awswwti9t",
         "origin": "San Carlos De Bariloche, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-24",
