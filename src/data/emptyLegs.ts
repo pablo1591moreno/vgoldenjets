@@ -11,27 +11,7 @@ export interface EmptyLeg {
 
 export const emptyLegs: EmptyLeg[] = [
     {
-        "id": "uw1q0s1mv",
-        "origin": "Rosario, AR",
-        "destination": "San Fernando, AR",
-        "date": "2026-10-02",
-        "aircraft": "Learjet 40XR",
-        "seats": 7,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "i7ry2lk6y",
-        "origin": "San Fernando, AR",
-        "destination": "Rosario, AR",
-        "date": "2026-10-02",
-        "aircraft": "Learjet 40XR",
-        "seats": 7,
-        "price": "Consultar",
-        "available": true
-    },
-    {
-        "id": "ql3nei59k",
+        "id": "88f7fl54b",
         "origin": "San Juan, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-03",
@@ -41,7 +21,27 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "6la4967xj",
+        "id": "1mnosbm5o",
+        "origin": "San Fernando, AR",
+        "destination": "Villa Dolores, AR",
+        "date": "2026-10-06",
+        "aircraft": "Learjet 60",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "odkuwkmof",
+        "origin": "San Fernando, AR",
+        "destination": "Rosario, AR",
+        "date": "2026-10-06",
+        "aircraft": "Learjet 60",
+        "seats": 7,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "rt3asv4xl",
         "origin": "San Fernando, AR",
         "destination": "Rosario, AR",
         "date": "2026-10-06",
@@ -51,17 +51,27 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "fpibf11bt",
+        "id": "ncuhunw3v",
         "origin": "Maldonado, UY",
-        "destination": "San Fernando, AR",
+        "destination": "Montevideo, UY",
         "date": "2026-10-06",
+        "aircraft": "Learjet 60",
+        "seats": 8,
+        "price": "Consultar",
+        "available": true
+    },
+    {
+        "id": "ecjnurl5z",
+        "origin": "Rosario, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-10-07",
         "aircraft": "Learjet 60",
         "seats": 7,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "fq6b8bgwg",
+        "id": "tqwvll4uw",
         "origin": "Rosario, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-07",
@@ -71,17 +81,17 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "j56lpe7qv",
-        "origin": "San Fernando, AR",
-        "destination": "Maldonado, UY",
-        "date": "2026-10-09",
-        "aircraft": "Learjet 40XR",
+        "id": "8m6caszts",
+        "origin": "Villa Dolores, AR",
+        "destination": "San Fernando, AR",
+        "date": "2026-10-07",
+        "aircraft": "Learjet 60",
         "seats": 7,
         "price": "Consultar",
         "available": true
     },
     {
-        "id": "6wdqu1oy0",
+        "id": "asz13l3wh",
         "origin": "Cape Town, ZA",
         "destination": "San Fernando, AR",
         "date": "2026-10-14",
@@ -91,7 +101,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "613wo3a4v",
+        "id": "b0qo6dq3k",
         "origin": "San Fernando, AR",
         "destination": "Ibiza, ES",
         "date": "2026-10-23",
@@ -101,7 +111,7 @@ export const emptyLegs: EmptyLeg[] = [
         "available": true
     },
     {
-        "id": "466zqxm79",
+        "id": "v0mlkvpmy",
         "origin": "San Carlos De Bariloche, AR",
         "destination": "San Fernando, AR",
         "date": "2026-10-24",
